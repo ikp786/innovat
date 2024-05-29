@@ -15,7 +15,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: Premad@2417
-          MYSQL_DATABASE: molni2j8_stucard
+          MYSQL_DATABASE: molni2j8_innovat
           MYSQL_USER: molni2j8_ibrahim
           MYSQL_PASSWORD: Premad@2417
         ports:
@@ -47,7 +47,7 @@ jobs:
         DB_CONNECTION: mysql
         DB_HOST: 127.0.0.1
         DB_PORT: 3306
-        DB_DATABASE: molni2j8_stucard
+        DB_DATABASE: molni2j8_innovat
         DB_USERNAME: molni2j8_ibrahim
         DB_PASSWORD: Premad@2417
       run: php artisan migrate --force
@@ -59,7 +59,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: "./"
-        server-dir: "/stucard/"
+        server-dir: "/innovat/"
         port: ${{ secrets.FTP_PORT }}
 
     - name: Run Remote Commands
@@ -70,7 +70,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         script: |
-          cd /stucard
+          cd /innovat
           php artisan migrate --force
           php artisan config:cache
           php artisan route:cache
