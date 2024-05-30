@@ -176,22 +176,5 @@
             });
         });
 
-
-        function toggleDescription(button) {
-            var container = $(button).closest('.description-container');
-            var shortenedDescription = container.find('.shortened-description');
-            var fullDescription = container.find('.full-description');
-            if (fullDescription.is(':visible')) {
-                // If full Description are visible, toggle to show shortened description
-                shortenedDescription.show();
-                fullDescription.hide();
-                $(button).text('Show More');
-            } else {
-                // If shortened Description are visible, toggle to show full description
-                shortenedDescription.hide();
-                fullDescription.show();
-                $(button).text('Show Less');
-            }
-        }
     </script>
 @endpush

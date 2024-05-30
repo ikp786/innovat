@@ -41,12 +41,19 @@
     <!-- END: Page CSS-->
 
     {{-- Datatable --}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('admin/vendors/css/tables/datatable/dataTables.bootstrap5.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('admin/vendors/css/tables/datatable/responsive.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('admin/vendors/css/tables/datatable/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('admin/vendors/css/tables/datatable/responsive.bootstrap5.min.css') }}">
 
     <!-- BEGIN: Custom CSS-->
     {{-- <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> --}}
     <!-- END: Custom CSS-->
+    <style>
+        .editor{
+            height: 200%;
+        }
+    </style>
     @stack('styles')
 </head>
 <!-- END: Head-->
@@ -192,11 +199,11 @@
 
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="{{ asset('admin/vendors/js/tables/datatable/jquery.dataTables.min.js')}}"></script>
-    <script src="{{ asset('admin/vendors/js/tables/datatable/dataTables.bootstrap5.min.js')}}"></script>
-    <script src="{{ asset('admin/vendors/js/tables/datatable/dataTables.responsive.min.js')}}"></script>
-    <script src="{{ asset('admin/vendors/js/tables/datatable/responsive.bootstrap5.js')}}"></script>
-    <script src="{{ asset('admin/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
+    <script src="{{ asset('admin/vendors/js/tables/datatable/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/vendors/js/tables/datatable/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('admin/vendors/js/tables/datatable/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('admin/vendors/js/tables/datatable/responsive.bootstrap5.js') }}"></script>
+    <script src="{{ asset('admin/vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
     <!-- END: Page Vendor JS-->
 
 
@@ -223,7 +230,26 @@
                 });
             }
         })
+
+
+        function toggleDescription(button) {
+            var container = $(button).closest('.description-container');
+            var shortenedDescription = container.find('.shortened-description');
+            var fullDescription = container.find('.full-description');
+            if (fullDescription.is(':visible')) {
+                // If full Description are visible, toggle to show shortened description
+                shortenedDescription.show();
+                fullDescription.hide();
+                $(button).text('Show More');
+            } else {
+                // If shortened Description are visible, toggle to show full description
+                shortenedDescription.hide();
+                fullDescription.show();
+                $(button).text('Show Less');
+            }
+        }
     </script>
+
     @stack('scripts')
 </body>
 <!-- END: Body-->

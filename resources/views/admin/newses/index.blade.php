@@ -34,9 +34,9 @@
 
                     <div class="card">
                         <div class="card-header border-bottom">
-                            <h4 class="card-title">Services</h4>
+                            <h4 class="card-title">Newses</h4>
                             <div class="dt-action-buttons text-end pt-3 pt-md-0">
-                                <div class="dt-buttons"> <a href="{{ route('admin.services.create') }}"> <button
+                                <div class="dt-buttons"> <a href="{{ route('admin.newses.create') }}"> <button
                                             class="btn btn-primary waves-effect waves-light" type="button">Add New</button>
                                     </a> </div>
                             </div>
@@ -59,8 +59,8 @@
                                     <tr>
                                         <th></th>
                                         <th>Title</th>
-                                        <th>Inco</th>
                                         <th>Image</th>
+                                        <th>Sort Description</th>
                                         <th>Description</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -82,7 +82,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "{{ route('admin.services.index') }}",
+                    url: "{{ route('admin.newses.index') }}",
                     data: function(d) {
                         // Add form data to the DataTables request
                         d.title = $('#title').val();
@@ -97,12 +97,12 @@
                         name: 'title'
                     },
                     {
-                        data: 'icon',
-                        name: 'icon'
-                    },
-                    {
                         data: 'image',
                         name: 'image'
+                    },
+                    {
+                        data: 'sort_description',
+                        name: 'sort_description'
                     },
                     {
                         data: 'full_description',
@@ -129,11 +129,12 @@
         });
 
         $(document).on('click', '.delete-record', function() {
-            var serviceId = $(this).data('id');
+            var newsId = $(this).data('id');
             // Display a confirmation dialog to confirm deletion
-            if (confirm('Are you sure you want to delete this service?')) {
+            if (confirm('Are you sure you want to delete this news?')) {
                 $.ajax({
-                    url: "{{ url('admin/services') }}/" + serviceId, // Use the url() function
+                    url: "{{ url('admin/newses') }}/" + newsId, // Use the url() function
+                    
                     type: 'DELETE',
                     data: {
                         '_token': '{{ csrf_token() }}', // You may need to pass CSRF token
@@ -141,8 +142,7 @@
                     success: function(res) {
                         if (res.status === 200) {
                             toastr.success(res.message);
-                            window.location.href =
-                                "{{ route('admin.services.index') }}";
+                           
                         }
                     },
                     error: function(xhr) {
@@ -153,13 +153,12 @@
         });
 
         $(document).on('change', '.status-toggle', function() {
-            var serviceId = $(this).data('id');
+            var newsId = $(this).data('id');
             var status = $(this).prop('checked') ? 1 : 0;
 
             // Send an AJAX request to update the status
             $.ajax({
-                url: "{{ route('admin.services.update-status', ['id' => ':id']) }}".replace(':id',
-                    serviceId),
+                url: "{{ route('admin.newses.update-status', ['id' => ':id']) }}".replace(':id', newsId),
                 type: 'POST',
                 data: {
                     '_token': '{{ csrf_token() }}',
@@ -167,11 +166,9 @@
                 },
                 success: function(response) {
                     toastr.success(response.message);
-                    // Optionally, you can perform additional actions upon success
                 },
                 error: function(xhr) {
                     toastr.error('Oops! Something went wrong.');
-                    // Handle error response if needed
                 }
             });
         });

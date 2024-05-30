@@ -60,10 +60,12 @@
             </li>
 
             <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('admin.pages.index') }}"><i
-                        data-feather="mail"></i><span class="menu-title text-truncate"
-                        data-i18n="pages">Page</span></a>
+                        data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="pages">Page</span></a>
             </li>
 
+            <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('admin.newses.index') }}"><i
+                        data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="newses">News</span></a>
+            </li>
 
             <li class=" nav-item"><a class="d-flex align-items-center" href="app-chat.html"><i
                         data-feather="message-square"></i><span class="menu-title text-truncate"
