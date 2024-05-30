@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            {!! html()->form('POST', isset($page->id) ? route('admin.pages.update', $page->id) : route('admin.pages.store'))->class('auth-login-form mt-2')->attribute('enctype', 'multipart/form-data')->open() !!}
+                            {!! html()->form('POST', isset($page->id) ? route('admin.pages.update', $page->id) : route('admin.pages.store'))->class('auth-login-form mt-2')->id('pageForm')->attribute('enctype', 'multipart/form-data')->open() !!}
                             @isset($page->id)
                                 @method('PUT')
                                 {!! html()->hidden('id')->value($page->id) !!}
@@ -87,11 +87,12 @@
                                     @enderror
                                 </div>
                                 {!! html()->label('Description', 'description')->class('form-label') !!}<span class="text-danger">*</span>
+
                                 <div class="col-sm-12 col-12 mb-3">
                                     <div id="full-wrapper">
                                         <div id="full-container">
-                                            <div class="editor" style="height: 200px;">
-                                                {!! old('description', $page->description ?? '') !!}
+                                            <div class="editor" style="height: 200px;" id="description_content">
+                                                {!! $page->description !!}
                                             </div>
                                         </div>
                                         @error('description')
@@ -109,28 +110,27 @@
                 </div>
         </section>
     </div>
+
 @endpush
 
 @push('scripts')
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{ asset('admin/vendors/js/editors/quill/katex.min.js') }}"></script>
+    <script src="{{ asset('admin/vendors/js/editors/quill/highlight.min.js') }}"></script>
     <script src="{{ asset('admin/vendors/js/editors/quill/quill.min.js') }}"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin/js/scripts/forms/form-quill-editor.js') }}"></script>
+
+
+    <!-- END: Page Vendor JS-->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize the Quill editor
-            var quill = new Quill('.editor', {
-                theme: 'snow'
-            });
-
-            // Set the existing description content if available
-            var existingDescription = {!! json_encode(old('description', $page->description ?? '')) !!};
-            quill.clipboard.dangerouslyPasteHTML(existingDescription);
-
-            // Update the hidden input field before form submission
-            var form = document.querySelector('.auth-login-form');
-            form.addEventListener('submit', function() {
-                var quillContent = document.querySelector('.editor').innerHTML;
-                document.getElementById('description').value = quillContent;
-            });
-        });
+        $(document).ready(function() {
+            $("#pageForm").on("submit", function() {
+                $("#description").val($(".editor").html());
+            })
+        })
     </script>
 @endpush

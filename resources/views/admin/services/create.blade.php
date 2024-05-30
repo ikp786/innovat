@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            {!! html()->form('POST', isset($service->id) ? route('admin.services.update', $service->id) : route('admin.services.store'))->class('auth-login-form mt-2')->attribute('enctype', 'multipart/form-data')->open() !!}
+                            {!! html()->form('POST', isset($service->id) ? route('admin.services.update', $service->id) : route('admin.services.store'))->id('serviceForm')->class('auth-login-form mt-2')->attribute('enctype', 'multipart/form-data')->open() !!}
                             @isset($service->id)
                                 @method('PUT')
                                 {!! html()->hidden('id')->value($service->id) !!}
@@ -116,25 +116,23 @@
 @endpush
 
 @push('scripts')
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{ asset('admin/vendors/js/editors/quill/katex.min.js') }}"></script>
+    <script src="{{ asset('admin/vendors/js/editors/quill/highlight.min.js') }}"></script>
     <script src="{{ asset('admin/vendors/js/editors/quill/quill.min.js') }}"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin/js/scripts/forms/form-quill-editor.js') }}"></script>
+
+
+    <!-- END: Page Vendor JS-->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize the Quill editor
-            var quill = new Quill('.editor', {
-                theme: 'snow'
-            });
-
-            // Set the existing description content if available
-            var existingDescription = {!! json_encode(old('description', $service->description ?? '')) !!};
-            quill.clipboard.dangerouslyPasteHTML(existingDescription);
-
-            // Update the hidden input field before form submission
-            var form = document.querySelector('.auth-login-form');
-            form.addEventListener('submit', function() {
-                var quillContent = document.querySelector('.editor').innerHTML;
-                document.getElementById('description').value = quillContent;
-            });
-        });
+        $(document).ready(function() {
+            $("#serviceForm").on("submit", function() {
+                $("#description").val($(".editor").html());
+            })
+        })
     </script>
 @endpush
