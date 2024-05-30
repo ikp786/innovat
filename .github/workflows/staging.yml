@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    steps:
+    steps:   
     - uses: actions/checkout@v4
 
     - name: Deploy to Server via FTP
@@ -20,5 +20,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: "./"
-        server-dir: "/stucard/"
+        server-dir: "/innovat/"
         port: ${{ secrets.FTP_PORT }}
