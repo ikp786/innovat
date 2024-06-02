@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Str;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,6 +17,11 @@ class Service extends Model
 
     protected $fillable = ['title', 'icon', 'image', 'description', 'status', 'slug'];
 
+    // Define the relationship to the Page model
+    public function pages()
+    {
+        return $this->hasMany(Page::class);
+    }
     protected function status(): Attribute
     {
         return Attribute::make(

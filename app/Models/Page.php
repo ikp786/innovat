@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Str;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -21,7 +22,8 @@ class Page extends Model
         );
     }
 
-    function service(){
+    function service() : BelongsTo
+    {
         return $this->belongsTo(Service::class);
     }
 
@@ -51,5 +53,4 @@ class Page extends Model
             }
         });
     }
-
 }
