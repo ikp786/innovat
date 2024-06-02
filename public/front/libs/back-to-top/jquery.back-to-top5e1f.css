@@ -1,0 +1,1 @@
+.bck{position:fixed;bottom:4px;right:34px;visibility:hidden;transition-property:all}.bck.bck-on{visibility:visible}.fade{opacity:0}.bck-on.fade{opacity:1}.rightToLeft{right:-50px}.bck-on.rightToLeft{right:1rem}.bottomToTop{bottom:-50px}.bck-on.bottomToTop{bottom:1rem}.bck-leftToRight{left:-50px}.bck-on.leftToRight{left:1rem}.topToBottom{top:-50px}.bck-on.topToBottom{top:1rem}
