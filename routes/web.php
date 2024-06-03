@@ -3,6 +3,9 @@
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+
+
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('services/{slug?}', 'services')->name('services');
