@@ -6,7 +6,7 @@
                 style="background-image: url('{{ asset('uploads/service_images/' . $data->image) }}'); background-size: cover;">
             @else
                 <section class="inner-header divider"
-                    style="background-image: url('{{ asset('uploads/pages_images/' . $data->image) }}'); background-size: cover;">
+                    style="background-image: url('{{ asset('uploads/page_images/' . $data->image) }}'); background-size: cover;">
         @endif
         <div class="container banner_text">
             <div class="section-content">
