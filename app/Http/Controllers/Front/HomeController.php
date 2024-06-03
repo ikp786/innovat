@@ -13,6 +13,12 @@ class HomeController extends Controller
     function index(Request $request, $slug = null)
     {
         $title = 'Home Page';
+
+        return view('front.index', compact('title'));
+    }
+
+    function services(Request $request, $slug = null)
+    {
         if ($slug) {
             $data = Service::whereSlug($slug)->first() ?? Page::whereSlug($slug)->first();
             if (!$data) {
@@ -24,7 +30,8 @@ class HomeController extends Controller
 
             return view('front.services', compact('title', 'data', 'modelName', 'news'));
         }
-        return view('front.index', compact('title'));
+        $title = 'Service Page';
+        return view('front.service', compact('title'));
     }
 
     function news(Request $request, $slug = null)
@@ -37,15 +44,11 @@ class HomeController extends Controller
             }
             $modelName = $data instanceof Service ? 'service' : 'page';
             $news = News::active()->get();
-            return view('front.services', compact('title', 'data', 'modelName', 'news'));
+            return view('front.news', compact('title', 'data', 'modelName', 'news'));
         }
         return view('front.index', compact('title'));
     }
 
 
-    function services(Request $request)
-    {
-        $title = 'Service Page';
-        return view('front.service', compact('title'));
-    }
+
 }

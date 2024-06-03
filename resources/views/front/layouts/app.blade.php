@@ -1385,287 +1385,20 @@
                                     <a href="{{ route('services') }}">
                                         Services </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
+                                        @foreach ($services as $serviceKey => $serviceValue)
                                         <li>
-                                            <a href="auditing-services.html" style="font-weight: bold !important;">
-                                                <img src="{{-- asset('uploads/page_images/') --}}" width="20" height="20"
-                                                    alt="Audit & Assurance" /> Audit &
-                                                Assurance</a>
+                                            <a href="{{ route('services',$serviceValue->slug) }}" style="font-weight: bold !important;">
+                                                <img src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}" width="20" height="20"
+                                                    alt="{{ $serviceValue->title }}" /> {{ $serviceValue->title }}</a>
                                             <ul class="dropdown" style="background-color: #f4f4f4;">
+                                                @foreach ($serviceValue->pages as $pageKey => $pageValue)
                                                 <li>
-                                                    <a href="financial-audit-services.html">Financial Audit</a>
+                                                    <a href="financial{{ $pageValue->slug }}">{{ $pageValue->title }}</a>
                                                 </li>
-                                                <li>
-                                                    <a href="external-audit-services.html">External Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="internal-audit-services.html">Internal Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="risk-management-audit-services.html">Risk Management
-                                                        Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="rera-audit-services-dubai.html">RERA Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="icv-audit-in-uae.html">ICV Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="tax-audit-services.html">Tax Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="stock-audit-services.html">Stock Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="liquidation-audit-services.html">Liquidation Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="forensic-audit-services.html">Forensic Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="audit-in-free-zones-uae.html">Audit in Free Zones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="due-diligence-services.html">Due Diligence Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="it-auditing-services.html">IT Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="statutory-audit-services.html">Statutory Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="dmcc-approved-auditors.html">DMCC Approved Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="sales-audit-services.html">Sales Audit</a>
-                                                </li>
+                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="accounting-and-bookkeeping-services.html"
-                                                style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/accounting_and_bookkeeping.svg') }}"
-                                                    width="20" height="20" alt="Accounting & Bookkeeping" />
-                                                Accounting & Bookkeeping</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="accounting-services.html">Accounting Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="bookkeeping-services.html">Bookkeeping Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="hr-and-payroll-services.html">HR & Payroll</a>
-                                                </li>
-                                                <li>
-                                                    <a href="backlog-accounting-services.html">Backlog Accounting</a>
-                                                </li>
-                                                <li>
-                                                    <a href="accounting-review-services.html">Accounting Review</a>
-                                                </li>
-                                                <li>
-                                                    <a href="cfo-services.html">CFO Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="business-valuation-services.html">Business Valuation</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="business-consultancy-services.html"
-                                                style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/business-consultancy.svg') }}"
-                                                    width="20" height="20" alt="Business Consultancy" />
-                                                Business Consultancy</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="business-setup-services.html">Business Setup</a>
-                                                </li>
-                                                <li>
-                                                    <a href="mainland-company-formation-in-uae.html">Mainland Company
-                                                        Setup</a>
-                                                </li>
-                                                <li>
-                                                    <a href="business-setup-in-uae-free-zones.html">Business Setup in
-                                                        Free Zones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="business-setup-in-dubai-free-zone.html">Business Setup in
-                                                        Dubai Free Zones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="business-setup-in-ajman-free-zone.html">Business Setup in
-                                                        Ajman Free Zones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="company-formation-in-sharjah-free-zone.html">Business
-                                                        Setup in Sharjah Free Zones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="abu-dhabi-free-zone-company-formation.html">Abu Dhabi Free
-                                                        Zone Setup</a>
-                                                </li>
-                                                <li>
-                                                    <a href="offshore-company-setup-in-uae.html">Offshore Company
-                                                        Setup</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="corporate-tax-in-the-uae.html"
-                                                style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/corporate-tax.svg') }}"
-                                                    width="20" height="20" alt="Corporate Tax" /> Corporate
-                                                Tax</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="blogs/corporate-tax-services-in-uae.html">Corporate Tax
-                                                        Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blogs/corporate-tax-registration-in-uae.html">Corporate
-                                                        Tax Registration</a>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        href="blogs/corporate-tax-impact-assessment-services-in-uae.html">Corporate
-                                                        Tax Assessment</a>
-                                                </li>
-                                                <li>
-                                                    <a href="corporate-tax-audit-in-uae.html">Corporate Tax Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="corporate-tax-return-filing-in-uae.html">Corporate Tax
-                                                        Return Filing</a>
-                                                </li>
-                                                <li>
-                                                    <a href="transfer-pricing-in-uae.html">Transfer Pricing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="vat-services.html" style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/VAT-services.svg') }}"
-                                                    width="20" height="20" alt="VAT Services" /> VAT
-                                                Services</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="vat-registration-services.html">VAT Registration</a>
-                                                </li>
-                                                <li>
-                                                    <a href="vat-return-filing-services.html">VAT Return Filing</a>
-                                                </li>
-                                                <li>
-                                                    <a href="vat-refund-services.html">VAT Refund</a>
-                                                </li>
-                                                <li>
-                                                    <a href="vat-audit-services.html">VAT Audit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="vat-accounting-services.html">VAT Accounting</a>
-                                                </li>
-                                                <li>
-                                                    <a href="vat-deregistration-services.html">VAT Deregistration</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="excise-tax-services.html" style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/home/excise-tax.svg') }}"
-                                                    width="20" height="20" alt="Excise Tax" /> Excise Tax</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="excise-tax-registration-in-uae.html">Excise Tax
-                                                        Registration</a>
-                                                </li>
-                                                <li>
-                                                    <a href="excise-tax-return-filing-in-uae.html">Excise Tax Return
-                                                        Filing</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="tax-agent-in-uae.html" style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/tax-agent-in-uae.svg') }}"
-                                                    width="20" height="20" alt="Tax Agent in UAE" /> Tax Agent
-                                                in UAE</a>
-                                        </li>
-                                        <li>
-                                            <a href="tax-compliance-services.html"
-                                                style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/tax-and-compliance.svg') }}"
-                                                    width="20" height="20" alt="Tax Compliance" /> Tax
-                                                Compliance</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="tax-consultancy-services.html">Tax Consultancy
-                                                        Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="zakat-and-tax-services-in-saudi-arabia.html">Zakat and Tax
-                                                        Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="tax-residency-certificate-uae.html">Tax Residency
-                                                        Certificate UAE</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="management-consultancy-services.html"
-                                                style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/management_consultancy.svg') }}"
-                                                    width="20" height="20" alt="Management Consultancy" />
-                                                Management Consultancy</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="feasibility-study-services.html">Feasibility Study</a>
-                                                </li>
-                                                <li>
-                                                    <a href="uae-economic-substance-regulations-esr.html">Economic
-                                                        Substance Regulation (ESR)</a>
-                                                </li>
-                                                <li>
-                                                    <a href="business-bank-account-opening-services.html">Bank Account
-                                                        Opening</a>
-                                                </li>
-                                                <li>
-                                                    <a href="company-liquidation-services.html">Company Liquidation</a>
-                                                </li>
-                                                <li>
-                                                    <a href="anti-money-laundering-compliance.html">AML Compliance</a>
-                                                </li>
-                                                <li>
-                                                    <a href="ultimate-beneficial-ownership-uae.html">UBO
-                                                        Declaration</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="mergers-and-acquisitions-services.html"
-                                                style="font-weight: bold !important;">
-                                                <img src="{{ asset('front/upload/files/Services/icons/mergers_aquisitions.svg') }}"
-                                                    width="20" height="20" alt="Mergers & Acquisitions" />
-                                                Mergers & Acquisitions</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                <li>
-                                                    <a href="commercial-document-attestation-in-uae.html">Commercial
-                                                        Attestation</a>
-                                                </li>
-                                                <li>
-                                                    <a href="document-attestation-in-uae.html">Certificate & Document
-                                                        Attestation</a>
-                                                </li>
-                                                <li>
-                                                    <a href="mofa-attestation-in-uae.html">MOFA Attestation in UAE</a>
-                                                </li>
-                                                <li>
-                                                    <a href="police-clearance-certificate-attestation-in-uae.html">PCC
-                                                        Attestation in UAE</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        @endforeach                                    
                                     </ul>
                                 </li>
 
@@ -1677,7 +1410,7 @@
                                             @foreach ($services as $serviceKey => $serviceValue)
                                                 <div class="col3">
                                                     <h4 class="megamenu-col-title"><a
-                                                            href="{{ $serviceValue->slug }}"><img
+                                                            href="{{ route('services',$serviceValue->slug) }}"><img
                                                                 src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}"
                                                                 width="25" alt="{{ $serviceValue->title }}"
                                                                 height="25"
@@ -1686,108 +1419,72 @@
                                                     <ul>
                                                         @foreach ($serviceValue->pages as $pageKey => $pageValue)
                                                             <li><a
-                                                                    href="{{ $pageValue->slug }}">{{ $pageValue->title }}</a>
+                                                                    href="{{ route('services', $pageValue->slug) }}">{{ $pageValue->title }}</a>
                                                             </li>
                                                         @endforeach
                                                     </ul>
                                                 </div>
                                             @endforeach
-
                                         </div>
                                     </div>
                                 </li>
                                 <li class="">
-                                    <a href="index.html#">
+                                    <a href="#">
                                         Insights </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>
-                                            <a href="news.html" style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 News</a>
                                         </li>
                                         <li>
-                                            <a href="blogs.html" style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 Blogs</a>
                                         </li>
                                         <li>
-                                            <a href="webinars.html" style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 Webinars</a>
                                         </li>
                                         <li>
-                                            <a href="corporate-tax-questionnaire.html"
+                                            <a href="co#"
                                                 style="font-weight: bold !important;">
                                                 Corporate Tax Assessment</a>
                                         </li>
                                         <li>
-                                            <a href="client-stories.html" style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 Client Stories</a>
                                         </li>
                                         <li>
-                                            <a href="faq.html" style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 FAQs</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="">
-                                    <a href="Industries.html">
+                                    <a href="#">
                                         Industries </a>
                                 </li>
                                 <li class="">
-                                    <a href="careers.html">
+                                    <a href="#">
                                         Careers </a>
                                 </li>
                                 <li class="">
-                                    <a href="contact.html">
+                                    <a href="#">
                                         Contact </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>
-                                            <a href="locations/bms-auditing-dubai-uae.html"
+                                            <a href="#"
                                                 style="font-weight: bold !important;">
                                                 Dubai</a>
                                         </li>
                                         <li>
-                                            <a href="locations/bms-auditing-abu-dhabi-uae.html"
+                                            <a href="#"
                                                 style="font-weight: bold !important;">
-                                                Abu Dhabi</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-saudi-arabia.html"
-                                                style="font-weight: bold !important;">
-                                                Saudi Arabia</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-qatar.html"
-                                                style="font-weight: bold !important;">
-                                                Qatar</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-bahrain.html"
-                                                style="font-weight: bold !important;">
-                                                Bahrain</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-oman.html"
-                                                style="font-weight: bold !important;">
-                                                Oman</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-india.html"
-                                                style="font-weight: bold !important;">
-                                                India</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-uk.html"
-                                                style="font-weight: bold !important;">
-                                                UK</a>
-                                        </li>
-                                        <li>
-                                            <a href="locations/bms-auditing-usa.html"
-                                                style="font-weight: bold !important;">
-                                                USA</a>
+                                                Mumbai</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a
-                                        href="locations/bms-auditing-dubai-uae.html" style="color: #ffffff">Get A
+                                        href="#" style="color: #ffffff">Get A
                                         Quote</a></button>
                             </ul>
                         </nav>
