@@ -315,12 +315,10 @@
             </div>
         </section>
 
-
         <section style="background-color: #f2f3f7;">
             <div class="container purpose-container">
                 <div class="section-content">
-                    <h1 style="font-size: 24px;">Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman,
-                        India, UK, USA
+                    <h1 style="font-size: 24px;">Accounting and Audit Firm in Dubai, Mumbai
                         | <span class="text-theme-colored2">Innovate Accounts</span></h1>
                     <div class="row">
                         <div class="col-md-5 purpose_img">

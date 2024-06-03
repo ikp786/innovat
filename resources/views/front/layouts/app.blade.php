@@ -1283,6 +1283,64 @@
             }
         }
     </style>
+    <style>
+        .floating_social_media {
+            background-color: #222222;
+            display: inline-block;
+            position: fixed;
+            top: 40vh;
+            left: 0;
+            z-index: 9;
+        }
+
+        .floating_social_media .styled-icons {
+            margin-left: 0 !important;
+        }
+
+        .floating_social_media li {
+            display: block;
+        }
+
+        .floating_social_media .styled-icons a {
+            margin: 0 !important;
+            height: 40px;
+            padding-top: 5px;
+        }
+
+        @media screen and (max-width:1100px) {
+            .floating_social_media {
+                display: none;
+            }
+        }
+
+        .floating_get-a-quote {
+            background-color: #222222;
+            padding: 10px 0px 0px 10px;
+            display: inline-block;
+            position: fixed;
+            top: 40vh;
+            right: 0;
+            z-index: 9;
+        }
+
+        .floating_get-a-quote:hover {
+            background-color: #006EBB;
+        }
+
+        @media screen and (max-width:1100px) {
+            .floating_get-a-quote {
+                display: none;
+            }
+        }
+
+        .paradm {
+            margin-left: 35px !important;
+        }
+
+        .paradm2 {
+            margin-left: 20px !important;
+        }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136334816-1"></script>
     <script>
@@ -1330,10 +1388,10 @@
                                                 <div class="item">
                                                     <p class="font-15 mt-5 mb-0"><a
                                                             style="color: #006EBB; font-weight: bold;"
-                                                            href="locations/bms-auditing-dubai-uae.html">Dubai</a>
+                                                            href="#">Dubai</a>
                                                     </p>
-                                                    <a href="tel:+971 52 940 2047" class="font-13 text-white">+971
-                                                        555209267</a><br>
+                                                    <a href="tel:+971555209267"
+                                                        class="font-13 text-white">+971555209267</a><br>
                                                     <a href="mailto:teams@innovateaccounts.com"
                                                         class="font-13 text-white">teams@innovateaccounts.com</a>
                                                 </div>
@@ -1342,10 +1400,10 @@
                                                 <div class="item">
                                                     <p class="font-15 mt-5 mb-0"><a
                                                             style="color: #006EBB; font-weight: bold;"
-                                                            href="locations/bms-auditing-abu-dhabi-uae.html">Mumbai</a>
+                                                            href="#">Mumbai</a>
                                                     </p>
-                                                    <a href="tel:+971 52 997 4124" class="font-13 text-white">971
-                                                        9769702402</a><br>
+                                                    <a href="tel:+919769702402" class="font-13 text-white">+91 97 697 02
+                                                        402</a><br>
                                                     <a href="mailto:teams@innovateaccounts.com"
                                                         class="font-13 text-white">teams@innovateaccounts.com</a>
                                                 </div>
@@ -1386,19 +1444,23 @@
                                         Services </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         @foreach ($services as $serviceKey => $serviceValue)
-                                        <li>
-                                            <a href="{{ route('services',$serviceValue->slug) }}" style="font-weight: bold !important;">
-                                                <img src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}" width="20" height="20"
-                                                    alt="{{ $serviceValue->title }}" /> {{ $serviceValue->title }}</a>
-                                            <ul class="dropdown" style="background-color: #f4f4f4;">
-                                                @foreach ($serviceValue->pages as $pageKey => $pageValue)
-                                                <li>
-                                                    <a href="financial{{ $pageValue->slug }}">{{ $pageValue->title }}</a>
-                                                </li>
-                                                 @endforeach
-                                            </ul>
-                                        </li>
-                                        @endforeach                                    
+                                            <li>
+                                                <a href="{{ route('services', $serviceValue->slug) }}"
+                                                    style="font-weight: bold !important;">
+                                                    <img src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}"
+                                                        width="20" height="20"
+                                                        alt="{{ $serviceValue->title }}" />
+                                                    {{ $serviceValue->title }}</a>
+                                                <ul class="dropdown" style="background-color: #f4f4f4;">
+                                                    @foreach ($serviceValue->pages as $pageKey => $pageValue)
+                                                        <li>
+                                                            <a
+                                                                href="financial{{ $pageValue->slug }}">{{ $pageValue->title }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
@@ -1410,7 +1472,7 @@
                                             @foreach ($services as $serviceKey => $serviceValue)
                                                 <div class="col3">
                                                     <h4 class="megamenu-col-title"><a
-                                                            href="{{ route('services',$serviceValue->slug) }}"><img
+                                                            href="{{ route('services', $serviceValue->slug) }}"><img
                                                                 src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}"
                                                                 width="25" alt="{{ $serviceValue->title }}"
                                                                 height="25"
@@ -1445,8 +1507,7 @@
                                                 Webinars</a>
                                         </li>
                                         <li>
-                                            <a href="co#"
-                                                style="font-weight: bold !important;">
+                                            <a href="co#" style="font-weight: bold !important;">
                                                 Corporate Tax Assessment</a>
                                         </li>
                                         <li>
@@ -1472,19 +1533,17 @@
                                         Contact </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>
-                                            <a href="#"
-                                                style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 Dubai</a>
                                         </li>
                                         <li>
-                                            <a href="#"
-                                                style="font-weight: bold !important;">
+                                            <a href="#" style="font-weight: bold !important;">
                                                 Mumbai</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a
-                                        href="#" style="color: #ffffff">Get A
+                                <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a href="#"
+                                        style="color: #ffffff">Get A
                                         Quote</a></button>
                             </ul>
                         </nav>
@@ -1492,64 +1551,7 @@
                 </div>
             </div>
         </header>
-        <style>
-            .floating_social_media {
-                background-color: #222222;
-                display: inline-block;
-                position: fixed;
-                top: 40vh;
-                left: 0;
-                z-index: 9;
-            }
 
-            .floating_social_media .styled-icons {
-                margin-left: 0 !important;
-            }
-
-            .floating_social_media li {
-                display: block;
-            }
-
-            .floating_social_media .styled-icons a {
-                margin: 0 !important;
-                height: 40px;
-                padding-top: 5px;
-            }
-
-            @media screen and (max-width:1100px) {
-                .floating_social_media {
-                    display: none;
-                }
-            }
-
-            .floating_get-a-quote {
-                background-color: #222222;
-                padding: 10px 0px 0px 10px;
-                display: inline-block;
-                position: fixed;
-                top: 40vh;
-                right: 0;
-                z-index: 9;
-            }
-
-            .floating_get-a-quote:hover {
-                background-color: #006EBB;
-            }
-
-            @media screen and (max-width:1100px) {
-                .floating_get-a-quote {
-                    display: none;
-                }
-            }
-
-            .paradm {
-                margin-left: 35px !important;
-            }
-
-            .paradm2 {
-                margin-left: 20px !important;
-            }
-        </style>
         <div class="floating_social_media">
             <ul class="styled-icons clearfix">
                 <li><a aria-label="Innovate Accounts facebook account"
