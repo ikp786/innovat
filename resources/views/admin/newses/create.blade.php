@@ -126,7 +126,7 @@
     <script>
         $(document).ready(function() {
             $("#newsForm").on("submit", function() {
-                $("#description").val($(".editor").html());
+                $("#description").val($(".ql-editor").html());
             })
         })
     </script>

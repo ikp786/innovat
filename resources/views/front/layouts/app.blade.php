@@ -180,7 +180,7 @@
 							"latitude": "24.7848144",
 							"longitude": "54.5983511"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting and Audit Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "info@Innovate Accountsauditing.com",
 						"telephone": "+971 52 997 4124",
 						"openingHours": [
@@ -1382,7 +1382,7 @@
                                 </li>
 
                                 <li class="mobile_menu">
-                                    <a href="{{-- route('service') --}}">
+                                    <a href="{{ route('services') }}">
                                         Services </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>

@@ -129,7 +129,7 @@
     <script>
         $(document).ready(function() {
             $("#pageForm").on("submit", function() {
-                $("#description").val($(".editor").html());
+                $("#description").val($(".ql-editor").html());
             })
         })
     </script>

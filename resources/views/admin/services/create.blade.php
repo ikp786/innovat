@@ -131,7 +131,7 @@
     <script>
         $(document).ready(function() {
             $("#serviceForm").on("submit", function() {
-                $("#description").val($(".editor").html());
+                $("#description").val($(".ql-editor").html());
             })
         })
     </script>
