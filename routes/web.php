@@ -11,6 +11,37 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('services/{slug?}', 'services')->name('services');
 });
 
+
+Route::get('/composer-install/{password}', function ($passsword) {
+    if ($passsword == 'Admin@123') {
+        $output = [];
+        $returnVar = null;
+        // Run Composer install
+        exec('composer install 2>&1', $output, $returnVar);
+
+        // Return output as a response
+        return response()->json([
+            'output' => $output,
+            'return_var' => $returnVar
+        ]);
+    } else {
+        return 'something went wrong';
+    }
+});
+
+Route::get('/composer-update', function () {
+    $output = [];
+    $returnVar = null;
+    // Run Composer update
+    exec('composer update 2>&1', $output, $returnVar);
+
+    // Return output as a response
+    return response()->json([
+        'output' => $output,
+        'return_var' => $returnVar
+    ]);
+});
+
 Route::get('/run-migrations', function () {
     try {
         Artisan::call('migrate');
