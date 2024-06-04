@@ -29,17 +29,22 @@ Route::get('/composer-install/{password}', function ($passsword) {
     }
 });
 
-Route::get('/composer-update', function () {
-    $output = [];
-    $returnVar = null;
-    // Run Composer update
-    exec('composer update 2>&1', $output, $returnVar);
+Route::get('/composer-update/{password}', function ($passsword) {
+    if ($passsword == 'Admin@123') {
 
-    // Return output as a response
-    return response()->json([
-        'output' => $output,
-        'return_var' => $returnVar
-    ]);
+        $output = [];
+        $returnVar = null;
+        // Run Composer update
+        exec('composer update 2>&1', $output, $returnVar);
+
+        // Return output as a response
+        return response()->json([
+            'output' => $output,
+            'return_var' => $returnVar
+        ]);
+    } else {
+        return 'something went wrong';
+    }
 });
 
 Route::get('/run-migrations', function () {
