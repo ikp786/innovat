@@ -48,7 +48,8 @@
                                 <h5 class="widget-title font-20 text-black pt-0 line-bottom" style="font-weight: 600;">
                                     Latest Blogs</h5>
                                 <div class="latest-posts">
-                                    <article class="post media-post clearfix pb-0 mb-25"
+                                    
+                                    {{-- <article class="post media-post clearfix pb-0 mb-25"
                                         style="font-family: Poppins,sans-serif;">
                                         <div class="post-right">
                                             <h5 class="post-title mt-0 mb-0"><a class="font-15"
@@ -58,40 +59,8 @@
                                                     Risks</a>
                                             </h5>
                                         </div>
-                                    </article>
-                                    <article class="post media-post clearfix pb-0 mb-25"
-                                        style="font-family: Poppins,sans-serif;">
-                                        <div class="post-right">
-                                            <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                    style="font-family: Poppins,sans-serif;"
-                                                    href="uae-aed-10000-penalty-late-corporate-tax-registration.html">UAE
-                                                    Introduces AED 10,000 Penalty for Late Corporate Tax Registration:
-                                                    Insights from BMS Auditing</a>
-                                            </h5>
-                                        </div>
-                                    </article>
-                                    <article class="post media-post clearfix pb-0 mb-25"
-                                        style="font-family: Poppins,sans-serif;">
-                                        <div class="post-right">
-                                            <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                    style="font-family: Poppins,sans-serif;"
-                                                    href="decoding-ZATCAs-proposed-vat-amendments.html">Decoding ZATCA's
-                                                    Proposed VAT Amendments: Your Roadmap to Retroactive Recovery with BMS
-                                                    Auditing Insight</a>
-                                            </h5>
-                                        </div>
-                                    </article>
-                                    <article class="post media-post clearfix pb-0 mb-25"
-                                        style="font-family: Poppins,sans-serif;">
-                                        <div class="post-right">
-                                            <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                    style="font-family: Poppins,sans-serif;"
-                                                    href="complete-guide-to-joint-venture-planning.html">A Complete Guide
-                                                    to Joint Venture Planning</a>
-                                            </h5>
-                                        </div>
-                                    </article>
-
+                                    </article> --}}
+                                    
                                 </div>
                             </div>
                             <div class="widget bordered mb-20">
@@ -120,15 +89,12 @@
                                     <div>
                                         <ul class="list ml-0">
                                             <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                    class="font-15 text-black" href="category/uae.html">UAE <span>
+                                                    class="font-15 text-black" href="category/uae.html">Dubai <span>
                                                         (72)
                                                     </span></a></li>
                                             <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                    class="font-15 text-black" href="category/vat.html">VAT <span>
+                                                    class="font-15 text-black" href="category/vat.html">Mumbai <span>
                                                         (46)</span></a></li>
-                                            <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                    class="font-15 text-black" href="category/dubai.html">Dubai <span>
-                                                        (43)</span></a></li>
                                         </ul>
                                     </div>
                                 </div>

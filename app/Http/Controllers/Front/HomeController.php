@@ -13,8 +13,8 @@ class HomeController extends Controller
     function index(Request $request, $slug = null)
     {
         $title = 'Home Page';
-
-        return view('front.index', compact('title'));
+        $services = Service::active()->get();
+        return view('front.index', compact('title', 'services'));
     }
 
     function services(Request $request, $slug = null)
@@ -38,17 +38,20 @@ class HomeController extends Controller
     {
         $title = 'News Page';
         if ($slug) {
-            $data = Service::whereSlug($slug)->first() ?? Page::whereSlug($slug)->first();
-            if (!$data) {
+            $news = News::whereSlug($slug)->first();
+            if (!$news) {
                 abort(404);
             }
-            $modelName = $data instanceof Service ? 'service' : 'page';
-            $news = News::active()->get();
-            return view('front.news', compact('title', 'data', 'modelName', 'news'));
+            $title = $news->title;
+            return view('front.news.detail', compact('title', 'news'));
         }
-        return view('front.index', compact('title'));
+        // Check if the request is an AJAX request
+        if ($request->ajax()) {
+            // dd($request->all());
+            $news = News::active()->paginate(1); // Adjust the number of items per page as needed
+            return view('front.news.pagination', compact('news'))->render();
+        }
+        $news = News::active()->paginate(1);
+        return view('front.news.index', compact('title', 'news'));
     }
-
-
-
 }

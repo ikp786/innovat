@@ -14,7 +14,7 @@
                                 announced the introduction of a 9% federal corporate tax in UAE on business profits
                                 with a threshold of AED 375,000. Our designated tax team of corporate tax advisors
                                 will provide the required assistance and clear your queries on corporate tax.</p>
-                            <a href="corporate-tax-in-the-uae.html"
+                            <a href="#"
                                 class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Corporate Tax in UAE</a>
                             <div>
                                 <a href="#contact_form" class="btn btn-dark btn-theme-colored3 btn-xl mr-10 thcolor">Book
@@ -34,7 +34,7 @@
                                 Certification body in UAE, We are committed to providing businesses with reliable
                                 ICV Audit and Accounting services to help you secure ICV certification, giving your
                                 business a competitive edge in the market.</p>
-                            <a href="icv-audit-in-uae.html" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">ICV
+                            <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">ICV
                                 Certificate</a>
                         </div>
                     </li>
@@ -48,7 +48,7 @@
                                 for businesses to meet their regulatory obligations and avoid penalties. With IDENFO
                                 direct verification, we are the most trustable provider of top-quality AML
                                 Compliance Services to offer effective solutions for you!</p>
-                            <a href="anti-money-laundering-compliance.html"
+                            <a href="#"
                                 class="btn btn-dark btn-theme-colored2 btn-xl mr-10">AML Compliance</a>
                         </div>
                     </li>
@@ -65,7 +65,7 @@
                                 insight
                                 and
                                 promote transparency.</p>
-                            <a href="auditing-services.html" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Audit &
+                            <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Audit &
                                 Assurance</a>
                         </div>
                     </li>
@@ -212,101 +212,22 @@
                     <div class="section-content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="auditing-services.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/audit.svg') }}" width="50"
-                                                    height="50" loading="lazy" alt="Audit"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">Audit
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="accounting-and-bookkeeping-services.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/bookkeeping.svg') }}"
-                                                    width="50" height="50" loading="lazy"
-                                                    alt="Accounting/Bookkeeping"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">
-                                                Accounting/Bookkeeping</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="business-consultancy-services.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/business-consultancy.svg') }}"
-                                                    width="50" height="50" loading="lazy"
-                                                    alt="Business Consultancy"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">
-                                                Business
-                                                Consultancy</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="feasibility-study-services.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/feasibilty-study.svg') }}"
-                                                    width="50" height="50" loading="lazy"
-                                                    alt="Feasibility Study"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">
-                                                Feasibility
-                                                Study</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="vat-services.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-sm-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/vat.svg') }}" width="50"
-                                                    height="50" loading="lazy" alt="VAT"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">VAT
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="excise-tax-services.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/excise-tax.svg') }}"
-                                                    width="50" height="50" loading="lazy" alt="Excise tax"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">Excise
-                                                tax</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="corporate-tax-in-the-uae.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-sm-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/corporate-tax.svg') }}"
-                                                    width="50" height="50" loading="lazy"
-                                                    alt="Corporate Tax"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">
-                                                Corporate
-                                                Tax</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
-                                    <a href="tax-agent-in-uae.html">
-                                        <div
-                                            class="service-box text-center pb-30 pt-30 mb-sm-30 bg-silver-light hover-box-shadow">
-                                            <i><img src="{{ asset('front/upload/files/home/tax-agent.svg') }}"
-                                                    width="50" height="50" loading="lazy" alt="Tax Agent"></i>
-                                            <h3 class="media-heading heading font-weight-600 pt-15 font-19">Tax
-                                                Agent</h3>
-                                        </div>
-                                    </a>
-                                </div>
+                                @forelse($services as $key => $service)
+                                    <div class="col-lg-3 col-md-4 col-sm-6 service_grid">
+                                        <a href="{{ route('services', $service->slug) }}">
+                                            <div
+                                                class="service-box text-center pb-30 pt-30 mb-30 bg-silver-light hover-box-shadow">
+                                                <i><img src="{{ asset('uploads/service_icons/' . $service->icon) }}"
+                                                        width="50" height="50" loading="lazy" alt="Audit"></i>
+                                                <h3 class="media-heading heading font-weight-600 pt-15 font-19">
+                                                    {{ $service->title }}
+                                                </h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @empty
+                                    <h2>Service are not avaible</h2>
+                                @endforelse
                             </div>
                         </div>
                     </div>
@@ -333,10 +254,8 @@
                             <div class="line-bottom-theme-colored2 mb-10"></div>
                             <p class="text-black font-15 pb-10 text-justify">Innovate Accounts is the best
                                 <b>Accounting and
-                                    Audit Firm in <a class="text-black"
-                                        href="#">Dubai</a>, <a class="text-black"
+                                    Audit Firm in <a class="text-black" href="#">Dubai</a>, <a class="text-black"
                                         href="#">Mumbai</a>,
-                                    
                                 </b>.
                                 Our services include <a class="text-theme-colored2 text-underline"
                                     href="auditing-services.html">Audit</a>, <a class="text-theme-colored2 text-underline"

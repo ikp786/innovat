@@ -36,7 +36,7 @@
         content="Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.">
     <meta name="twitter:image" content="{{ asset('front/upload/files/bms-auditing.svg') }}">
     <!-- Favicon and Touch Icons -->
-    {!! Html::element('link')->attribute('rel', 'shortcut icon')->attribute('href', asset('/front/upload/files/favicon/favicon.ico'))->attribute('type', 'image/x-icon') !!}
+    {!! Html::element('link')->attribute('rel', 'shortcut icon')->attribute('href', asset('/front/upload/files/favicon/favicon.png'))->attribute('type', 'image/x-icon') !!}
     {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon.png')) !!}
     {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '57x57')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-57x57.png')) !!}
     {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '72x72')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-72x72.png')) !!}
@@ -51,7 +51,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-
+    @stack('styles')
     <meta name="google-site-verification" content="OIKJ3eKwEnRYUezb2doKPXs3ManLHnDESmsYSunmFAg" />
 
     <link rel="canonical" href="index.html" />
@@ -1421,7 +1421,8 @@
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white nav-lg">
                     <div class="container menu_container">
                         <nav id="menuzord-right" class="menuzord default no-bg">
-                            <a class="menuzord-brand switchable-logo pull-left flip mt-20 pt-5" href="index.html">
+                            <a class="menuzord-brand switchable-logo pull-left flip mt-20 pt-5"
+                                href="{{ route('home') }}">
                                 <img id="Innovate Accountslogo" class="logo-default"
                                     src="{{ asset('front/upload/files/Innovate-H5.png') }}" width="270"
                                     height="70" alt="Innovate Accounts logo">
@@ -1455,7 +1456,7 @@
                                                     @foreach ($serviceValue->pages as $pageKey => $pageValue)
                                                         <li>
                                                             <a
-                                                                href="financial{{ $pageValue->slug }}">{{ $pageValue->title }}</a>
+                                                                href="{{ route('services', $pageValue->slug) }}">{{ $pageValue->title }}</a>
                                                         </li>
                                                     @endforeach
                                                 </ul>
@@ -1495,7 +1496,7 @@
                                         Insights </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>
-                                            <a href="#" style="font-weight: bold !important;">
+                                            <a href="{{route('news')}}" style="font-weight: bold !important;">
                                                 News</a>
                                         </li>
                                         <li>
@@ -1585,8 +1586,9 @@
                             height="35" alt="Innovate Accounts facebook account"></a></li>
             </ul>
         </div>
-
-        @stack('content')
+        <div class="main-content">
+            @stack('content')
+        </div>
         <!-- Footer -->
         <footer id="footer" class="footer">
             <div class="container pt-60 pb-0">
@@ -1631,8 +1633,7 @@
                         <div class="widget dark">
                             <h4 class="widget-title line-bottom-theme-colored2">Latest Blogs</h4>
                             <div class="latest-posts">
-
-                                <article class="post media-post clearfix pb-0 mb-10">
+                                {{-- <article class="post media-post clearfix pb-0 mb-10">
                                     <div class="post-right">
                                         <h5 class="post-title mt-0 mb-5"><a
                                                 href="blogs/the-power-of-feasibility-studies-in-mitigating-investment-risks.html">Decoding
@@ -1640,43 +1641,7 @@
                                                 Risks</a>
                                         </h5>
                                     </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-10">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-5"><a
-                                                href="blogs/uae-aed-10000-penalty-late-corporate-tax-registration.html">UAE
-                                                Introduces AED 10,000 Penalty for Late Corporate Tax Registration:
-                                                Insights from Innovate Accounts</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-10">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-5"><a
-                                                href="blogs/decoding-ZATCAs-proposed-vat-amendments.html">Decoding
-                                                ZATCA's Proposed VAT Amendments: Your Roadmap to Retroactive Recovery
-                                                with Innovate Accounts Insight</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-10">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-5"><a
-                                                href="blogs/complete-guide-to-joint-venture-planning.html">A Complete
-                                                Guide to Joint Venture Planning</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-10">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-5"><a
-                                                href="blogs/establishing-100-percentage-foreign-owned-company-in-saudi-arabia.html">Unlocking
-                                                Opportunities: Establishing a 100% Foreign-Owned Company in Saudi
-                                                Arabia</a>
-                                        </h5>
-                                    </div>
-                                </article>
-
+                                </article> --}}
                             </div>
                         </div>
                     </div>
@@ -1686,14 +1651,11 @@
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-8 col-md-8">
                                     <ul class="footer-link ml-0">
-                                        <li><a href="audit-services.html">Audit & Assurance</a></li>
-                                        <li><a href="accounting-and-bookkeeping-services.html">Accounting &
-                                                Bookkeeping</a></li>
-                                        <li><a href="vat-services.html">VAT Services</a></li>
-                                        <li><a href="tax-agent-in-uae.html">Tax Agent</a></li>
-                                        <li><a href="corporate-tax-in-the-uae.html">Corporate Tax</a></li>
-                                        <li><a href="business-consultancy-services.html">Business
-                                                Consultancy</a></li>
+                                        @forelse($services->take(6) as $key => $val)
+                                            <li><a href="{{ route('services', $val->slug) }}"> {{ $val->title }}
+                                                </a></li>
+                                        @empty
+                                        @endforelse
                                     </ul>
                                 </div>
                             </div>
@@ -1772,21 +1734,10 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="pb-20" style="font-size: 18px">
-                            <span class="footer_text widget-title line-bottom-theme-colored2"><a
-                                    href="locations.html">Our Locations</a> :</span>
-                            <a href="locations/bms-auditing-dubai-uae.html"
-                                class="csr pt-8 pb-8 footer_text">Dubai</a>
-                            | <a href="locations/bms-auditing-abu-dhabi-uae.html"
-                                class="csr pt-8 pb-8 footer_text">Abu Dhabi</a>
-                            | <a href="locations/bms-auditing-saudi-arabia.html"
-                                class="csr pt-8 pb-8 footer_text">Saudi Arabia</a>
-                            | <a href="locations/bms-auditing-qatar.html" class="csr pt-8 pb-8 footer_text">Qatar</a>
-                            | <a href="locations/bms-auditing-bahrain.html"
-                                class="csr pt-8 pb-8 footer_text">Bahrain</a>
-                            | <a href="locations/bms-auditing-oman.html" class="csr pt-8 pb-8 footer_text">Oman</a>
-                            | <a href="locations/bms-auditing-india.html" class="csr pt-8 pb-8 footer_text">India</a>
-                            | <a href="locations/bms-auditing-uk.html" class="csr pt-8 pb-8 footer_text">UK</a>
-                            | <a href="locations/bms-auditing-usa.html" class="csr pt-8 pb-8 footer_text">USA</a>
+                            <span class="footer_text widget-title line-bottom-theme-colored2"><a href="#">Our
+                                    Locations</a> :</span>
+                            <a href="#" class="csr pt-8 pb-8 footer_text">Mumbai</a>
+                            | <a href="#" class="csr pt-8 pb-8 footer_text">Dubai</a>
                         </div>
                     </div>
                 </div>
@@ -2211,7 +2162,7 @@
                 }
             }
         </script>
-
+@stack('scripts')
 </body>
 
 <!-- Mirrored from www.Innovate Accountsauditing.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 08:57:04 GMT -->

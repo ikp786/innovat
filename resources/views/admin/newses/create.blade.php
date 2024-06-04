@@ -89,9 +89,8 @@
                                 <div class="col-sm-12 col-12 mb-3">
                                     <div id="full-wrapper">
                                         <div id="full-container">
-                                            <div class="editor">
-                                                {!! old('description', $news->description ?? '') !!}
-                                            </div>
+                                            <div class="editor" style="height: 200px;">
+                                                {!! $news->description !!}
                                         </div>
                                         @error('description')
                                             <span class="text-danger">{{ $message }}</span>
