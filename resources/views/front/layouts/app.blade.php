@@ -1755,10 +1755,9 @@
             <div class="footer-bottom" data-bg-color="#2B3037">
                 <div class="container pt-20 pb-20">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <p class="font-14 text-white-light m-0">&copy; Innovat Accounting & Auditing LLC Dubai
-                                Mainland Company | All Rights Reserved <span
-                                    class="text-white">innovat-auditing</span>. All Rights Reserved</p>
+                                Mainland Company | All Rights Reservedinnovat-auditing . All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
