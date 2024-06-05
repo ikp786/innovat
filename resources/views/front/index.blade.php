@@ -140,7 +140,7 @@
                 </ul>
             </div>
         </section>
-        <section class="clients bg-white" style="height: 90px; overflow-y: hidden">
+        {{-- <section class="clients bg-white" style="height: 90px; overflow-y: hidden">
             <div class="container pt-10 pb-10">
                 <div class="row">
                     <div class="col-md-12">
@@ -148,24 +148,7 @@
                             aria-label="country contact slide">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    {{-- <li class="splide__slide">
-                                        <div class="item getintouch">
-                                            <h3 class="font-18 mt-10 mb-10"><a style="color: #006EBB; font-weight: bold;"
-                                                    href="#">{{ ucfirst(config('constants.locations.dubai.name')) }}
-                                                </a>
-                                            </h3>
-                                            <a href="tel:+971 52 940 2047" class="text-black">{{ ucfirst(config('constants.locations.dubai.phone')) }}</a>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div class="item getintouch">
-                                            <h3 class="font-18 mt-10 mb-10"><a style="color: #006EBB; font-weight: bold;"
-                                                    href="#">{{ ucfirst(config('constants.locations.mumbai.name')) }}</a>
-                                            </h3>
-                                            <a href="tel:+971 52 997 4124" class="text-black">{{ ucfirst(config('constants.locations.dubai.phone')) }}</a>
-                                        </div>
-                                    </li> --}}
-
+                                  
                                     @foreach (config('constants.locations') as $locationKey => $location)
                                         <li class="splide__slide">
                                             <div class="item getintouch">
@@ -185,7 +168,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section id="team" class="bg-white" style="padding-top: 20px;">
             <div class="container pt-0 pb-20">

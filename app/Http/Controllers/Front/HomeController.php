@@ -43,7 +43,8 @@ class HomeController extends Controller
                 abort(404);
             }
             $title = $news->title;
-            return view('front.news.detail', compact('title', 'news'));
+            $newsList = News::active()->paginate(10);
+            return view('front.news.detail', compact('title', 'news','newsList'));
         }
         // Check if the request is an AJAX request
         if ($request->ajax()) {
