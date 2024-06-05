@@ -32,7 +32,7 @@
                                             {{ $value->title }}</h3>
                                         <p class="text-black">{{ date('d F Y', strtotime($value->created_at)) }}
                                             <!-- <span class="text-theme-colored2">
-                                                BMS Auditing Oman </span> -->
+                                                Innovate Accounts Oman </span> -->
                                         </p>
                                         <p class="mb-20 text-black">{{ $value->sort_description }}</p>
                                         <a href="{{ route('news', $value->slug) }}">

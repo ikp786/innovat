@@ -1436,7 +1436,7 @@
                                         Home </a>
                                 </li>
                                 <li class="">
-                                    <a href="{{-- route('about-us') --}}">
+                                    <a href="{{ route('about-us') }}">
                                         About Us </a>
                                 </li>
 
@@ -1748,18 +1748,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <p class="font-14 text-white-light m-0">Copyright &copy;2024 <span
-                                    class="text-white">bms-auditing</span>. All Rights Reserved</p>
+                                    class="text-white">innovat-auditing</span>. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        <a aria-label="contact us on telegram" href="https://telegram.me/Innovate Accountsauditing"
-            class="telegram_mobile" id="telegramContact" target="_blank" rel="noreferrer">
-            <img style="width: 100%" height="65" width="65"
-                src="{{ asset('front/upload/icons/telegram_logo.svg') }}" loading="lazy"
-                alt="Innovate Accounts Telegram">
-        </a>
+        
         <a aria-label="contact us on whatsapp"
             href="https://api.whatsapp.com/send?phone=971 555209267&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             class="whatsapp_mobile" id="whatsappContact" target="_blank" rel="noreferrer">

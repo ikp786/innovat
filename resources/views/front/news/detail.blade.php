@@ -96,7 +96,7 @@
                         <h1 class="text-black font-Poppins text-justify mt-0 font-30 font-weight-700">
                             {{ $news->title }}
                         </h1>
-                        {{-- <p class="text-black"><b>By BMS AUDITING</b></p> --}}
+                        {{-- <p class="text-black"><b>By Innovate Accounts</b></p> --}}
                         <div class="text-black">
                             <div class="social_share"
                                 onclick="facebook_share({{ route('news', $news->slug) }})">
@@ -168,7 +168,7 @@
                                             style="font-family: Poppins,sans-serif;"
                                             href="../blogs/uae-aed-10000-penalty-late-corporate-tax-registration.html">UAE
                                             Introduces AED 10,000 Penalty for Late Corporate Tax Registration: Insights from
-                                            BMS Auditing</a>
+                                            Innovate Accounts</a>
                                     </h5>
                                 </div>
                             </article>
@@ -177,7 +177,7 @@
                                     <h5 class="post-title mt-0 mb-0"><a class="font-15"
                                             style="font-family: Poppins,sans-serif;"
                                             href="../blogs/decoding-ZATCAs-proposed-vat-amendments.html">Decoding ZATCA's
-                                            Proposed VAT Amendments: Your Roadmap to Retroactive Recovery with BMS Auditing
+                                            Proposed VAT Amendments: Your Roadmap to Retroactive Recovery with Innovate Accounts
                                             Insight</a>
                                     </h5>
                                 </div>

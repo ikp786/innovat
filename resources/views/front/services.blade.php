@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 right_side_bar">
-                        <a style="color: #fff;" href="../locations/bms-auditing-dubai-uae.html">
+                        <a style="color: #fff;" href="#">
                             <div class="mb-20" style="text-align: center;background: #e03e2d;padding: 7px;">
                                 <button
                                     class="btn btn-outline-primary sear"style="border-radius: 0px;background: #e03e2d;padding: 7px;">Get
@@ -74,7 +74,7 @@
                                             <div class="post-right">
                                                 <h5 class="post-title mt-0 mb-0"><a class="font-15"
                                                         style="font-family: Poppins,sans-serif;"
-                                                        href="#">{{ $newsVal->title }}</a>
+                                                        href="{{ route( 'news',$newsVal->slug) }}">{{ $newsVal->title }}</a>
                                                 </h5>
                                             </div>
                                         </article>
@@ -89,11 +89,11 @@
                                     <div>
                                         <ul class="list ml-0">
                                             <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                    class="font-15 text-black" href="category/uae.html">Dubai <span>
+                                                    class="font-15 text-black" href="#">Dubai <span>
                                                         (72)
                                                     </span></a></li>
                                             <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                    class="font-15 text-black" href="category/vat.html">Mumbai <span>
+                                                    class="font-15 text-black" href="#">Mumbai <span>
                                                         (46)</span></a></li>
                                         </ul>
                                     </div>

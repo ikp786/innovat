@@ -6,16 +6,16 @@
                 <ul class="splide__list">
                     <li class="splide__slide">
                         <img width="100%" height="100%" loading="lazy"
-                            src="{{ asset('front/upload/files/slider/desktop/corporate-tax7b30.html?v=4') }}"
-                            alt="Corporate Tax in UAE" />
+                            src="{{ asset('front/upload/files/slider/tax.jpg') }}" alt="Corporate Tax in UAE" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Corporate Tax in UAE</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">Ministry of Finance has
-                                announced the introduction of a 9% federal corporate tax in UAE on business profits
-                                with a threshold of AED 375,000. Our designated tax team of corporate tax advisors
-                                will provide the required assistance and clear your queries on corporate tax.</p>
-                            <a href="#"
-                                class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Corporate Tax in UAE</a>
+                            <p class="text-black text-justify" style="max-width: 500px;">The Ministry of Finance has
+                                announced a 9% federal corporate tax on business profits in the UAE, applicable to earnings
+                                exceeding AED 375,000. Our dedicated team of corporate tax advisors is ready to assist you
+                                with any questions and provide the necessary support regarding corporate tax compliance.
+
+                            </p>
+                            <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Corporate Tax in UAE</a>
                             <div>
                                 <a href="#contact_form" class="btn btn-dark btn-theme-colored3 btn-xl mr-10 thcolor">Book
                                     Free
@@ -30,10 +30,10 @@
                             alt="audit and assurance" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">ICV</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">As an ADNOC approved ICV
-                                Certification body in UAE, We are committed to providing businesses with reliable
-                                ICV Audit and Accounting services to help you secure ICV certification, giving your
-                                business a competitive edge in the market.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">As an ADNOC-approved ICV
+                                Certification body in the UAE, we are dedicated to offering dependable ICV Audit and
+                                Accounting services. Our goal is to assist businesses in obtaining ICV certification,
+                                ensuring a competitive advantage in the market.</p>
                             <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">ICV
                                 Certificate</a>
                         </div>
@@ -44,12 +44,11 @@
                             alt="audit and assurance" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">AML Compliance</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">AML compliance is crucial
-                                for businesses to meet their regulatory obligations and avoid penalties. With IDENFO
-                                direct verification, we are the most trustable provider of top-quality AML
-                                Compliance Services to offer effective solutions for you!</p>
-                            <a href="#"
-                                class="btn btn-dark btn-theme-colored2 btn-xl mr-10">AML Compliance</a>
+                            <p class="text-black text-justify" style="max-width: 500px;">Ensuring AML compliance is
+                                essential for businesses to fulfill their regulatory obligations and avoid penalties.
+                                Through IDENFO direct verification, we provide reliable and high-quality AML Compliance
+                                Services, delivering effective solutions for your needs!</p>
+                            <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">AML Compliance</a>
                         </div>
                     </li>
                     <li class="splide__slide">
@@ -58,13 +57,10 @@
                             alt="audit and assurance" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Audit & Assurance</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">With a focus that is
-                                specific to
-                                each business and industry, our audit procedures are tailored to the operations and
-                                reporting requirements of clients. Through our audit and assurance work, we deliver
-                                insight
-                                and
-                                promote transparency.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">Our audit procedures are customized
+                                to meet the unique operations and reporting requirements of each business and industry.
+                                Through our audit and assurance services, we provide valuable insights and promote
+                                transparency.</p>
                             <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Audit &
                                 Assurance</a>
                         </div>
@@ -75,14 +71,10 @@
                             alt="Accounting & Bookkeeping" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Accounting & Bookkeeping</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">Our
-                                professional chartered
-                                accountants aim to look into the broad picture of the client’s business regardless
-                                of the
-                                size & complexity of the figures. We help our clients to meet their compliance
-                                obligations
-                                by
-                                following international standards.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">Our professional chartered
+                                accountants take a comprehensive view of our clients' businesses, regardless of size or
+                                complexity. We assist clients in meeting their compliance obligations by adhering to
+                                international standards.</p>
                             <a href="accounting-and-bookkeeping-services.html"
                                 class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Accounting & Bookkeeping</a>
                         </div>
@@ -93,13 +85,10 @@
                             alt="VAT Services" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">VAT Services</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">VAT rules can be complex
-                                and the
-                                implications are not always considered. Implementation of VAT needs careful planning
-                                for its
-                                success. Our dedicated VAT team will help you consider every stage of the
-                                implementation
-                                process and beyond.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">VAT regulations can be intricate,
+                                and their implications are often overlooked. Successful VAT implementation requires
+                                meticulous planning. Our dedicated VAT team will guide you through every stage of the
+                                implementation process and beyond.</p>
                             <a href="vat-services.html" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">VAT
                                 Services</a>
                         </div>
@@ -110,14 +99,12 @@
                             alt="Tax & Compliance" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Tax & Compliance</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">Our globally coordinated
-                                tax
-                                specialists’ offer connected services across all tax disciplines to help you thrive
-                                in an
-                                era of rapid change. We address a variety of business needs and help organizations
-                                align
-                                their
-                                businesses in a more tax efficient manner.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">Our globally coordinated tax
+                                specialists provide integrated services across all tax disciplines to help you succeed in a
+                                rapidly changing environment. We address diverse business needs and assist organizations in
+                                aligning their operations to be more tax efficient.
+
+                            </p>
                             <a href="tax-compliance-services.html" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Tax
                                 & Compliance</a>
                         </div>
@@ -128,15 +115,10 @@
                             alt="business consultancy" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Business Consultancy</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">Our business consultants
-                                are
-                                specialist practitioners who can not only advise you on what to do, but will also be
-                                a part
-                                of the delivering the answer. We can help you to make better decisions, reduce costs
-                                and
-                                build a more effective organization. Build a more effective organization to take
-                                your
-                                business to greater heights.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">Our business consultants are
+                                expert practitioners who not only provide advice but also actively participate in delivering
+                                solutions. We help you make better decisions, reduce costs, and build a more effective
+                                organization, enabling your business to reach new heights.</p>
                             <a href="business-consultancy-services.html"
                                 class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Business Consultancy</a>
                         </div>
@@ -147,10 +129,10 @@
                             alt="Corporate Tax in UAE" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Excise Tax Services</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">UAE government introduced
-                                excise tax on carbonated drinks, tobacco products and energy drinks. We have a
-                                dedicated excise tax team who have in-depth experience and can support you in excise
-                                tax registration and filing.</p>
+                            <p class="text-black text-justify" style="max-width: 500px;">The UAE government has
+                                implemented an excise tax on carbonated drinks, tobacco products, and energy drinks. Our
+                                dedicated excise tax team, with extensive experience, can assist you with excise tax
+                                registration and filing.</p>
                             <a href="excise-tax-services.html" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Excise
                                 Tax Services</a>
                         </div>
@@ -166,22 +148,37 @@
                             aria-label="country contact slide">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="splide__slide">
+                                    {{-- <li class="splide__slide">
                                         <div class="item getintouch">
                                             <h3 class="font-18 mt-10 mb-10"><a style="color: #006EBB; font-weight: bold;"
-                                                    href="#">Dubai</a>
+                                                    href="#">{{ ucfirst(config('constants.locations.dubai.name')) }}
+                                                </a>
                                             </h3>
-                                            <a href="tel:+971 52 940 2047" class="text-black">+971 55 520 9267</a>
+                                            <a href="tel:+971 52 940 2047" class="text-black">{{ ucfirst(config('constants.locations.dubai.phone')) }}</a>
                                         </div>
                                     </li>
                                     <li class="splide__slide">
                                         <div class="item getintouch">
                                             <h3 class="font-18 mt-10 mb-10"><a style="color: #006EBB; font-weight: bold;"
-                                                    href="#">Mumbai</a>
+                                                    href="#">{{ ucfirst(config('constants.locations.mumbai.name')) }}</a>
                                             </h3>
-                                            <a href="tel:+971 52 997 4124" class="text-black">+91 97 6970 2402</a>
+                                            <a href="tel:+971 52 997 4124" class="text-black">{{ ucfirst(config('constants.locations.dubai.phone')) }}</a>
                                         </div>
-                                    </li>
+                                    </li> --}}
+
+                                    @foreach (config('constants.locations') as $locationKey => $location)
+                                        <li class="splide__slide">
+                                            <div class="item getintouch">
+                                                <h3 class="font-18 mt-10 mb-10">
+                                                    <a style="color: #006EBB; font-weight: bold;" href="#">
+                                                        {{ ucfirst($location['name']) }}
+                                                    </a>
+                                                </h3>
+                                                <a href="tel:{{ $location['phone'] }}"
+                                                    class="text-black">{{ $location['phone'] }}</a>
+                                            </div>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -199,11 +196,10 @@
                                 <h4 class="title text-uppercase" style="font-size: 2rem;font-weight: bold;">Our
                                     <span class="text-theme-colored2">Services</span>
                                 </h4>
-                                <p class="font-15 text-black">Innovate Accounts is the leading accounting and audit
-                                    firm
-                                    providing audit, accounting, tax and consulting services that help solve our
-                                    client's
-                                    toughest challenges and build a better working world for all.</p>
+                                <p class="font-15 text-black">Innovate Accounts is a premier accounting and audit firm
+                                    offering comprehensive services including audit, accounting, tax, and consulting. We
+                                    strive to address our clients' most complex challenges and contribute to creating a
+                                    better working world for everyone.</p>
                                 <div class="line-bottom-centered"></div>
                             </div>
                         </div>
@@ -254,27 +250,14 @@
                             <div class="line-bottom-theme-colored2 mb-10"></div>
                             <p class="text-black font-15 pb-10 text-justify">Innovate Accounts is the best
                                 <b>Accounting and
-                                    Audit Firm in <a class="text-black" href="#">Dubai</a>, <a class="text-black"
-                                        href="#">Mumbai</a>,
+                                    Audit Firm in Dubai Mumbai
                                 </b>.
-                                Our services include <a class="text-theme-colored2 text-underline"
-                                    href="auditing-services.html">Audit</a>, <a class="text-theme-colored2 text-underline"
-                                    href="accounting-and-bookkeeping-services.html">Accounting</a>, <a
-                                    class="text-theme-colored2 text-underline"
-                                    href="bookkeeping-services.html">Bookkeeping</a>,
-                                <a class="text-theme-colored2 text-underline" href="vat-services.html">VAT</a> and
+                                Our services include Accounting Bookkeeping VAT and
                                 more.
                             </p>
-                            <p class="text-black font-15 pb-10 text-justify">Innovate Accounts is committed to
-                                service excellence and
-                                quality in all that we do, bringing our finest to clients and earning our client’s
-                                trust
-                                through our high standard behaviors and actions both professionally and personally.
+                            <p class="text-black font-15 pb-10 text-justify">Innovate Accounts is dedicated to delivering service excellence and quality in all our endeavors. We consistently bring our best to our clients, earning their trust through our high standards of professional and personal conduct.
                             </p>
-                            <p class="text-black font-15 pb-10 text-justify">At Innovate Accounts, our purpose is
-                                building your business
-                                dreams. The services and insights we provide help to create long-term value for
-                                clients.</p>
+                            <p class="text-black font-15 pb-10 text-justify">At Innovate Accounts, our mission is to nurture your business aspirations. Our services and insights are crafted to </p>
                             <ul class="font-15 text-black">
                                 <li>
                                     <a class="text-black hover_red d-flex" href="audit-in-free-zones-uae.html">
@@ -310,7 +293,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <a class="btn btn-theme-colored2 pt-10 pb-10 mt-10" href="about-us.html">More
+                            <a class="btn btn-theme-colored2 pt-10 pb-10 mt-10" href=" {{route('about-us')}} ">More
                                 about Innovate Accounts</a>
                         </div>
                     </div>
@@ -365,7 +348,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="splide__slide">
+                                {{-- <li class="splide__slide">
                                     <a href="blogs/uae-aed-10000-penalty-late-corporate-tax-registration.html">
                                         <div class="item">
                                             <article class="post">
@@ -494,7 +477,7 @@
                                             </article>
                                         </div>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>

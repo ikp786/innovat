@@ -47,11 +47,15 @@ class HomeController extends Controller
         }
         // Check if the request is an AJAX request
         if ($request->ajax()) {
-            // dd($request->all());
-            $news = News::active()->paginate(1); // Adjust the number of items per page as needed
+            $news = News::active()->paginate(10); // Adjust the number of items per page as needed
             return view('front.news.pagination', compact('news'))->render();
         }
-        $news = News::active()->paginate(1);
+        $news = News::active()->paginate(10);
         return view('front.news.index', compact('title', 'news'));
+    }
+
+    function aboutUs(Request $request)
+    {
+        return view('front.about-us');
     }
 }

@@ -10,6 +10,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('services/{slug?}', 'services')->name('services');
     Route::get('news/{slug?}', 'news')->name('news');
+    Route::get('about-us', 'aboutUs')->name('about-us');
 });
 
 
