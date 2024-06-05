@@ -49,6 +49,7 @@
                                 {!! html()->hidden('id')->value($service->id) !!}
                             @endisset
                             <div class="row">
+                                
                                 <div class="col-sm-6 col-12 mb-3">
                                     {!! html()->label('Title', 'title')->class('form-label') !!}<span class="text-danger">*</span>
                                     {!! html()->text('title')->class('form-control')->id('title')->placeholder('Title')->value(old('title', $service->title ?? '')) !!}
@@ -79,9 +80,17 @@
                                     @error('image')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
+                                </div>                                
+
+                                <div class="col-sm-3 col-3 mb-3">
+                                    {!! html()->label('Sort By', 'sort_by')->class('form-label') !!}<span class="text-danger"></span>
+                                    {!! html()->number('sort_by')->class('form-control')->id('sort_by')->placeholder('Sort By')->value(old('sort_by', $service->sort_by ?? '')) !!}
+                                    @error('sort_by')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
 
-                                <div class="col-sm-6 col-12 mb-3">
+                                <div class="col-sm-3 col-3 mb-3">
                                     {!! html()->label('Status', 'status')->class('form-label') !!} <span class="text-danger">*</span>
                                     <div class="form-check form-check-primary form-switch">
                                         {!! html()->checkbox('status', isset($service) ? $service->status : false)->class('form-check-input')->id('status') !!}
@@ -90,6 +99,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
                                 {!! html()->label('Description', 'description')->class('form-label') !!}<span class="text-danger">*</span>
                                 <div class="col-sm-12 col-12 mb-3">
                                     <div id="full-wrapper">

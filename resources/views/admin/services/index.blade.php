@@ -59,7 +59,8 @@
                                     <tr>
                                         <th></th>
                                         <th>Title</th>
-                                        <th>Inco</th>
+                                        <th>Sort By</th>
+                                        <th>Icon</th>
                                         <th>Image</th>
                                         <th>Description</th>
                                         <th>Status</th>
@@ -95,6 +96,10 @@
                     {
                         data: 'title',
                         name: 'title'
+                    },
+                    {
+                        data: 'sort_by',
+                        name: 'sort_by'
                     },
                     {
                         data: 'icon',

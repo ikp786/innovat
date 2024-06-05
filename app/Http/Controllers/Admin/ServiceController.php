@@ -38,10 +38,10 @@ class ServiceController extends Controller
                             </a>';
                     })
                     ->addColumn('icon', function ($row) {
-                        return '<img style="width:50px;" class=" icon_list" src="' . asset('uploads/service_icons/' . $row->icon) . '">';
+                        return '<img style="width:50px;" class="icon_list" src="' . asset('uploads/service_icons/' . $row->icon) . '">';
                     })
                     ->addColumn('image', function ($row) {
-                        return '<img style="width:50px;" class=" image_list" src="' . asset('uploads/service_images/' . $row->image) . '">';
+                        return '<img style="width:50px; height: 50px;" class="image_list" src="' . asset('uploads/service_images/' . $row->image) . '">';
                     })
 
                     ->addColumn('status', function ($row) {
@@ -49,7 +49,6 @@ class ServiceController extends Controller
                                     <input type="checkbox" class="form-check-input status-toggle" id="status_' . $row->id . '" ' . ($row->status ? 'checked' : '') . ' data-id="' . $row->id . '">
                                 </div>';
                     })
-
 
                     ->addColumn('full_description', function ($row) {
                         // Check if the length of description is greater than 180

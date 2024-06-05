@@ -28,9 +28,8 @@ class ViewServiceProvider extends ServiceProvider
             Cache::flush();
             if (!Request::is('admin/*')) { // Assuming your admin routes are prefixed with 'admin'
                 $services = Cache::remember('services_with_pages', 60 * 60, function () {
-                    return Service::with('pages')->get(); // Eager load pages
+                    return Service::with('pages')->orderBy('sort_by','asc')->get(); // Eager load pages
                 });
-
                 $view->with('services', $services);
             }
         });

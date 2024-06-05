@@ -15,7 +15,7 @@ class Service extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['title', 'icon', 'image', 'description', 'status', 'slug'];
+    protected $fillable = ['title', 'icon', 'image', 'description', 'status', 'slug','sort_by'];
 
     // Define the relationship to the Page model
     public function pages()
