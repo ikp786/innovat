@@ -316,14 +316,14 @@
             </div>
         </div>
 
-        <section id="blog">
+        <section id="blog" style="display: none">
             <div class="container pb-sm-40 pt-0">
                 <div class="section-content pt-50">
                     <div class="splide" id="blog_list" role="group" aria-label="blog list">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <a href="blogs/the-power-of-feasibility-studies-in-mitigating-investment-risks.html">
+                                    <a href="#">
                                         <div class="item">
                                             <article class="post">
                                                 <div class="post-thumb position-relative">
@@ -348,7 +348,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                {{-- <li class="splide__slide">
+                                <li class="splide__slide">
                                     <a href="blogs/uae-aed-10000-penalty-late-corporate-tax-registration.html">
                                         <div class="item">
                                             <article class="post">
@@ -477,7 +477,7 @@
                                             </article>
                                         </div>
                                     </a>
-                                </li> --}}
+                                </li>
                             </ul>
                         </div>
                     </div>
