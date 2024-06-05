@@ -38,10 +38,10 @@ class ServiceController extends Controller
                             </a>';
                     })
                     ->addColumn('icon', function ($row) {
-                        return '<img style="width:50px;" class="rounded-circle icon_list" src="' . asset('uploads/service_icons/' . $row->icon) . '">';
+                        return '<img style="width:50px;" class=" icon_list" src="' . asset('uploads/service_icons/' . $row->icon) . '">';
                     })
                     ->addColumn('image', function ($row) {
-                        return '<img style="width:50px;" class="rounded-circle image_list" src="' . asset('uploads/service_images/' . $row->image) . '">';
+                        return '<img style="width:50px;" class=" image_list" src="' . asset('uploads/service_images/' . $row->image) . '">';
                     })
 
                     ->addColumn('status', function ($row) {

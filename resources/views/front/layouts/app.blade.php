@@ -75,7 +75,7 @@
 					"postalCode": "80394"
 				},
 				"description": "Innovate Accounts is the best Accounting and Audit Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
-				"email": "info@Innovate Accountsauditing.com",
+				"email": "teams@innovateaccounts.com",
 				"telephone": "04 551 6399",
 				"url": "https://www.Innovate Accountsauditing.com/",
 				"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
@@ -126,7 +126,7 @@
 							"longitude": "55.1742046"
 						},
 						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
-						"email": "info@Innovate Accountsauditing.com",
+						"email": "teams@innovateaccounts.com",
 						"telephone": "+971 4 551 6399",
 						"openingHours": [
 							"Mo-Sa 09:00-18:00",
@@ -181,7 +181,7 @@
 							"longitude": "54.5983511"
 						},
 						"description": "Innovate Accounts is the best Accounting and Audit Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
-						"email": "info@Innovate Accountsauditing.com",
+						"email": "teams@innovateaccounts.com",
 						"telephone": "+971 52 997 4124",
 						"openingHours": [
 							"Mo-Sa 09:00-18:00",
@@ -1496,7 +1496,7 @@
                                         Insights </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>
-                                            <a href="{{route('news')}}" style="font-weight: bold !important;">
+                                            <a href="{{ route('news') }}" style="font-weight: bold !important;">
                                                 News</a>
                                         </li>
                                         <li>
@@ -1533,17 +1533,16 @@
                                     <a href="#">
                                         Contact </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
-                                        <li>
-                                            <a href="#" style="font-weight: bold !important;">
-                                                Dubai</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="font-weight: bold !important;">
-                                                Mumbai</a>
-                                        </li>
+                                        @foreach (config('constants.locations') as $locationKey => $location)
+                                            <li>
+                                                <a href="{{ route('our-locations', $location['name']) }}"
+                                                    style="font-weight: bold !important;">{{ ucfirst($location['name']) }}</a>|
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </li>
-                                <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a href="#"
+                                <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a
+                                        href="{{ route('our-locations', config('constants.locations.dubai.name')) }}"
                                         style="color: #ffffff">Get A
                                         Quote</a></button>
                             </ul>
@@ -1597,9 +1596,13 @@
                         <div class="widget dark">
                             <h4 class="widget-title line-bottom-theme-colored2">Contact Us</h4>
                             <p class="mt-20">
-                                <a id="footer_country_address" href="https://goo.gl/maps/Firzbn5oMDHCDLQJA"
+                                <a id="footer_country_address" href="https://maps.app.goo.gl/D197cMsXrDv1Gybg8"
                                     class="address_link" target="_blank" rel="noreferrer">
-                                    DAMAC Smart Heights - Office No. 1501 - Barsha Heights - Dubai, UAE (Head Office)
+
+                                    <b> Innovate Accountings & Auditing LLC </b>
+                                    <br>
+                                    Aspin Commercial Tower, 3rd Floor, Office 304, Trade Center 1st, Sheikh Zayed Road,
+                                    Dubai, United State Emirates
                                 </a>
                             </p>
                             <ul class="fotter-address list-inline">
@@ -1607,25 +1610,29 @@
                                 <li class="d-flex" id="footer_country_landline_wrapper"><img
                                         src="{{ asset('front/upload/icons/phone.svg') }}" width="20"
                                         height="20" alt="Innovate Accounts landline" loading="lazy"><a
-                                        class="pl-10" id="footer_country_landline" href="tel:+971 4 551 6399">+971 4
-                                        551 6399</a>
+                                        class="pl-10" id="footer_country_landline"
+                                        href="tel:++971 4 551 6399
+                                        ">+971 4 551
+                                        6399
+                                    </a>
                                 </li>
                                 <li class="d-flex"><img src="{{ asset('front/upload/icons/mobile.svg') }}"
                                         width="20" height="20" alt="Innovate Accounts mobile"
                                         loading="lazy"><a class="pl-10" id="footer_country_phone"
-                                        href="tel:+971 52 940 2047">+971
-                                        52 940 2047</a>
+                                        href="tel:+971 52 940 2047
+                                        ">+971 52
+                                        940 2047
+                                    </a>
                                 </li>
                                 <li class="d-flex"><img src="{{ asset('front/upload/icons/mail.svg') }}"
                                         width="20" height="20" alt="Innovate Accounts email"
                                         loading="lazy"><a class="pl-10" id="footer_country_email"
-                                        href="mailto:info@Innovate Accountsauditing.com">info@Innovate
-                                        Accountsauditing.com</a>
+                                        href="mailto:teams@innovateaccounts.com">teams@innovateaccounts.com</a>
                                 </li>
                                 <li class="d-flex"><img src="{{ asset('front/upload/icons/globe.svg') }}"
                                         width="20" height="20" alt="Innovate Accounts website"
-                                        loading="lazy"><a class="pl-10" href="index.html">www.Innovate
-                                        Accountsauditing.com</a></li>
+                                        loading="lazy"><a class="pl-10"
+                                        href="{{ route('home') }}">www.innovateaccounts.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1736,8 +1743,10 @@
                         <div class="pb-20" style="font-size: 18px">
                             <span class="footer_text widget-title line-bottom-theme-colored2"><a href="#">Our
                                     Locations</a> :</span>
-                            <a href="#" class="csr pt-8 pb-8 footer_text">Mumbai</a>
-                            | <a href="#" class="csr pt-8 pb-8 footer_text">Dubai</a>
+                            @foreach (config('constants.locations') as $locationKey => $location)
+                                <a href="{{ route('our-locations', $location['name']) }}"
+                                    class="csr pt-8 pb-8 footer_text">{{ ucfirst($location['name']) }}</a>|
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -1747,14 +1756,15 @@
                 <div class="container pt-20 pb-20">
                     <div class="row">
                         <div class="col-md-6">
-                            <p class="font-14 text-white-light m-0">Copyright &copy;2024 <span
+                            <p class="font-14 text-white-light m-0">&copy; Innovat Accounting & Auditing LLC Dubai
+                                Mainland Company | All Rights Reserved <span
                                     class="text-white">innovat-auditing</span>. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        
+
         <a aria-label="contact us on whatsapp"
             href="https://api.whatsapp.com/send?phone=971 555209267&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             class="whatsapp_mobile" id="whatsappContact" target="_blank" rel="noreferrer">
@@ -2157,7 +2167,7 @@
                 }
             }
         </script>
-@stack('scripts')
+        @stack('scripts')
 </body>
 
 <!-- Mirrored from www.Innovate Accountsauditing.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 08:57:04 GMT -->

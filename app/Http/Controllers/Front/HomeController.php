@@ -59,4 +59,10 @@ class HomeController extends Controller
     {
         return view('front.about-us');
     }
+
+    function ourLocations(Request $request, $location)
+    {
+        return view('front.locations.'.$location);
+    }
+
 }

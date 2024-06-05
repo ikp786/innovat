@@ -11,42 +11,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('services/{slug?}', 'services')->name('services');
     Route::get('news/{slug?}', 'news')->name('news');
     Route::get('about-us', 'aboutUs')->name('about-us');
-});
-
-
-Route::get('/composer-install/{password}', function ($passsword) {
-    if ($passsword == 'Admin@123') {
-        $output = [];
-        $returnVar = null;
-        // Run Composer install
-        exec('composer install 2>&1', $output, $returnVar);
-
-        // Return output as a response
-        return response()->json([
-            'output' => $output,
-            'return_var' => $returnVar
-        ]);
-    } else {
-        return 'something went wrong';
-    }
-});
-
-Route::get('/composer-update/{password}', function ($passsword) {
-    if ($passsword == 'Admin@123') {
-
-        $output = [];
-        $returnVar = null;
-        // Run Composer update
-        exec('composer update 2>&1', $output, $returnVar);
-
-        // Return output as a response
-        return response()->json([
-            'output' => $output,
-            'return_var' => $returnVar
-        ]);
-    } else {
-        return 'something went wrong';
-    }
+    Route::get('our-locations/{locationName}', 'ourLocations')->name('our-locations');
 });
 
 Route::get('/run-migrations', function () {
