@@ -36,7 +36,7 @@
             <li class="nav-item {{ \Str::is('admin.pages.*', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.pages.index') }}">
                     <i data-feather="mail"></i>
-                    <span class="menu-title text-truncate" data-i18n="pages">Page</span>
+                    <span class="menu-title text-truncate" data-i18n="pages">Sub Service</span>
                 </a>
             </li>
             
@@ -51,6 +51,13 @@
                 <a class="d-flex align-items-center" href="{{ route('admin.banners.index') }}">
                     <i data-feather="mail"></i>
                     <span class="menu-title text-truncate" data-i18n="banners">Banner</span>
+                </a>
+            </li>
+
+            <li class="nav-item {{ \Str::is('admin.settings.*', request()->route()->getName()) ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.settings.edit') }}">
+                    <i data-feather="mail"></i>
+                    <span class="menu-title text-truncate" data-i18n="settings">Setting</span>
                 </a>
             </li>
 

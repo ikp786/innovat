@@ -15,7 +15,7 @@ return [
     'locations' => [
         'dubai' => [
             'name' => 'dubai',
-            'phone' => '+971 55 520 9267',
+            'phone' => '+971 521 29 7955',
         ],
         'mumbai' => [
             'name' => 'mumbai',

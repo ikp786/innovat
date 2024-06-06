@@ -1493,7 +1493,7 @@
                                 </li>
                                 <li class="">
                                     <a href="#">
-                                        Insights </a>
+                                        Know More </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         <li>
                                             <a href="{{ route('news') }}" style="font-weight: bold !important;">
@@ -1508,10 +1508,6 @@
                                                 Webinars</a>
                                         </li>
                                         <li>
-                                            <a href="co#" style="font-weight: bold !important;">
-                                                Corporate Tax Assessment</a>
-                                        </li>
-                                        <li>
                                             <a href="#" style="font-weight: bold !important;">
                                                 Client Stories</a>
                                         </li>
@@ -1523,14 +1519,10 @@
                                 </li>
                                 <li class="">
                                     <a href="#">
-                                        Industries </a>
-                                </li>
-                                <li class="">
-                                    <a href="#">
                                         Careers </a>
                                 </li>
-                                <li class="">
-                                    <a href="#">
+                                <li class=" active">
+                                    <a href="{{ route('our-locations', config('constants.locations.dubai.name')) }}">
                                         Contact </a>
                                     <ul class="dropdown" style="background-color: #f4f4f4;">
                                         @foreach (config('constants.locations') as $locationKey => $location)
@@ -1541,10 +1533,10 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                                <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a
+                                {{-- <button class="getin mr-10 btn-dark btn-theme-colored2 hidd"><a
                                         href="{{ route('our-locations', config('constants.locations.dubai.name')) }}"
                                         style="color: #ffffff">Get A
-                                        Quote</a></button>
+                                        Quote</a></button> --}}
                             </ul>
                         </nav>
                     </div>
@@ -1554,32 +1546,41 @@
 
         <div class="floating_social_media">
             <ul class="styled-icons clearfix">
-                <li><a aria-label="Innovate Accounts facebook account"
-                        href="https://www.facebook.com/Innovate Accountsauditing" target="_blank" rel="noreferrer">
-                        <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}" width="15"
-                            height="15" alt="Innovate Accounts facebook account"></a></li>
-                <li><a aria-label="Innovate Accounts twitter account"
-                        href="https://twitter.com/Innovate Accounts_auditing" target="_blank" rel="noreferrer">
-                        <img src="{{ asset('front/upload/icons/twitter.svg') }}" loading="lazy" width="15"
-                            height="15" alt="Innovate Accounts twitter account"></a></li>
-                <li><a aria-label="Innovate Accounts linkedin account"
-                        href="https://www.linkedin.com/company/Innovate Accountsaudit" target="_blank"
-                        rel="noreferrer">
-                        <img src="{{ asset('front/upload/icons/linkedin.svg') }}" width="15" height="15"
-                            loading="lazy" alt="Innovate Accounts linkedin account"></a></li>
-                <li><a aria-label="Innovate Accounts youtube account"
-                        href="https://www.youtube.com/Innovate Accountsauditing" target="_blank" rel="noreferrer">
-                        <img src="{{ asset('front/upload/icons/youtube.svg') }}" width="15" loading="lazy"
-                            height="15" alt="Innovate Accounts youtube account"></a></li>
-                <li><a aria-label="Innovate Accounts instagram account"
-                        href="https://www.instagram.com/Innovate Accountsauditing" target="_blank" rel="noreferrer">
-                        <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
-                            height="15" alt="Innovate Accounts instagram account"></a></li>
+                @if ($settings->facebook_url)
+                    <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
+                            target="_blank" rel="noreferrer">
+                            <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}" width="15"
+                                height="15" alt="Innovate Accounts facebook account"></a></li>
+                @endif
+                @if ($settings->twitter_url)
+                    <li><a aria-label="Innovate Accounts twitter account" href="{{ $settings->twitter_url }}"
+                            target="_blank" rel="noreferrer">
+                            <img src="{{ asset('front/upload/icons/twitter.svg') }}" loading="lazy" width="15"
+                                height="15" alt="Innovate Accounts twitter account"></a></li>
+                @endif
+                @if ($settings->linkedin_url)
+                    <li><a aria-label="Innovate Accounts linkedin account" href="{{ $settings->linkedin_url }}"
+                            target="_blank" rel="noreferrer">
+                            <img src="{{ asset('front/upload/icons/linkedin.svg') }}" width="15" height="15"
+                                loading="lazy" alt="Innovate Accounts linkedin account"></a></li>
+                @endif
+                @if ($settings->youtube_url)
+                    <li><a aria-label="Innovate Accounts youtube account" href="{{ $settings->youtube_url }}"
+                            target="_blank" rel="noreferrer">
+                            <img src="{{ asset('front/upload/icons/youtube.svg') }}" width="15" loading="lazy"
+                                height="15" alt="Innovate Accounts youtube account"></a></li>
+                @endif
+                @if ($settings->instagram_url)
+                    <li><a aria-label="Innovate Accounts instagram account" href="{{ $settings->instagram_url }}"
+                            target="_blank" rel="noreferrer">
+                            <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
+                                height="15" alt="Innovate Accounts instagram account"></a></li>
+                @endif
             </ul>
         </div>
         <div class="floating_get-a-quote">
             <ul class="styled-icons clearfix">
-                <li><a aria-label="Innovate Accounts facebook account" href="contact.html" target="_blank"
+                <li><a aria-label="Innovate Accounts facebook account" href="{{ route('our-locations', config('constants.locations.dubai.name')) }}" target="_blank"
                         rel="noreferrer">
                         <img loading="lazy" src="{{ asset('front/upload/icons/get_in_touch.svg') }}" width="35"
                             height="35" alt="Innovate Accounts facebook account"></a></li>
@@ -1602,7 +1603,7 @@
                                     <b> Innovate Accountings & Auditing LLC </b>
                                     <br>
                                     Aspin Commercial Tower, 3rd Floor, Office 304, Trade Center 1st, Sheikh Zayed Road,
-                                    Dubai, United State Emirates
+                                    Dubai, United Arab Emirates
                                 </a>
                             </p>
                             <ul class="fotter-address list-inline">

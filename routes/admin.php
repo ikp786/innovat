@@ -15,6 +15,9 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('newses', NewsController::class);
     Route::post('news/updateStatus/{id}', [NewsController::class, 'updateStatus'])->name('newses.update-status');
 
+    Route::get('settings', [DashboardController::class,'setting'])->name('settings.edit');
+    Route::post('settings/{id?}', [DashboardController::class,'updateSetting'])->name('settings.update');
+
     Route::resource('banners', BannerController::class);
     Route::post('banner/updateStatus/{id}', [BannerController::class, 'updateStatus'])->name('banners.update-status');
 });

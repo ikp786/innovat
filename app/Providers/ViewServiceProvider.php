@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Service;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -28,9 +29,16 @@ class ViewServiceProvider extends ServiceProvider
             Cache::flush();
             if (!Request::is('admin/*')) { // Assuming your admin routes are prefixed with 'admin'
                 $services = Cache::remember('services_with_pages', 60 * 60, function () {
-                    return Service::with('pages')->orderBy('sort_by','asc')->get(); // Eager load pages
+                    return Service::with('pages')->orderBy('sort_by', 'asc')->get(); // Eager load pages
                 });
+
+                // Caching settings
+                $settings = Cache::remember('settings_data', 60 * 60, function () {
+                    return Setting::first();
+                });
+
                 $view->with('services', $services);
+                $view->with('settings', $settings);
             }
         });
     }

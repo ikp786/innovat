@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 @push('content')
     <section class="inner-header divider"
-        style="background-image: url('{{ asset('front/uploads/contact/bms-auditing-dubai.html')}}'); background-size: cover;">
+        style="background-image: url('{{ asset('front/uploads/contact/bms-auditing-dubai.html') }}'); background-size: cover;">
         <div class="container banner_text">
             <!-- Section Content -->
             <div class="section-content">
@@ -23,41 +23,45 @@
                             <div class="volunteer- ess bg-light" style="min-height: 580px; padding: 20px;">
                                 <table>
                                     <tr class="mb-20">
-                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/mail-red.svg')}}"
+                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/mail-red.svg') }}"
                                                 style="width: 25px;max-width: 25px;" alt="Innovate Accounts Email"></td>
                                         <td class="pb-10">
-                                            <p class="m-0 pl-10"><a
+                                            <p class="m-0 pl-10"><a style="color: #006EBB"
                                                     href="mailto:teams@innovateaccounts.com">teams@innovateaccounts.com</a>
                                             </p>
+                                            <p class="m-0 pl-10"><a style="color: #006EBB"
+                                                href="mailto:Innovate.team@outlook.com">Innovate.team@outlook.com</a>
+                                        </p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/mobile-red.svg')}}"
+                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/mobile-red.svg') }}"
                                                 style="width: 27px;max-width: 27px;" alt="Innovate Accounts Mobile"></td>
                                         <td class="pb-10">
-                                            <p class="m-0 pl-10"><a href="tel:+971 4 551 6399">+971 4 551 6399</a>
+                                            <p class="m-0 pl-10"><a href="tel:{{config('constants.locations.dubai.phone')}}">{{config('constants.locations.dubai.phone')}}</a>
                                             </p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/whatsapp-red.svg')}}"
+                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/whatsapp-red.svg') }}"
                                                 style="width: 23px;max-width: 23px;" alt="Innovate Accounts WhatsApp"></td>
                                         <td class="pb-10">
-                                            <p class="m-0 pl-10">+971 52 940 2047<span
+                                            <p class="m-0 pl-10">{{config('constants.locations.dubai.phone')}}<span
                                                     class="label label-success ml-10 whats"><a
-                                                        href="https://api.whatsapp.com/send?phone=+971 52 940 2047&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+                                                        href="https://api.whatsapp.com/send?phone={{config('constants.locations.dubai.phone')}}&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
                                                         style="color: #ffff">Message us</a></span></p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/location.svg')}}"
+                                        <td class="pb-10"><img src="{{ asset('front/upload/icons/location.svg') }}"
                                                 style="width: 30px;max-width: 30px;" alt="Innovate Accounts Location"></td>
                                         <td class="pb-10">
                                             <p class="m-0 pl-10"><a href="https://maps.app.goo.gl/D197cMsXrDv1Gybg8"
-                                                    target="_blank"> Innovate Accountings & Auditing LLC 
+                                                    target="_blank"> Innovate Accountings & Auditing LLC
                                                     <br>
-                                                    Aspin Commercial Tower, 3rd Floor, Office 304, Trade Center 1st, Sheikh Zayed Road,
-                                                    Dubai, United State Emirates</a>
+                                                    Aspin Commercial Tower, 3rd Floor, Office 304, Trade Center 1st, Sheikh
+                                                    Zayed Road,
+                                                    Dubai, United Arab Emirates </a>
                                             </p>
                                         </td>
                                     </tr>
@@ -78,7 +82,9 @@
                                     <h4 class="text-theme-colored text-uppercase m-0 line-bottom-theme-colored2">Free
                                         Consultation</h4>
                                     <div class="line-bottom mb-5"></div>
-                                    <p class="text-black text-justify">Looking for audit, accounting, VAT, or tax services? Contact Innovate Accounts Dubai. Our accountants, auditors, and tax experts are committed to providing quality and timely services</p>
+                                    <p class="text-black text-justify">Looking for audit, accounting, VAT, or tax services?
+                                        Contact Innovate Accounts Dubai. Our accountants, auditors, and tax experts are
+                                        committed to providing quality and timely services</p>
                                     <form id="contact_form" name="contact_form" class="mt-30">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -115,7 +121,7 @@
                                             <textarea id="message" name="message" class="form-control captchaValid" placeholder="Enter Message" rows="5"></textarea>
                                         </div>
                                         <!--<div class="g-recaptcha"
-                                        data-sitekey="6LfWeZUnAAAAAAQsFGy1sHO08NkGD4MFpjsWNwOv"></div>-->
+                                                data-sitekey="6LfWeZUnAAAAAAQsFGy1sHO08NkGD4MFpjsWNwOv"></div>-->
                                         <div class="form-group mb-0 mt-20">
                                             <button type="submit" class="btn btn-dark btn-theme-colored"
                                                 id="contact_form_btn">Submit
