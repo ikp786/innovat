@@ -1745,7 +1745,7 @@
                                     Locations</a> :</span>
                             @foreach (config('constants.locations') as $locationKey => $location)
                                 <a href="{{ route('our-locations', $location['name']) }}"
-                                    class="csr pt-8 pb-8 footer_text">{{ ucfirst($location['name']) }}</a>|
+                                    class="csr pt-8 pb-8 footer_text">{{ ucfirst($location['name']) }}</a> |
                             @endforeach
                         </div>
                     </div>

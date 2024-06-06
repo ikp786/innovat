@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Banner;
 use App\Models\News;
 use App\Models\Page;
 use App\Models\Service;
@@ -14,7 +15,8 @@ class HomeController extends Controller
     {
         $title = 'Home Page';
         $services = Service::active()->get();
-        return view('front.index', compact('title', 'services'));
+        $banners = Banner::active()->get();
+        return view('front.index', compact('title', 'services','banners'));
     }
 
     function services(Request $request, $slug = null)

@@ -4,29 +4,22 @@
         <section class="splide home_slider" id="home_slider" aria-label="Home slider">
             <div class="splide__track">
                 <ul class="splide__list">
+                    @foreach($banners as $key => $banner)
                     <li class="splide__slide">
                         <img width="100%" height="100%" loading="lazy"
-                            src="{{ asset('front/upload/files/slider/tax.jpg') }}" alt="Corporate Tax in UAE" />
+                            src="{{ asset('uploads/banner_images/' . $banner->image) }}" alt="{{ $banner->title}}" />
                         <div class="home_slider_text">
-                            <h2><span class="text-theme-colored2">Corporate Tax in UAE</span></h2>
-                            <p class="text-black text-justify" style="max-width: 500px;">The Ministry of Finance has
-                                announced a 9% federal corporate tax on business profits in the UAE, applicable to earnings
-                                exceeding AED 375,000. Our dedicated team of corporate tax advisors is ready to assist you
-                                with any questions and provide the necessary support regarding corporate tax compliance.
-
+                            <h2><span class="text-theme-colored2">{{ $banner->title}}</span></h2>
+                            <p class="text-black text-justify" style="max-width: 500px;">
+                                {!! strip_tags($banner->description) !!}
                             </p>
-                            <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Corporate Tax in UAE</a>
-                            <div>
-                                <a href="#contact_form" class="btn btn-dark btn-theme-colored3 btn-xl mr-10 thcolor">Book
-                                    Free
-                                    Corporate Tax Consultancy</a>
-                            </div>
+                            <a href=" {{ $banner->url }}" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">{{ $banner->button_name}}</a>
                         </div>
-
                     </li>
-                    <li class="splide__slide">
+                    @endforeach
+                    {{-- <li class="splide__slide">
                         <img width="100%" height="100%" style="object-position: right"
-                            src="{{ asset('front/upload/files/slider/desktop/icv5e1f.html?v=2') }}"
+                            src="{{ asset('front/upload/files/slider/desktop/Internal-AML-Compliance.png') }}"
                             alt="audit and assurance" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">ICV</span></h2>
@@ -126,7 +119,7 @@
                     <li class="splide__slide">
                         <img width="100%" height="100%" loading="lazy"
                             src="{{ asset('front/upload/files/slider/desktop/excise-tax3860.html?v=1') }}"
-                            alt="Corporate Tax in UAE" />
+                            alt="{{ $banner->title}}" />
                         <div class="home_slider_text">
                             <h2><span class="text-theme-colored2">Excise Tax Services</span></h2>
                             <p class="text-black text-justify" style="max-width: 500px;">The UAE government has
@@ -136,7 +129,7 @@
                             <a href="excise-tax-services.html" class="btn btn-dark btn-theme-colored2 btn-xl mr-10">Excise
                                 Tax Services</a>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </section>
