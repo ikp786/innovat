@@ -37,7 +37,7 @@ class NewsController extends Controller
                             </a>';
                     })
                     ->addColumn('image', function ($row) {
-                        return '<img style="width:50px;" class="rounded-circle image_list" src="' . asset('uploads/news_images/' . $row->image) . '">';
+                        return '<img style="width:50px;" class="image_list" src="' . asset('uploads/news_images/' . $row->image) . '">';
                     })
 
                     ->addColumn('status', function ($row) {

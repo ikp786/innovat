@@ -12,9 +12,9 @@
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="PIXINVENT">
-    <title>Dashboard ecommerce - Vuexy - Bootstrap HTML admin template</title>
+    <title> {{env('APP_NAME','Innovat')}} </title>
     <link rel="apple-touch-icon" href="{{ asset('admin/images/ico/apple-icon-120.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/images/ico/favicon.ico') }}">
+    {!! Html::element('link')->attribute('rel', 'shortcut icon')->attribute('href', asset('/front/upload/files/favicon/favicon.png'))->attribute('type', 'image/x-icon') !!}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
