@@ -16,7 +16,7 @@ class HomeController extends Controller
         $title = 'Home Page';
         $services = Service::active()->get();
         $banners = Banner::active()->get();
-        return view('front.index', compact('title', 'services','banners'));
+        return view('front.index', compact('title', 'services', 'banners'));
     }
 
     function services(Request $request, $slug = null)
@@ -46,7 +46,7 @@ class HomeController extends Controller
             }
             $title = $news->title;
             $newsList = News::active()->paginate(10);
-            return view('front.news.detail', compact('title', 'news','newsList'));
+            return view('front.news.detail', compact('title', 'news', 'newsList'));
         }
         // Check if the request is an AJAX request
         if ($request->ajax()) {
@@ -59,12 +59,38 @@ class HomeController extends Controller
 
     function aboutUs(Request $request)
     {
-        return view('front.about-us');
+        $title = 'About Us';
+        return view('front.about-us', compact('title'));
     }
 
     function ourLocations(Request $request, $location)
     {
-        return view('front.locations.'.$location);
+        $title = 'Our Location';
+        return view('front.locations.' . $location, compact('title'));
+    }
+
+    function webinars()
+    {
+        $title = 'Webinars';
+        return view('front.webinars', compact('title'));
+    }
+
+    function clientStories()
+    {
+        $title = 'Client Stories';
+        return view('front.client-stories', compact('title'));
+    }
+
+    function faq()
+    {
+        $title = 'Frequently Asked Questions (FAQ)';
+        return view('front.faq', compact('title'));
+    }
+
+    function careers()
+    {
+        $title = 'Ccareers';
+        return view('front.careers', compact('title'));
     }
 
 }

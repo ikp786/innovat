@@ -1390,8 +1390,8 @@
                                                             style="color: #006EBB; font-weight: bold;"
                                                             href="#">Dubai</a>
                                                     </p>
-                                                    <a href="tel:+971555209267"
-                                                        class="font-13 text-white">+971555209267</a><br>
+                                                    <a href="tel:{{config('constants.locations.dubai.phone')}}"
+                                                        class="font-13 text-white">{{config('constants.locations.dubai.phone')}}</a><br>
                                                     <a href="mailto:teams@innovateaccounts.com"
                                                         class="font-13 text-white">teams@innovateaccounts.com</a>
                                                 </div>
@@ -1402,8 +1402,7 @@
                                                             style="color: #006EBB; font-weight: bold;"
                                                             href="#">Mumbai</a>
                                                     </p>
-                                                    <a href="tel:+919769702402" class="font-13 text-white">+91 97 697 02
-                                                        402</a><br>
+                                                    <a href="tel:+919769702402" class="font-13 text-white">{{config('constants.locations.mumbai.phone')}}</a><br>
                                                     <a href="mailto:teams@innovateaccounts.com"
                                                         class="font-13 text-white">teams@innovateaccounts.com</a>
                                                 </div>
@@ -1504,21 +1503,21 @@
                                                 Blogs</a>
                                         </li>
                                         <li>
-                                            <a href="#" style="font-weight: bold !important;">
+                                            <a href="{{ route('webinars') }}" style="font-weight: bold !important;">
                                                 Webinars</a>
                                         </li>
                                         <li>
-                                            <a href="#" style="font-weight: bold !important;">
+                                            <a href=" {{ route('client-stories') }}" style="font-weight: bold !important;">
                                                 Client Stories</a>
                                         </li>
                                         <li>
-                                            <a href="#" style="font-weight: bold !important;">
+                                            <a href=" {{ route('faq') }}" style="font-weight: bold !important;">
                                                 FAQs</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="{{ asset('careers') }}">
                                         Careers </a>
                                 </li>
                                 <li class=" active">
@@ -1615,7 +1614,7 @@
                                         href="tel:++971 4 551 6399
                                         ">+971 4 551
                                         6399
-                                    </a>
+                                    </a> 
                                 </li>
                                 <li class="d-flex"><img src="{{ asset('front/upload/icons/mobile.svg') }}"
                                         width="20" height="20" alt="Innovate Accounts mobile"
@@ -1679,23 +1678,23 @@
                                 <p class="subscribe-sub-title mb-0 text-white">Subscribe to Connect with us</p>
                                 <form id="do_subscibe" class="newsletter-form mt-10 form-transparent">
                                     <div class="input-group substext">
-                                        <input name="email" id="subscribe_email" placeholder="Your Email"
+                                        {{-- <input name="email" id="subscribe_email" placeholder="Your Email"
                                             class="form-control" data-height="45px" style="height: 45px;"
-                                            type="text">
-                                        <span class="input-group-btn">
+                                            type="text"> --}}
+                                        {{-- <span class="input-group-btn">
                                             <button aria-label="subscribe" style="height:45px"
                                                 class="btn btn-colored btn-theme-colored2 text-white m-0"
                                                 type="submit" id="do_subscibe_btn"><img
                                                     src="{{ asset('front/upload/icons/subscribe.svg') }}"
                                                     style="position: absolute;height: 30px;width: 30px;top: 8px;left: 6px;"
                                                     loading="lazy" alt="Subscribe to Innovate Accounts"></button>
-                                        </span>
+                                        </span> --}}
                                     </div>
                                     <span class="notify" id="error_note"></span>
                                 </form>
 
                                 <ul class="styled-icons clearfix mt-10 ml-0">
-                                    <li><a aria-label="Innovate Accounts facebook account"
+                                    {{-- <li><a aria-label="Innovate Accounts facebook account"
                                             href="https://www.facebook.com/Innovate Accountsauditing" target="_blank"
                                             rel="noreferrer">
                                             <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}"
@@ -1730,7 +1729,37 @@
                                             target="_blank" rel="noreferrer">
                                             <img loading="lazy" src="{{ asset('front/upload/icons/pinterest.svg') }}"
                                                 width="25" height="20"
-                                                alt="Innovate Accounts pintrest account"></a></li>
+                                                alt="Innovate Accounts pintrest account"></a></li> --}}
+                                                @if ($settings->facebook_url)
+                                                <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
+                                                        target="_blank" rel="noreferrer">
+                                                        <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}" width="15"
+                                                            height="15" alt="Innovate Accounts facebook account"></a></li>
+                                            @endif
+                                            @if ($settings->twitter_url)
+                                                <li><a aria-label="Innovate Accounts twitter account" href="{{ $settings->twitter_url }}"
+                                                        target="_blank" rel="noreferrer">
+                                                        <img src="{{ asset('front/upload/icons/twitter.svg') }}" loading="lazy" width="15"
+                                                            height="15" alt="Innovate Accounts twitter account"></a></li>
+                                            @endif
+                                            @if ($settings->linkedin_url)
+                                                <li><a aria-label="Innovate Accounts linkedin account" href="{{ $settings->linkedin_url }}"
+                                                        target="_blank" rel="noreferrer">
+                                                        <img src="{{ asset('front/upload/icons/linkedin.svg') }}" width="15" height="15"
+                                                            loading="lazy" alt="Innovate Accounts linkedin account"></a></li>
+                                            @endif
+                                            @if ($settings->youtube_url)
+                                                <li><a aria-label="Innovate Accounts youtube account" href="{{ $settings->youtube_url }}"
+                                                        target="_blank" rel="noreferrer">
+                                                        <img src="{{ asset('front/upload/icons/youtube.svg') }}" width="15" loading="lazy"
+                                                            height="15" alt="Innovate Accounts youtube account"></a></li>
+                                            @endif
+                                            @if ($settings->instagram_url)
+                                                <li><a aria-label="Innovate Accounts instagram account" href="{{ $settings->instagram_url }}"
+                                                        target="_blank" rel="noreferrer">
+                                                        <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
+                                                            height="15" alt="Innovate Accounts instagram account"></a></li>
+                                            @endif
                                 </ul>
                                 <div id="response_2">Subscribed Thank you!</div>
                             </div>
@@ -1766,7 +1795,7 @@
         </footer>
 
         <a aria-label="contact us on whatsapp"
-            href="https://api.whatsapp.com/send?phone=971 555209267&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            href="https://api.whatsapp.com/send?phone=+971521297955&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             class="whatsapp_mobile" id="whatsappContact" target="_blank" rel="noreferrer">
             <img style="width: 100%" height="65" width="65" src="{{ asset('front/images/whatsapp2.svg') }}"
                 loading="lazy" alt="Innovate Accounts WhatsApp">

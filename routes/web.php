@@ -5,12 +5,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 
-
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('services/{slug?}', 'services')->name('services');
     Route::get('news/{slug?}', 'news')->name('news');
     Route::get('about-us', 'aboutUs')->name('about-us');
+    Route::get('webinars', 'webinars')->name('webinars');
+    Route::get('client-stories', 'clientStories')->name('client-stories');
+    Route::get('faq', 'faq')->name('faq');
+    Route::get('careers', 'careers')->name('careers');
     Route::get('our-locations/{locationName}', 'ourLocations')->name('our-locations');
 });
 
