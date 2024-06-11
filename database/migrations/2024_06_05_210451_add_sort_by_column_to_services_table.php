@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('services', function (Blueprint $table) {
-            $table->integer('sort_by')->default(0)->after('status');
+            $table->integer('sort_by')->default(0)->nullable()->after('status');
         });
     }
 
