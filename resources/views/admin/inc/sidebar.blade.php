@@ -19,45 +19,46 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            
+
             <li class="nav-item {{ \Str::is('admin.dashboard', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.dashboard') }}">
+                    <i data-feather="grid"></i>
                     <span class="menu-title text-truncate" data-i18n="Dashboard">Dashboard</span>
                 </a>
             </li>
-            
+
             <li class="nav-item {{ \Str::is('admin.services.*', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.services.index') }}">
-                    <i data-feather="mail"></i>
+                    <i data-feather="briefcase"></i>
                     <span class="menu-title text-truncate" data-i18n="Services">Service</span>
                 </a>
             </li>
-            
+
             <li class="nav-item {{ \Str::is('admin.pages.*', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.pages.index') }}">
-                    <i data-feather="mail"></i>
+                    <i data-feather="layers"></i>
                     <span class="menu-title text-truncate" data-i18n="pages">Sub Service</span>
                 </a>
             </li>
-            
+
             <li class="nav-item {{ \Str::is('admin.newses.*', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.newses.index') }}">
-                    <i data-feather="mail"></i>
+                    <i data-feather="file-text"></i>
                     <span class="menu-title text-truncate" data-i18n="newses">News</span>
                 </a>
             </li>
-            
+
             <li class="nav-item {{ \Str::is('admin.banners.*', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.banners.index') }}">
-                    <i data-feather="mail"></i>
+                    <i data-feather="image"></i>
                     <span class="menu-title text-truncate" data-i18n="banners">Banner</span>
                 </a>
             </li>
 
             <li class="nav-item {{ \Str::is('admin.settings.*', request()->route()->getName()) ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.settings.edit') }}">
-                    <i data-feather="mail"></i>
-                    <span class="menu-title text-truncate" data-i18n="settings">Setting</span>
+                    <i data-feather="settings"></i>
+                    <span class="menu-title text-truncate" data-i18n="settings">Settings</span>
                 </a>
             </li>
 
