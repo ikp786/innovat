@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
 
+    function loginPage(Request $request)
+    {
+        // Check if the user is already authenticated
+        if (Auth::check()) {
+            return redirect()->route('admin.dashboard');
+        }
+        return view('admin.login');
+    }
 
     function login(AdminLoginRequest $request)
     {

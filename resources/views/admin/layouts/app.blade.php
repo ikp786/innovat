@@ -183,15 +183,15 @@
 
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
-        <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a
-                    class="ms-25" href="https://1.envato.market/pixinvent_portfolio"
-                    target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights
-                    Reserved</span></span><span class="float-md-end d-none d-md-block">Hand-crafted & Made with<i
-                    data-feather="heart"></i></span></p>
+        <div class="text-body mb-2 mb-md-0">
+            © <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <span class="text-danger"><i class="tf-icons mdi mdi-heart"></i></span> by <a
+              href="https://premad.in" target="_blank" class="footer-link fw-medium">Premad Software</a>
+          </div>
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
-
 
     <!-- BEGIN: Vendor JS-->
     <script src="{{ asset('admin/vendors/js/vendors.min.js') }}"></script>

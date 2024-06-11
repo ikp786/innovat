@@ -12,7 +12,7 @@
     <meta name="author" content="PIXINVENT">
     <title>Login</title>
     <link rel="apple-touch-icon" href="{{ asset('admin/images/ico/apple-icon-120.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/images/ico/favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/upload/files/Innovate-H5.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
@@ -57,11 +57,9 @@
                                     </div>
                                 @endif
                                 <a href="index.html" class="brand-logo">
-                                    <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" height="28"></svg>
-                                    <h2 class="brand-text text-primary ms-1">Vuexy</h2>
+                                    <img src="{{ asset('front/upload/files/Innovate-H5.png') }}" alt="">
                                 </a>
-                                <h4 class="card-title mb-1">Welcome to Innovate! 👋</h4>
+                                {{--  <h4 class="card-title mb-1">Welcome to Innovate! 👋</h4>  --}}
                                 {!! html()->form('POST', route('admin.login'))->class('auth-login-form mt-2')->open() !!}
                                 <div class="mb-1">
                                     {!! html()->label('Email', 'login-email')->class('form-label') !!}

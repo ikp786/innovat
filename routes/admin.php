@@ -3,8 +3,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('login', 'admin.login')->name('login-view');
-Route::post('login', [AuthController::class, 'login'])->name('login');
+Route::controller(AuthController::class)->group(function(){
+    Route::get('login', 'loginPage')->name('login-view');
+    Route::get('/', 'loginPage')->name('login-view-page');
+    Route::post('login', 'login')->name('login');
+});
 Route::middleware(['admin'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
