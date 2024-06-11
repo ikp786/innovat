@@ -1545,6 +1545,7 @@
 
         <div class="floating_social_media">
             <ul class="styled-icons clearfix">
+                @if($settings)
                 @if ($settings->facebook_url)
                     <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
                             target="_blank" rel="noreferrer">
@@ -1574,6 +1575,7 @@
                             target="_blank" rel="noreferrer">
                             <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
                                 height="15" alt="Innovate Accounts instagram account"></a></li>
+                @endif
                 @endif
             </ul>
         </div>
@@ -1614,7 +1616,7 @@
                                         href="tel:++971 4 551 6399
                                         ">+971 4 551
                                         6399
-                                    </a> 
+                                    </a>
                                 </li>
                                 <li class="d-flex"><img src="{{ asset('front/upload/icons/mobile.svg') }}"
                                         width="20" height="20" alt="Innovate Accounts mobile"
@@ -1730,6 +1732,7 @@
                                             <img loading="lazy" src="{{ asset('front/upload/icons/pinterest.svg') }}"
                                                 width="25" height="20"
                                                 alt="Innovate Accounts pintrest account"></a></li> --}}
+                                                @if ($settings)
                                                 @if ($settings->facebook_url)
                                                 <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
                                                         target="_blank" rel="noreferrer">
@@ -1759,6 +1762,7 @@
                                                         target="_blank" rel="noreferrer">
                                                         <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
                                                             height="15" alt="Innovate Accounts instagram account"></a></li>
+                                            @endif
                                             @endif
                                 </ul>
                                 <div id="response_2">Subscribed Thank you!</div>

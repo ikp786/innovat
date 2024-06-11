@@ -7,6 +7,7 @@ use App\Models\Banner;
 use App\Models\News;
 use App\Models\Page;
 use App\Models\Service;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,7 +17,8 @@ class HomeController extends Controller
         $title = 'Home Page';
         $services = Service::active()->get();
         $banners = Banner::active()->get();
-        return view('front.index', compact('title', 'services', 'banners'));
+        $settings = Setting::first();
+        return view('front.index', compact('title', 'services', 'banners','settings'));
     }
 
     function services(Request $request, $slug = null)

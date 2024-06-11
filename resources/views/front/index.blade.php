@@ -141,7 +141,7 @@
                             aria-label="country contact slide">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                  
+
                                     @foreach (config('constants.locations') as $locationKey => $location)
                                         <li class="splide__slide">
                                             <div class="item getintouch">
@@ -467,12 +467,14 @@
                     <div class="col-md-7">
                         <img src="{{ asset('front/upload/files/home/tag_bms3860.html') }}" loading="lazy" width="100%"
                             height="100%" alt="Innovate Accounts Brochure">
-                        <a class="down_brochure_btn"
-                            href="{{ asset('front/upload/files/downloads/Innovate Accounts-Profile-2022.pdf') }}"
-                            target="_blank">Download Brochure &nbsp;
-                            <img src="{{ asset('front/upload/files/home/download.svg') }}" loading="lazy" width="20"
-                                alt="Innovate Accounts brochure download">
-                        </a>
+                            @if ($settings && $settings->facebook_url)
+                                <a class="down_brochure_btn"
+                                    href="{{ asset('uploads/brochure_images/' . $settings->brochure_url) }}"
+                                    target="_blank">Download Brochure &nbsp;
+                                    <img src="{{ asset('front/upload/files/home/download.svg') }}" loading="lazy" width="20"
+                                        alt="Innovate Accounts brochure download">
+                                </a>
+                            @endif
                     </div>
                     <div class="col-md-5">
                         <img src="{{ asset('front/upload/files/home/bms-auditing-brochure.html') }}" loading="lazy"
