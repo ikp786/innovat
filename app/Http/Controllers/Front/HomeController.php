@@ -91,7 +91,7 @@ class HomeController extends Controller
 
     function careers()
     {
-        $title = 'Ccareers';
+        $title = 'Careers';
         return view('front.careers', compact('title'));
     }
 

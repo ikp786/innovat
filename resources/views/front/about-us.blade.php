@@ -18,17 +18,92 @@
         <div class="container dynamic_page pt-60 pt-sm-20 pb-30">
             <div class="row">
                 <div class="col-md-12  col-lg-12 page_content">
-                    <p style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">Innovate Accounts is an
-                            international <strong>audit and accounting firm</strong>. We operate as an integrated team,
-                            delivering exceptional and customized services in audit, accounting, tax, and financial
-                            advisory.</span></p>
-                    <p style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">With offices located
-                            throughout the United Arab Emirates and globally, <a style="color: #000000;">Innovate Accounts</a>
-                            <strong>Chartered Accountants</strong> ranks among the top professional service providers
-                            worldwide. Established in January 2011, we have been serving the financial market ever
-                            since.</span></p>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="{{ asset('front/upload/files/about.png') }}" loading="lazy"class="img-responsive"alt="">
+                        </div>
+                        <div class="col-md-7">
 
-                    <section class="layer-overlay overlay-theme-colored-9"
+                            <h2>ABOUT US</h2>
+                            <h5 style="color: #006ebb;">We manage your accounts & operations,
+                            while you focus on expanding your business.</h5>
+                            <p style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">Innovate Accounting and Auditing LLC was founded by a team of vibrant and
+                            dedicated professionals having vast experience in Middle East and India
+                            Region. The founding partners / associates / team of the firm have been
+                            working in this profession for the last 14 years serving various clients from all
+                            the industries.</span></p>
+                            <ul class="font-15 text-black mb-10 mt-30">
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px; right:6px;position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="Approved Audit Firm in all UAE Free Zones"> 
+                                            Highly experinced professional
+                                    </p>                                    
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}" alt="Registered Tax Agent">
+                                        Technical advanced operations
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="DMCC Approved Auditors">
+                                        proactive advices and consulting
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="Registered Auditing Firm in all the Banks"> 
+                                            cost effective solutions
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="Registered Auditing Firm in all the Banks"> 
+                                            Accurate & efficient book-keeping
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="Registered Auditing Firm in all the Banks"> 
+                                            High returns on investments
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="Registered Auditing Firm in all the Banks"> 
+                                            Easily accessible team
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-black hover_red d-flex">
+                                        <img width="14" style="top: 6px;right:6px; position: relative" height="14"
+                                            src="{{ asset('front/upload/icons/check.svg') }}"
+                                            alt="Registered Auditing Firm in all the Banks"> 
+                                            Hear & Learn from feedback
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                     
+
+                    <section class="layer-overlay overlay-theme-colored-9 mt-30"
                         style="background-image: url('{{ asset('front/upload/files/Main/achievements-cover.jpg') }}'); background-size: cover;">
                         <div class="container pt-90 pb-90">
                             <div class="section-content">
@@ -70,63 +145,20 @@
                             </div>
                         </div>
                     </section>
-                    <p style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">Getting the right
-                            financial advice and service is crucial for the success of every business organization. At Innovate Accounts</a>, we are committed
-                            to delivering top-quality professional services while upholding the highest standards of ethics
-                            and integrity.</span></p>
-                    <p style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">We specialize in
-                            providing <a style="color: #006EBB; text-decoration: underline;">audit services</a>, <a
-                                style="color: #006EBB; text-decoration: underline;">accounting services</a>, <a
-                                style="color: #006EBB; text-decoration: underline;">VAT services</a>, <a
-                                style="color: #006EBB; text-decoration: underline;">excise tax services</a>, <a
-                                style="color: #006EBB; text-decoration: underline;">corporate tax services</a>, <a
-                                style="color: #006EBB; text-decoration: underline;">business consultancy</a>, and a wide
-                            range of financial services.</span></p>
-                    <h2><strong><span style="color: #006EBB; font-size: 14pt;">Our Vision</span></strong></h2>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">Our
-                            vision is to emerge as one of the leading auditing and consulting firms in the region, providing
-                            professional services with absolute customer satisfaction. We adhere to values such as:</span>
-                    </p>
-                    <h5 style="text-align: justify;"><strong><span
-                                style="color: #006EBB; font-size: 13pt;">Passion</span></strong></h5>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">We
-                            strive to exceed our clients' expectations by being responsive, creative, and delivering
-                            superior outcomes. We encourage personal and professional growth through opportunities and
-                            training.</span></p>
-                    <h5 style="text-align: justify;"><strong><span
-                                style="color: #006EBB; font-size: 13pt;">Integrity</span></strong></h5>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">We
-                            uphold shared standards and mutual respect, extending our voice and reach to entrepreneurs and
-                            influential leaders.</span></p>
-                    <h5 style="text-align: justify;"><strong><span
-                                style="color: #006EBB; font-size: 13pt;">Teamwork</span></strong></h5>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">Strong
-                            personal relationships enable seamless collaboration. We prioritize timely responses, fair
-                            charges, and mutual respect.</span></p>
-                    <h5 style="text-align: justify;"><strong><span
-                                style="color: #006EBB; font-size: 13pt;">Clarity</span></strong></h5>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">We
-                            initiate clear and direct action, maintaining openness, transparency, and consistency in our
-                            approach.</span></p>
-                    <h5 style="text-align: justify;"><strong><span
-                                style="color: #006EBB; font-size: 13pt;">Quality</span></strong></h5>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">We
-                            apply the highest standards of quality to our work, constantly reviewing and testing compliance
-                            to ensure superior outcomes.</span></p>
+                    
                     <h3><span style="font-size: 14pt;"><strong><span style="color: #006EBB;">Our
                                     Mission</span></strong></span></h3>
-                    <p class="mb-20 jsfy" style="text-align: justify;"><span style="color: #000000; font-size: 13pt;">We are
-                            passionate about providing professional services to our clients and community. Through
-                            continuous improvement and the latest technologies, we ensure the highest quality performance
-                            expected of the industry.</span><br /><br /><span style="color: #000000; font-size: 13pt;">In
-                            our audit firm, we have a diverse team of professional auditors and chartered accountants from
-                            different regions and nationalities, proficient in various languages. This ensures that our
-                            clients work with adept professionals who deliver high-quality work and real results every day.
-                            <a><span style="color: #006EBB;">Innovate Accounts</span></a> is the leading auditing firm in <a
-                                style="color: #000000;">UAE</a>, <a style="color: #000000;">KSA</a>, <a
-                                style="color: #000000;">Qatar</a>, <a style="color: #000000;">Bahrain</a>, <a
-                                style="color: #000000;">Oman</a>, <a style="color: #000000;">India</a>, <a
-                                style="color: #000000;">UK</a>, and <a style="color: #000000;">USA</a>.</span></p>
+                    <p style="text-align: justify; color: #000000; font-size: 13pt;">
+                        We are committed to delivering exceptional professional services to our clients and community. By embracing continuous improvement and leveraging the latest technologies, we ensure top-tier performance that meets industry standards.
+                    </p>
+                    <p style="text-align: justify; color: #000000; font-size: 13pt;">
+                        Our audit firm boasts a diverse team of skilled auditors and chartered accountants from various regions and backgrounds, fluent in multiple languages. This diversity ensures that our clients receive high-quality service and tangible results every day. 
+                        <span  style="color: #006EBB;">Innovate Accounts</span> stands as the premier auditing firm in 
+                        <span style="color: #000000;">Dubai</span>, 
+                        <span style="color: #000000;">Mumbai</span>. 
+                        
+                    </p>
+
                 </div>
             </div>
         </div>

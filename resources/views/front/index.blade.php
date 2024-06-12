@@ -215,58 +215,57 @@
                         | <span class="text-theme-colored2">Innovate Accounts</span></h1>
                     <div class="row">
                         <div class="col-md-5 purpose_img">
-                            <img src="{{ asset('front/upload/files/common/our-purpose.html') }}" loading="lazy"
+                            <img src="{{ asset('front/upload/files/home.png') }}" loading="lazy"
                                 style="min-height: 420px; object-fit: cover; width: 100%;" width="100%" height="590"
                                 alt="our purpose">
                         </div>
                         <div class="col-md-7">
-                            <p class="mb-0 font-18" style="color: #222222;">OUR PURPOSE</p>
+                            <p class="mb-0 font-18" style="color: #222222;">How We Work</p>
                             <h5 class="text-uppercase title mt-0 text-black" style="font-size: 2rem;font-weight: bold;">
-                                Building your <span class="text-theme-colored2">Business</span> Dreams</h5>
+                                Business Setup & <span class="text-theme-colored2">Consultancy </span></h5>
                             <div class="line-bottom-theme-colored2 mb-10"></div>
-                            <p class="text-black font-15 pb-10 text-justify">Innovate Accounts is the best
-                                <b>Accounting and
-                                    Audit Firm in Dubai Mumbai
-                                </b>.
-                                Our services include Accounting Bookkeeping VAT and
-                                more.
+                            <p class="text-black font-15 pb-10 text-justify">We offer low-cost business setup services in the UAE. Our professional
+                            business specialists will help you determine the proper company type so
+                            that you can benefit from 100% ownership, substantial tax exemptions, and hassle-free capital repatriation.
                             </p>
-                            <p class="text-black font-15 pb-10 text-justify">Innovate Accounts is dedicated to delivering service excellence and quality in all our endeavors. We consistently bring our best to our clients, earning their trust through our high standards of professional and personal conduct.
-                            </p>
-                            <p class="text-black font-15 pb-10 text-justify">At Innovate Accounts, our mission is to nurture your business aspirations. Our services and insights are crafted to </p>
+                            
                             <ul class="font-15 text-black">
                                 <li>
                                     <a class="text-black hover_red d-flex" href="audit-in-free-zones-uae.html">
                                         <img width="14" style="top: 6px; position: relative" height="14"
                                             src="{{ asset('front/upload/icons/check.svg') }}"
-                                            alt="Approved Audit Firm in all UAE Free Zones"> Approved Audit Firm in
-                                        all UAE
-                                        Free Zones
-                                    </a>
+                                            alt="Approved Audit Firm in all UAE Free Zones"> 
+                                            <strong>Company / Business Formation</strong>
+                                            </a>
+                                             <p class="ml-25">• Advice and support in forming Mainland, Freezone or as Offshore Entities</p>
+                                    
                                 </li>
                                 <li>
                                     <a class="text-black hover_red d-flex" href="tax-agent-in-uae.html">
                                         <img width="14" style="top: 6px; position: relative" height="14"
                                             src="{{ asset('front/upload/icons/check.svg') }}" alt="Registered Tax Agent">
-                                        Registered Tax Agent
+                                        <strong>Company Liquidation</strong>
                                     </a>
+                                    <p class="ml-25">• Mainland Company Closure • Freezone Company Closure • Start to Endapprovals and process follow up</p>
                                 </li>
                                 <li>
                                     <a class="text-black hover_red d-flex" href="dmcc-approved-auditors.html">
                                         <img width="14" style="top: 6px; position: relative" height="14"
                                             src="{{ asset('front/upload/icons/check.svg') }}"
                                             alt="DMCC Approved Auditors">
-                                        DMCC Approved Auditors
+                                        <strong>Payroll Processing</strong>
                                     </a>
+                                    <p class="ml-25">• Confidential Salary Processing • Payslip Generation • End of Service Benefits Calculations</p>
                                 </li>
                                 <li>
                                     <a class="text-black hover_red d-flex"
                                         href="blogs/approved-auditors-in-uae-banks.html">
                                         <img width="14" style="top: 6px; position: relative" height="14"
                                             src="{{ asset('front/upload/icons/check.svg') }}"
-                                            alt="Registered Auditing Firm in all the Banks"> Approved Auditors in
-                                        UAE Banks
+                                            alt="Registered Auditing Firm in all the Banks"> 
+                                            <strong>Operational Guidance and outsourcing</strong>
                                     </a>
+                                    <p class="ml-25">• Government Licensing approvals • Normal Visa Services • Golden Visa Services Other PRO support services</p>
                                 </li>
                             </ul>
                             <a class="btn btn-theme-colored2 pt-10 pb-10 mt-10" href=" {{route('about-us')}} ">More
@@ -292,7 +291,7 @@
             </div>
         </div>
 
-        <section id="blog" style="display: none">
+        <section id="blog" style="display: none;">
             <div class="container pb-sm-40 pt-0">
                 <div class="section-content pt-50">
                     <div class="splide" id="blog_list" role="group" aria-label="blog list">
@@ -477,7 +476,7 @@
                             @endif
                     </div>
                     <div class="col-md-5">
-                        <img src="{{ asset('front/upload/files/home/bms-auditing-brochure.html') }}" loading="lazy"
+                        <img src="{{ asset('front/upload/files/2.png') }}" loading="lazy"
                             width="100%" style="max-width: 500px;" height="100%"
                             alt="Innovate Accounts brochure preview">
                     </div>
@@ -488,7 +487,7 @@
         <section class="layer-overlay overlay-theme-colored-9" id="quick_enq_block">
             <div class="container-fluid pt-0 pb-0">
                 <div class="row bg-img-cover"
-                    style="background-image: url('{{ asset('front/images/consult-banner2.html') }}')">
+                    style="background-image: url('{{ asset('front/upload/files/1.png') }}')">
                     <div class="col-sm-6 col-md-6 pull-right home-contact-form xs-pull-none"
                         style="background-color: rgb(37, 42, 49) !important;">
                         <div class="home-form-container">
@@ -513,9 +512,9 @@
                                         <div class="col-sm-6">
                                             <div class="form-group mb-20">
                                                 <div class="styled-select">
-                                                    <select id="country" name="country"
+                                                    <select id="location" name="location"
                                                         class="form-control captchaValid">
-                                                        <option value="">Country</option>
+                                                        <option value="">Location</option>
                                                         <option value="1">Dubai</option>
                                                         <option value="2">Mumbai</option>
                                                     </select>

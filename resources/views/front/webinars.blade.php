@@ -70,8 +70,8 @@
                             <div class="col-md-5 align-middle">
                                 <div>
                                     <a target="blank" href="#">
-                                        <img src="{{ asset('front/upload/files/events/uae-corporate-tax-webinar.jpg') }}"
-                                            class="wp-post-image" alt="">
+                                        <img src="{{ asset('front/upload/files/about.png') }}"
+                                            class="wp-post-image" alt="" height="450" style="width: 100%">
                                     </a>
                                 </div>
                             </div>

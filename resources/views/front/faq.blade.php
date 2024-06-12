@@ -407,65 +407,11 @@
                                     <div class="post-right">
                                         <h5 class="post-title mt-0 mb-0"><a class="font-15"
                                                 style="font-family: Poppins,sans-serif;"
-                                                href="blogs/the-power-of-feasibility-studies-in-mitigating-investment-risks.html">Decoding
+                                                href="#">Decoding
                                                 Success: The Power of Feasibility Studies in Mitigating Investment Risks</a>
                                         </h5>
                                     </div>
                                 </article>
-                                <article class="post media-post clearfix pb-0 mb-25"
-                                    style="font-family: Poppins,sans-serif;">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                style="font-family: Poppins,sans-serif;"
-                                                href="blogs/uae-aed-10000-penalty-late-corporate-tax-registration.html">UAE
-                                                Introduces AED 10,000 Penalty for Late Corporate Tax Registration: Insights
-                                                from BMS Auditing</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-25"
-                                    style="font-family: Poppins,sans-serif;">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                style="font-family: Poppins,sans-serif;"
-                                                href="blogs/decoding-ZATCAs-proposed-vat-amendments.html">Decoding ZATCA's
-                                                Proposed VAT Amendments: Your Roadmap to Retroactive Recovery with BMS
-                                                Auditing Insight</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-25"
-                                    style="font-family: Poppins,sans-serif;">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                style="font-family: Poppins,sans-serif;"
-                                                href="blogs/complete-guide-to-joint-venture-planning.html">A Complete Guide
-                                                to Joint Venture Planning</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-25"
-                                    style="font-family: Poppins,sans-serif;">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                style="font-family: Poppins,sans-serif;"
-                                                href="blogs/establishing-100-percentage-foreign-owned-company-in-saudi-arabia.html">Unlocking
-                                                Opportunities: Establishing a 100% Foreign-Owned Company in Saudi Arabia</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                                <article class="post media-post clearfix pb-0 mb-25"
-                                    style="font-family: Poppins,sans-serif;">
-                                    <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-0"><a class="font-15"
-                                                style="font-family: Poppins,sans-serif;"
-                                                href="blogs/steps-to-obtaining-misa-license-in-saudi-arabia.html">Mastering
-                                                MISA: Unleashing Opportunities with BMS Auditing's Business Setup
-                                                Mastery</a>
-                                        </h5>
-                                    </div>
-                                </article>
-
                             </div>
                         </div>
                         <div class="widget bordered category-block">
@@ -474,44 +420,14 @@
                             <div class="categories">
                                 <div>
                                     <ul class="list ml-0">
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/uae.html">UAE <span>
-                                                    (72)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/vat.html">VAT <span>
-                                                    (46)</span></a></li>
+                                        
                                         <li style="padding-left: 0;"><a style="font-weight: 400"
                                                 class="font-15 text-black" href="blogs/category/dubai.html">Dubai <span>
                                                     (43)</span></a></li>
                                         <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/audit.html">Audit <span>
+                                                class="font-15 text-black" href="blogs/category/audit.html">Mumbai <span>
                                                     (34)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black"
-                                                href="blogs/category/corporate-tax.html">Corporate Tax <span>
-                                                    (31)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/business.html">Business
-                                                <span> (27)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/vat-in-uae.html">VAT in
-                                                UAE <span> (19)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black"
-                                                href="blogs/category/accounting.html">Accounting <span> (18)</span></a>
-                                        </li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/saudi-arabia.html">Saudi
-                                                Arabia <span> (18)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/auditors.html">Accountants
-                                                and Auditors <span> (18)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/taxations.html">Taxations
-                                                <span> (15)</span></a></li>
-                                        <li style="padding-left: 0;"><a style="font-weight: 400"
-                                                class="font-15 text-black" href="blogs/category/oman.html">Oman <span>
-                                                    (13)</span></a></li>
+                                        
                                     </ul>
                                 </div>
                                 <div id="blog_category" style="height: 0; overflow:hidden;">
@@ -563,9 +479,7 @@
                                                 in Bahrain <span> (1)</span></a></li>
                                     </ul>
                                 </div>
-                                <button onclick="expand('blog_category',this)"
-                                    style="border: none; background: transparent; color: #d52121">Show more
-                                    categories</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -573,6 +487,10 @@
             </div>
         </div>
     </section>
+
+
+
+
 @endpush
 
 
@@ -588,4 +506,8 @@
 		}
 	}
     </script>
+    <!-- <script src="https://www.bmsauditing.com/design/web_design/assets/js/custom.js?v=6"></script> -->
+    <script src=" https://www.bmsauditing.com/design/web_design/assets/js/jquery-2.2.4.min.js"></script>
+    <script src=" https://www.bmsauditing.com/design/web_design/assets/js/jquery-ui.min.js"></script>
+    <script src=" https://www.bmsauditing.com/design/web_design/assets/js/bootstrap.min.js"></script>
 @endpush
