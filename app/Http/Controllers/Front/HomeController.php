@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use App\Models\News;
 use App\Models\Page;
-use App\Models\contactUs;
+use App\Models\ContactUs;
 use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -103,7 +103,7 @@ class HomeController extends Controller
             'message' => 'required|string'
             ]);
 
-        $contactUs = new contactUs();
+        $contactUs = new ContactUs();
         $contactUs->name = $request->input('name');
         $contactUs->email = $request->input('email');
         $contactUs->contact_number = $request->input('contact_number');
