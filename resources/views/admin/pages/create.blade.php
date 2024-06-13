@@ -32,7 +32,7 @@
                     <div class="card">
                         <div class="card-header">
 
-                            <h4 class="card-title">{{ isset($page->id) ? 'Edit page' : 'Create page' }}</h4>
+                            <h4 class="card-title">{{ isset($page->id) ? 'Edit Sub Service' : 'Create Sub Service' }}</h4>
                             <div class="dt-action-buttons text-end pt-3 pt-md-0">
                                 <div class="dt-buttons">
                                     <a href="{{ route('admin.pages.index') }}">

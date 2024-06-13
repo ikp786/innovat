@@ -34,7 +34,7 @@
 
                     <div class="card">
                         <div class="card-header border-bottom">
-                            <h4 class="card-title">Pages</h4>
+                            <h4 class="card-title">Sub Services</h4>
                             <div class="dt-action-buttons text-end pt-3 pt-md-0">
                                 <div class="dt-buttons"> <a href="{{ route('admin.pages.create') }}"> <button
                                             class="btn btn-primary waves-effect waves-light" type="button">Add New</button>
