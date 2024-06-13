@@ -2201,6 +2201,51 @@
                 }
             }
         </script>
+
+
+        <script>
+        $("#contact_us_form").on('submit',function(event) {
+            event.preventDefault();
+            var $form = $(this);
+            var formData = new FormData($form[0]);
+            $('.validation_error_message').css('display','none')
+            $.ajax({
+                type: "post",
+                url: "{{ route('save-contact') }}",
+                dataType: "json",
+                "headers": {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(data){
+                    // successMsg(data.message)
+                    // alert("Data Save: " + data.message);
+                    // form.reset();
+                    $('#contact_us_form')[0]. reset();
+                    $('#success_msg').show().html(data.message);
+                   // $("#contact_us_form").reset();
+                   
+                   
+              },
+              error: function(err){
+                if (err.status == 422) { // when status code is 422, it's a validation issue
+            console.log(err.responseJSON);
+            $('#success_message').fadeIn().html(err.responseJSON.message);
+            
+            // you can loop through the errors object and show it to the user
+            console.warn(err.responseJSON.errors);
+            // display errors on each form field
+            $.each(err.responseJSON.errors, function (i, error) {
+                var el = $(document).find('[name="'+i+'"]');
+                el.after($('<span class="validation_error_message" style="color: red;">'+error[0]+'</span>'));
+            });
+        }
+            }
+        });
+        });
+    </script>
+
+
         @stack('scripts')
 </body>
 

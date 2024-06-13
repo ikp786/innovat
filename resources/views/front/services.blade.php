@@ -35,10 +35,10 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 right_side_bar">
-                        <a style="color: #fff;" href="#">
-                            <div class="mb-20" style="text-align: center;background: #e03e2d;padding: 7px;">
+                        <a style="color: #fff;" href="{{ route('our-locations', config('constants.locations.dubai.name')) }}">
+                            <div class="mb-20" style="text-align: center;background: #006ebb;padding: 7px;">
                                 <button
-                                    class="btn btn-outline-primary sear"style="border-radius: 0px;background: #e03e2d;padding: 7px;">Get
+                                    class="btn btn-outline-primary sear"style="border-radius: 0px;background: #006ebb;padding: 7px;">Get
                                     A Quote</button>
                             </div>
                         </a>
@@ -82,7 +82,7 @@
 
                                 </div>
                             </div>
-                            <div class="widget bordered category-block">
+                            <!-- <div class="widget bordered category-block">
                                 <h5 class="widget-title font-20 text-black pt-0 line-bottom" style="font-weight: 600;">
                                     Categories</h5>
                                 <div class="categories">
@@ -98,7 +98,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

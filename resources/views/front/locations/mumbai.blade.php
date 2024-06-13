@@ -88,7 +88,7 @@ style="background-image: url('{{ asset('front/uploads/contact/bms-auditing-dubai
                                                 <form id="contact_us_form"  action="{{ route('save-contact') }}" name="" class="mt-30" method="POST">
                                                     @csrf
                                                     
-                                                    <div id="success_msg" class="p-5 mb-5" style="background: linear-gradient(to right, #006ebb, #e1e7d5);color: white;border-radius: 2px;display: none;"></div>
+                                                    <div id="success_msg" class="p-5 mb-5 pt-10 pb-10" style="background: linear-gradient(to right, #006ebb, #e1e7d5);color: white;border-radius: 2px;display: none;text-align: center;font-weight: 600;"></div>
                                                     
                                                     <div class="row">
                                                         <div class="col-md-6">
@@ -154,35 +154,4 @@ style="background-image: url('{{ asset('front/uploads/contact/bms-auditing-dubai
     </section>
     @endpush
 
-    @push('scripts')
-    <script>
-        $("#contact_us_form").on('submit',function(event) {
-            event.preventDefault();
-            var $form = $(this);
-            var formData = new FormData($form[0]);
-
-            $.ajax({
-                type: "post",
-                url: "{{ route('save-contact') }}",
-                dataType: "json",
-                "headers": {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(data){
-                    // successMsg(data.message)
-                    // alert("Data Save: " + data.message);
-                    // form.reset();
-                    $('#contact_us_form')[0]. reset();
-                    $('#success_msg').show().html(data.message);
-                   // $("#contact_us_form").reset();
-                   
-                   
-              },
-              error: function(data){
-                alert("Error")
-            }
-        });
-        });
-    </script>
-    @endpush
+    

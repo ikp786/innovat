@@ -495,28 +495,36 @@
                                 <div id="response">We will get back to you soon. Thank you!</div>
                                 <h3 class="text-white line-bottom-theme-colored2 font-30">Get a Free Consultation
                                 </h3>
-                                <form id="contact_form" name="contact_form" class="reservation-form form-transparent">
+                                <div id="success_msg" class="p-5 mb-5 pt-5 pb-5" style="background: linear-gradient(to right, #006ebb, #e1e7d5);color: white;border-radius: 2px;display: none;text-align: center;font-weight: 600;"></div>
+                                <form id="contact_us_form"  action="{{ route('save-contact') }}" name="" class="reservation-form form-transparent">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group mb-20">
-                                                <input placeholder="Full Name" id="fullname" name="fullname"
+                                                <input placeholder="Full Name" id="name" name="name"
                                                     class="form-control captchaValid" type="text">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group mb-20">
-                                                <input placeholder="Contact Number" id="landline" name="landline"
+                                                <input placeholder="Contact Number" id="contact_number" name="contact_number"
                                                     class="form-control captchaValid" type="number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group mb-20">
+                                                <input placeholder="Email-id" id="email" name="email"class="form-control captchaValid" type="text">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group mb-20">
                                                 <div class="styled-select">
-                                                    <select id="location" name="location"
+                                                    <select id="location" name="location" 
                                                         class="form-control captchaValid">
                                                         <option value="">Location</option>
-                                                        <option value="1">Dubai</option>
-                                                        <option value="2">Mumbai</option>
+                                                                    @foreach (config('constants.locations') as $locationKey => $location)
+                                                                    <option value="{{ $location['name'] }}">
+                                                                    {{ ucfirst($location['name']) }}</option>
+                                                                    @endforeach
                                                     </select>
                                                     <i class="fa fa-caret-down"></i>
                                                 </div>
@@ -525,10 +533,21 @@
 
                                         <div class="col-sm-6">
                                             <div class="form-group mb-20">
-                                                <input placeholder="Email-id" id="email" name="email"
-                                                    class="form-control captchaValid" type="text">
+                                                <div class="styled-select">
+                                                    <select id="service_id" name="service_id" 
+                                                        class="form-control">
+                                                        <option value="">Service</option>
+                                                                    @foreach ($services as $services)
+                                                                    <option value="{{ $services->id }}">
+                                                                        {{($services->title) }}</option>
+                                                                        @endforeach
+                                                    </select>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <textarea id="message" name="message" class="form-control captchaValid" rows="5"
@@ -751,3 +770,7 @@
         </section>
     </div>
 @endpush
+
+
+
+
