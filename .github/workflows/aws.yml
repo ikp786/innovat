@@ -52,6 +52,9 @@ jobs:
               # Add any other environment variables you need
             fi
 
+            # Check if database exists and create if it doesn't
+            mysql -h ${{ secrets.DB_HOST }} -u ${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} -e "CREATE DATABASE IF NOT EXISTS ${{ secrets.DB_DATABASE }};"
+
             composer install --no-interaction --prefer-dist --optimize-autoloader
             php artisan key:generate --force
             php artisan migrate --force
