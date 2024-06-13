@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use App\Models\News;
 use App\Models\Page;
+use App\Models\contactUs;
 use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Front\Validator;
 
 class HomeController extends Controller
 {
@@ -68,8 +70,55 @@ class HomeController extends Controller
     function ourLocations(Request $request, $location)
     {
         $title = 'Our Location';
-        return view('front.locations.' . $location, compact('title'));
+         $services = Service::active()->get();
+        return view('front.locations.' . $location, compact('title','services'));
+
     }
+
+
+    // store data in table contact_us
+    function saveContactUsData(Request $request)
+    {
+        // die;
+        // dd($request->all());
+
+
+        // $validator = Validator::make($request->all(), [
+        // 'name' => 'required|string|max:255',
+        // 'email' => 'required|email|max:255',
+        // 'contact_number' => 'required|string|max:15',
+        // 'location' => 'required|string|max:255',
+        // 'service_id' => 'required|integer',
+        // 'message' => 'required|string'
+        // ]);
+
+        // $validator->validate();
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'contact_number' => 'required|string|max:15',
+            'location' => 'required|string|max:255',
+            'service_id' => 'required|integer',
+            'message' => 'required|string'
+            ]);
+
+        $contactUs = new contactUs();
+        $contactUs->name = $request->input('name');
+        $contactUs->email = $request->input('email');
+        $contactUs->contact_number = $request->input('contact_number');
+        $contactUs->location = $request->input('location');
+        $contactUs->service_id = $request->input('service_id');
+        $contactUs->message = $request->input('message');
+        $contactUs->save();
+
+        return response()->json(['status' => true,'message' => 'We will get back to you soon !!!']);
+        return redirect()->back()->with('success', 'Data stored successfully!');
+
+
+    }
+
+
 
     function webinars()
     {

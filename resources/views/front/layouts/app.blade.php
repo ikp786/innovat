@@ -14,6 +14,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Innovate Accounts" />
     <meta name="p:domain_verify" content="0836777531265b3aa0a15b497322e445" />
+<meta name="csrf_token" content="{{ csrf_token() }}" />
 
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta property="og:type" content="business.business">

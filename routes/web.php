@@ -15,6 +15,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('faq', 'faq')->name('faq');
     Route::get('careers', 'careers')->name('careers');
     Route::get('our-locations/{locationName}', 'ourLocations')->name('our-locations');
+    Route::post('save-contact', 'saveContactUsData')->name('save-contact');
 });
 
 Route::get('/run-migrations', function () {
