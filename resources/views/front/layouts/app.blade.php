@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<!-- Mirrored from www.Innovate Accountsauditing.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 08:55:55 GMT -->
+<!-- Mirrored from www.Innovate Accountsauditing.com/ by HTTrack Website Copier/3.x [XR&CO 2014], Thu, 25 Apr 2024 08:55:55 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
     <title>{{ $title ?? 'Innovat' }}</title>
     <meta name="description"
-        content="Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more." />
+        content="Innovate Accounts is the best Accounting Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more." />
     <meta name="keywords"
-        content="Innovate Accounts, audit firm in UAE, audit firm in KSA, audit firm in Qatar, audit firm in Bahrain, audit firm in Oman, audit firm in India, audit firm in US, audit firm in UK, accounting firm in UAE, accounting firm in KSA, accounting firm in Qatar, accounting firm in Bahrain, accounting firm in Oman, accounting firm in India, accounting firm in US, accounting firm in UK, audit and accounting firm in UAE, audit firms dubai, audit firms uae, audit and accounting firm in dubai, accounting firms uae, accounting firms in dubai, accounting firms dubai" />
+        content="Innovate Accounts, audit firm in UAE, audit firm in audit firm in India,  accounting firm in UAE, accounting firm in India, accounting firm in US, accounting firm in UK, audit and accounting firm in UAE, audit firms dubai, audit firms uae, audit and accounting firm in dubai, accounting firms uae, accounting firms in dubai, accounting firms dubai" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Innovate Accounts" />
@@ -18,11 +18,11 @@
 
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta property="og:type" content="business.business">
-    <meta property="og:title" content="Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK, USA">
+    <meta property="og:title" content="Accounting Dubai, Mumbai">
     <meta property="og:url" content="index.html">
     <meta property="og:description"
-        content="Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.">
-    <meta property="og:image" content="{{ asset('front/upload/files/favicon/bms-auditing.jpg') }}">
+        content="Innovate Accounts is the best Accounting Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.">
+    <meta property="og:image" content="{{ asset('front/upload/files/Innovate-H5.png') }}">
     <meta property="business:contact_data:street_address"
         content="DAMAC Smart Heights - Office No. 1501 - Barsha Heights - Dubai, UAE">
     <meta property="business:contact_data:locality" content="Dubai">
@@ -32,10 +32,10 @@
     <!-- Twitter Meta Data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Innovate Accounts_auditing">
-    <meta name="twitter:title" content="Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK, USA">
+    <meta name="twitter:title" content="Accounting  Dubai, Mumbai">
     <meta name="twitter:description"
-        content="Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.">
-    <meta name="twitter:image" content="{{ asset('front/upload/files/bms-auditing.svg') }}">
+        content="Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.">
+    <meta name="twitter:image" content="{{ asset('front/upload/files/Innovate-H5.png') }}">
     <!-- Favicon and Touch Icons -->
     {!! Html::element('link')->attribute('rel', 'shortcut icon')->attribute('href', asset('/front/upload/files/favicon/favicon.png'))->attribute('type', 'image/x-icon') !!}
     {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon.png')) !!}
@@ -58,6 +58,7 @@
     <link rel="canonical" href="index.html" />
     <link rel="alternate" href="index.html" hreflang="en" />
 
+    {{--
     <script type="application/ld+json">
 			{
 				"@context": "http://schema.org/",
@@ -75,12 +76,12 @@
 					"addressRegion": "AE-DU",
 					"postalCode": "80394"
 				},
-				"description": "Innovate Accounts is the best Accounting and Audit Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+				"description": "Innovate Accounts is the best Accounting  Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 				"email": "teams@innovateaccounts.com",
 				"telephone": "04 551 6399",
-				"url": "https://www.Innovate Accountsauditing.com/",
-				"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
-				"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+				"url": "www.innovateaccounts.com/",
+				"image": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
+				"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 				"makesOffer": [
 					"Audit Services",
 					"Accounting Services",
@@ -126,7 +127,7 @@
 							"latitude": "25.0964093",
 							"longitude": "55.1742046"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "teams@innovateaccounts.com",
 						"telephone": "+971 4 551 6399",
 						"openingHours": [
@@ -134,10 +135,10 @@
 							"Su Closed"
 						],
 						"priceRange": "AED",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-dubai-uae",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-dubai-uae",
 						"hasMap": "https://goo.gl/maps/7U4q5mbR1d12pgYX8",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-dubai-uae.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-dubai-uae.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -181,7 +182,7 @@
 							"latitude": "24.7848144",
 							"longitude": "54.5983511"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Firm in Dubai, Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "teams@innovateaccounts.com",
 						"telephone": "+971 52 997 4124",
 						"openingHours": [
@@ -189,10 +190,10 @@
 							"Su Closed"
 						],
 						"priceRange": "AED",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-abu-dhabi-uae",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-abu-dhabi-uae",
 						"hasMap": "https://goo.gl/maps/ziHhrYv41enGCTFK7",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-abu-dhabi-uae.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-abu-dhabi-uae.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -236,7 +237,7 @@
 							"latitude": "25.1201071",
 							"longitude": "50.3362865"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "ksa@Innovate Accountsauditing.com",
 						"telephone": "+966 57 037 6076",
 						"openingHours": [
@@ -244,10 +245,10 @@
 							"Su Closed"
 						],
 						"priceRange": "SAR",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-saudi-arabia",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-saudi-arabia",
 						"hasMap": "https://goo.gl/maps/HNNiwvttdvnK8cd7A",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-saudi-arabia.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-saudi-arabia.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -291,7 +292,7 @@
 							"latitude": "26.2350999",
 							"longitude": "50.5725387"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "bahrain@Innovate Accountsauditing.com",
 						"telephone": "+973 1704 4431",
 						"openingHours": [
@@ -299,10 +300,10 @@
 							"Su Closed"
 						],
 						"priceRange": "BD",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-bahrain",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-bahrain",
 						"hasMap": "https://goo.gl/maps/4DUexjnnobpapLzX6",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-bahrain.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-bahrain.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -345,7 +346,7 @@
 							"latitude": "24.6074965",
 							"longitude": "50.8410423"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "qatar@Innovate Accountsauditing.com",
 						"telephone": "+974 4 452 8139",
 						"openingHours": [
@@ -353,10 +354,10 @@
 							"Su Closed"
 						],
 						"priceRange": "QR",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-qatar",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-qatar",
 						"hasMap": "https://goo.gl/maps/ruN4TP5yroSbPG5n8",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-qatar.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-qatar.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -400,7 +401,7 @@
 							"latitude": "23.5868726",
 							"longitude": "58.3789436"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "qatar@Innovate Accountsauditing.com",
 						"telephone": "+968 9656 9829",
 						"openingHours": [
@@ -408,10 +409,10 @@
 							"Su Closed"
 						],
 						"priceRange": "OMR",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-oman",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-oman",
 						"hasMap": "https://goo.gl/maps/ruN4TP5yroSbPG5n8",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-oman.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-oman.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -455,7 +456,7 @@
 							"latitude": "12.9887364",
 							"longitude": "77.6472109"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "india@Innovate Accountsauditing.com",
 						"telephone": "+91 807 898 5958",
 						"openingHours": [
@@ -463,10 +464,10 @@
 							"Su Closed"
 						],
 						"priceRange": "INR",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-india",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-india",
 						"hasMap": "https://goo.gl/maps/dxmDCBJ6SFN8Ktyc9",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-india.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-india.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -509,7 +510,7 @@
 							"latitude": "31.879304",
 							"longitude": "-8.8620288"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
 						"email": "uk@Innovate Accountsauditing.com",
 						"telephone": "+44 7452 213297",
 						"openingHours": [
@@ -517,10 +518,10 @@
 							"Su Closed"
 						],
 						"priceRange": "GBP",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-uk",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-uk",
 						"hasMap": "https://goo.gl/maps/X9YoTpBk16p9Cq12A",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-uk.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-uk.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -549,14 +550,14 @@
 					{
 						"@context": "http://schema.org/",
 						"@type": "LocalBusiness",
-						"name": "Innovate Accounts USA",
+						"name": "Innovate Accounts Mumbai",
 						"legalName": "Innovate Accounts",
 						"address": {
 							"@type": "PostalAddress",
 							"streetAddress": "651 N Broad ST, STE 205 # 6935, Delaware, Middle Town, DE 19709",
 							"addressLocality": "Delaware",
-							"addressCountry": "USA",
-							"addressRegion": "USA",
+							"addressCountry": "Mumbai",
+							"addressRegion": "Mumbai",
 							"postalCode": "IG1 1JP"
 						},
 						"geo": {
@@ -564,18 +565,18 @@
 							"latitude": "31.879304",
 							"longitude": "-8.8620288"
 						},
-						"description": "Innovate Accounts is the best Accounting and Audit Firm in UAE, KSA, Qatar, Bahrain, Oman, India, UK and USA. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
-						"email": "usa@Innovate Accountsauditing.com",
+						"description": "Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.",
+						"email": "Mumbai@Innovate Accountsauditing.com",
 						"telephone": "+44 7452 213297",
 						"openingHours": [
 							"Mo-Sa 09:00-18:00",
 							"Su Closed"
 						],
 						"priceRange": "USD",
-						"url": "https://www.Innovate Accountsauditing.com/locations/bms-auditing-usa",
+						"url": "www.innovateaccounts.com/locations/bms-auditing-Mumbai",
 						"hasMap": "https://goo.gl/maps/X9YoTpBk16p9Cq12A",
-						"image": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing-usa.webp",
-						"logo": "https://www.Innovate Accountsauditing.com/upload/files/bms-auditing.svg",
+						"image": "www.innovateaccounts.com/upload/files/bms-auditing-Mumbai.webp",
+						"logo": "www.innovateaccounts.com/upload/files/bms-auditing.svg",
 						"makesOffer": [
 							"Audit Services",
 							"Accounting Services",
@@ -598,12 +599,13 @@
 						],
 						"areaServed": {
 							"@type": "City",
-							"name": "Delaware, USA"
+							"name": "Delaware, Mumbai"
 						}
 					}
 				]
 			}
 		</script>
+        --}}
     <script type="application/ld+json">
 			{
 				"@context": "http://schema.org",
@@ -613,7 +615,7 @@
 				"url": "https://www.Innovate Accountsauditing.com",
 				"potentialAction": {
 					"@type": "SearchAction",
-					"target": "https://www.Innovate Accountsauditing.com/search?key={search_term_string}",
+					"target": "www.innovateaccounts.com/search?key={search_term_string}",
 					"query-input": "required name=search_term_string"
 				}
 			}
@@ -1968,7 +1970,7 @@
                 $("#do_subscibe").submit(function(event) {
                     event.preventDefault();
                     $.ajax({
-                        url: "https://www.Innovate Accountsauditing.com/info/save_subscibe",
+                        url: "www.innovateaccounts.com/info/save_subscibe",
                         type: "POST",
                         data: $(this).serialize(),
                         dataType: "json",
@@ -2005,7 +2007,7 @@
                 $('form[name=contact_form]').on('submit', function(event) {
                     event.preventDefault();
                     $.ajax({
-                        url: "https://www.Innovate Accountsauditing.com/info/contact_mail_send",
+                        url: "www.innovateaccounts.com/info/contact_mail_send",
                         type: "POST",
                         data: $(this).serialize(),
                         dataType: "json",
@@ -2123,7 +2125,7 @@
         <script type="text/javascript">
             function get_contact_info() {
                 $.ajax({
-                    url: "https://www.Innovate Accountsauditing.com/info/get_country_contact",
+                    url: "www.innovateaccounts.com/info/get_country_contact",
                     method: "POST",
                     dataType: "json",
                     success: function(data) {
