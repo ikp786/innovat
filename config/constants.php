@@ -17,9 +17,9 @@ return [
             'name' => 'dubai',
             'phone' => '+971 521 29 7955',
         ],
-        'mumbai' => [
-            'name' => 'mumbai',
-            'phone' => '+91 97 6970 2402',
-        ],
+        // 'mumbai' => [
+        //     'name' => 'mumbai',
+        //     'phone' => '+91 97 6970 2402',
+        // ],
     ],
 ];
