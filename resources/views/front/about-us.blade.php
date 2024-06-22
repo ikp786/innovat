@@ -114,31 +114,31 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-                                        <div class="funfact text-center">
-                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15"
-                                                data-value="5250" data-theme="minimal">100</div>
-                                            <h5 class="text-white text-uppercase mb-0">+ Happy Clients</h5>
+                                        <div class="funfact text-center mt-10">
+                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0 "
+                                                data-value="5250" data-theme="minimal">100+</div>
+                                            <h5 class="text-white text-uppercase mb-0 mt-0"> Happy Clients</h5>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-                                        <div class="funfact text-center">
-                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15"
-                                                data-value="11" data-theme="minimal">12</div>
-                                            <h5 class="text-white text-uppercase mb-0">+ Years of Experience</h5>
+                                        <div class="funfact text-center mt-10">
+                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0"
+                                                data-value="11" data-theme="minimal">17+</div>
+                                            <h5 class="text-white text-uppercase mb-0 mt-0"> Years of Experience</h5>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-                                        <div class="funfact text-center">
-                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15"
-                                                data-value="7000" data-theme="minimal">7000</div>
-                                            <h5 class="text-white text-uppercase mb-0">+ Cases completed</h5>
+                                        <div class="funfact text-center mt-10">
+                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0"
+                                                data-value="7000" data-theme="minimal">250+</div>
+                                            <h5 class="text-white text-uppercase mb-0 mt-0"> Cases completed</h5>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-0">
-                                        <div class="funfact text-center">
-                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15"
-                                                data-value="200" data-theme="minimal">200</div>
-                                            <h5 class="text-white text-uppercase mb-0">+ Employees</h5>
+                                        <div class="funfact text-center mt-10">
+                                            <div class="odometer-animate-number text-theme-colored2 font-42 font-weight-600 mt-0"
+                                                data-value="200" data-theme="minimal">15+</div>
+                                            <h5 class="text-white text-uppercase mb-0 mt-0"> Employees</h5>
                                         </div>
                                     </div>
                                 </div>
