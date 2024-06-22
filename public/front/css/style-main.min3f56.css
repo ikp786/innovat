@@ -2237,9 +2237,21 @@ div#response {
     bottom: 17px;
     right: 26px;
 }
+.phone_mobile {
+    position: fixed;
+    z-index: 9999999;
+    display: block;
+    width: 50px;
+    height: 85px;
+    bottom: 80px;
+    right: 26px;
+}
 @media only screen and (max-width: 1000px) {
     .whatsapp_mobile {
-        bottom: -11px;
+        bottom: 15px;
+    }
+    .phone_mobile{
+        bottom: 70px
     }
 }
 .getintouch ::after {

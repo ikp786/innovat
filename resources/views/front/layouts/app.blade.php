@@ -1801,6 +1801,13 @@
             </div>
         </footer>
 
+        <a aria-label="contact us on phone"
+            href="tel:+971521297955"
+            class="phone_mobile" id="whatsappContact" target="_blank" rel="noreferrer">
+            <img style="width: 100%" height="50" width="50" src="{{ asset('front/images/Circle-icons-phone.svg.png') }}"
+                loading="lazy" alt="Innovate Accounts Phone">
+        </a>
+
         <a aria-label="contact us on whatsapp"
             href="https://api.whatsapp.com/send?phone=+971521297955&amp;text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             class="whatsapp_mobile" id="whatsappContact" target="_blank" rel="noreferrer">
