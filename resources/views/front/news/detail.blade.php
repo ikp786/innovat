@@ -96,7 +96,7 @@
     <section>
         <div class="container mt-30 mb-30 pt-30 pt-sm-0 pb-30">
             <div class="row">
-                <div class="col-md-12 col-lg-8 page_content">
+                <div class="col-md-12 col-lg-12 page_content">
                     <div class="blog-posts single-post">
                         <h1 class="text-black font-Poppins text-justify mt-0 font-30 font-weight-700">
                             {{ $news->title }}
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-4 sidebar right_side_bar">
+                <!-- <div class="col-md-12 col-lg-4 sidebar right_side_bar">
                     <div class="widget contact-form-wrapper mb-20 bordered">
                         <form id="smallContactform" class="mb-0" method="post"
                             action="https://www.bmsauditing.com/info/search_results" style="padding: 0px;">
@@ -266,7 +266,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
