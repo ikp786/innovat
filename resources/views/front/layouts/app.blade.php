@@ -14,7 +14,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Innovate Accounts" />
     <meta name="p:domain_verify" content="0836777531265b3aa0a15b497322e445" />
-<meta name="csrf_token" content="{{ csrf_token() }}" />
+    <meta name="csrf_token" content="{{ csrf_token() }}" />
 
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta property="og:type" content="business.business">
@@ -1393,8 +1393,8 @@
                                                             style="color: #006EBB; font-weight: bold;"
                                                             href="#">Dubai</a>
                                                     </p>
-                                                    <a href="tel:{{config('constants.locations.dubai.phone')}}"
-                                                        class="font-13 text-white">{{config('constants.locations.dubai.phone')}}</a><br>
+                                                    <a href="tel:{{ config('constants.locations.dubai.phone') }}"
+                                                        class="font-13 text-white">{{ config('constants.locations.dubai.phone') }}</a><br>
                                                     <a href="mailto:teams@innovateaccounts.com"
                                                         class="font-13 text-white">teams@innovateaccounts.com</a>
                                                 </div>
@@ -1405,7 +1405,8 @@
                                                             style="color: #006EBB; font-weight: bold;"
                                                             href="#">Mumbai</a>
                                                     </p>
-                                                    <a href="tel:+919769702402" class="font-13 text-white">{{config('constants.locations.mumbai.phone')}}</a><br>
+                                                    <a href="tel:+919769702402"
+                                                        class="font-13 text-white">{{ config('constants.locations.mumbai.phone') }}</a><br>
                                                     <a href="mailto:teams@innovateaccounts.com"
                                                         class="font-13 text-white">teams@innovateaccounts.com</a>
                                                 </div>
@@ -1510,7 +1511,8 @@
                                                 Webinars</a>
                                         </li>  --}}
                                         <li>
-                                            <a href=" {{ route('client-stories') }}" style="font-weight: bold !important;">
+                                            <a href=" {{ route('client-stories') }}"
+                                                style="font-weight: bold !important;">
                                                 Client Stories</a>
                                         </li>
                                         <li>
@@ -1548,43 +1550,44 @@
 
         <div class="floating_social_media">
             <ul class="styled-icons clearfix">
-                @if($settings)
-                @if ($settings->facebook_url)
-                    <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
-                            target="_blank" rel="noreferrer">
-                            <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}" width="15"
-                                height="15" alt="Innovate Accounts facebook account"></a></li>
-                @endif
-                @if ($settings->twitter_url)
-                    <li><a aria-label="Innovate Accounts twitter account" href="{{ $settings->twitter_url }}"
-                            target="_blank" rel="noreferrer">
-                            <img src="{{ asset('front/upload/icons/twitter.svg') }}" loading="lazy" width="15"
-                                height="15" alt="Innovate Accounts twitter account"></a></li>
-                @endif
-                @if ($settings->linkedin_url)
-                    <li><a aria-label="Innovate Accounts linkedin account" href="{{ $settings->linkedin_url }}"
-                            target="_blank" rel="noreferrer">
-                            <img src="{{ asset('front/upload/icons/linkedin.svg') }}" width="15" height="15"
-                                loading="lazy" alt="Innovate Accounts linkedin account"></a></li>
-                @endif
-                @if ($settings->youtube_url)
-                    <li><a aria-label="Innovate Accounts youtube account" href="{{ $settings->youtube_url }}"
-                            target="_blank" rel="noreferrer">
-                            <img src="{{ asset('front/upload/icons/youtube.svg') }}" width="15" loading="lazy"
-                                height="15" alt="Innovate Accounts youtube account"></a></li>
-                @endif
-                @if ($settings->instagram_url)
-                    <li><a aria-label="Innovate Accounts instagram account" href="{{ $settings->instagram_url }}"
-                            target="_blank" rel="noreferrer">
-                            <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
-                                height="15" alt="Innovate Accounts instagram account"></a></li>
-                @endif
+                @if ($settings)
+                    @if ($settings->facebook_url)
+                        <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
+                                target="_blank" rel="noreferrer">
+                                <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}"
+                                    width="15" height="15" alt="Innovate Accounts facebook account"></a></li>
+                    @endif
+                    @if ($settings->twitter_url)
+                        <li><a aria-label="Innovate Accounts twitter account" href="{{ $settings->twitter_url }}"
+                                target="_blank" rel="noreferrer">
+                                <img src="{{ asset('front/upload/icons/twitter.svg') }}" loading="lazy"
+                                    width="15" height="15" alt="Innovate Accounts twitter account"></a></li>
+                    @endif
+                    @if ($settings->linkedin_url)
+                        <li><a aria-label="Innovate Accounts linkedin account" href="{{ $settings->linkedin_url }}"
+                                target="_blank" rel="noreferrer">
+                                <img src="{{ asset('front/upload/icons/linkedin.svg') }}" width="15"
+                                    height="15" loading="lazy" alt="Innovate Accounts linkedin account"></a></li>
+                    @endif
+                    @if ($settings->youtube_url)
+                        <li><a aria-label="Innovate Accounts youtube account" href="{{ $settings->youtube_url }}"
+                                target="_blank" rel="noreferrer">
+                                <img src="{{ asset('front/upload/icons/youtube.svg') }}" width="15"
+                                    loading="lazy" height="15" alt="Innovate Accounts youtube account"></a></li>
+                    @endif
+                    @if ($settings->instagram_url)
+                        <li><a aria-label="Innovate Accounts instagram account" href="{{ $settings->instagram_url }}"
+                                target="_blank" rel="noreferrer">
+                                <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}"
+                                    width="15" height="15" alt="Innovate Accounts instagram account"></a></li>
+                    @endif
                 @endif
             </ul>
         </div>
         <div class="floating_get-a-quote">
             <ul class="styled-icons clearfix">
-                <li><a aria-label="Innovate Accounts facebook account" href="{{ route('our-locations', config('constants.locations.dubai.name')) }}" target="_blank"
+                <li><a aria-label="Innovate Accounts facebook account"
+                        href="{{ route('our-locations', config('constants.locations.dubai.name')) }}" target="_blank"
                         rel="noreferrer">
                         <img loading="lazy" src="{{ asset('front/upload/icons/get_in_touch.svg') }}" width="35"
                             height="35" alt="Innovate Accounts facebook account"></a></li>
@@ -1645,15 +1648,14 @@
                         <div class="widget dark">
                             <h4 class="widget-title line-bottom-theme-colored2">Latest Blogs</h4>
                             <div class="latest-posts">
-                                {{-- <article class="post media-post clearfix pb-0 mb-10">
+                                @foreach($blogs as $blog)
+                                <article class="post media-post clearfix pb-0 mb-10">
                                     <div class="post-right">
-                                        <h5 class="post-title mt-0 mb-5"><a
-                                                href="blogs/the-power-of-feasibility-studies-in-mitigating-investment-risks.html">Decoding
-                                                Success: The Power of Feasibility Studies in Mitigating Investment
-                                                Risks</a>
+                                        <h5 class="post-title mt-0 mb-5"><a href="{{ route('blog', $blog->slug) }}">{{ $blog->title }}</a>
                                         </h5>
                                     </div>
-                                </article> --}}
+                                </article>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -1735,38 +1737,50 @@
                                             <img loading="lazy" src="{{ asset('front/upload/icons/pinterest.svg') }}"
                                                 width="25" height="20"
                                                 alt="Innovate Accounts pintrest account"></a></li> --}}
-                                                @if ($settings)
-                                                @if ($settings->facebook_url)
-                                                <li><a aria-label="Innovate Accounts facebook account" href="{{ $settings->facebook_url }}"
-                                                        target="_blank" rel="noreferrer">
-                                                        <img loading="lazy" src="{{ asset('front/upload/icons/facebook.svg') }}" width="15"
-                                                            height="15" alt="Innovate Accounts facebook account"></a></li>
-                                            @endif
-                                            @if ($settings->twitter_url)
-                                                <li><a aria-label="Innovate Accounts twitter account" href="{{ $settings->twitter_url }}"
-                                                        target="_blank" rel="noreferrer">
-                                                        <img src="{{ asset('front/upload/icons/twitter.svg') }}" loading="lazy" width="15"
-                                                            height="15" alt="Innovate Accounts twitter account"></a></li>
-                                            @endif
-                                            @if ($settings->linkedin_url)
-                                                <li><a aria-label="Innovate Accounts linkedin account" href="{{ $settings->linkedin_url }}"
-                                                        target="_blank" rel="noreferrer">
-                                                        <img src="{{ asset('front/upload/icons/linkedin.svg') }}" width="15" height="15"
-                                                            loading="lazy" alt="Innovate Accounts linkedin account"></a></li>
-                                            @endif
-                                            @if ($settings->youtube_url)
-                                                <li><a aria-label="Innovate Accounts youtube account" href="{{ $settings->youtube_url }}"
-                                                        target="_blank" rel="noreferrer">
-                                                        <img src="{{ asset('front/upload/icons/youtube.svg') }}" width="15" loading="lazy"
-                                                            height="15" alt="Innovate Accounts youtube account"></a></li>
-                                            @endif
-                                            @if ($settings->instagram_url)
-                                                <li><a aria-label="Innovate Accounts instagram account" href="{{ $settings->instagram_url }}"
-                                                        target="_blank" rel="noreferrer">
-                                                        <img loading="lazy" src="{{ asset('front/upload/icons/instagram.svg') }}" width="15"
-                                                            height="15" alt="Innovate Accounts instagram account"></a></li>
-                                            @endif
-                                            @endif
+                                    @if ($settings)
+                                        @if ($settings->facebook_url)
+                                            <li><a aria-label="Innovate Accounts facebook account"
+                                                    href="{{ $settings->facebook_url }}" target="_blank"
+                                                    rel="noreferrer">
+                                                    <img loading="lazy"
+                                                        src="{{ asset('front/upload/icons/facebook.svg') }}"
+                                                        width="15" height="15"
+                                                        alt="Innovate Accounts facebook account"></a></li>
+                                        @endif
+                                        @if ($settings->twitter_url)
+                                            <li><a aria-label="Innovate Accounts twitter account"
+                                                    href="{{ $settings->twitter_url }}" target="_blank"
+                                                    rel="noreferrer">
+                                                    <img src="{{ asset('front/upload/icons/twitter.svg') }}"
+                                                        loading="lazy" width="15" height="15"
+                                                        alt="Innovate Accounts twitter account"></a></li>
+                                        @endif
+                                        @if ($settings->linkedin_url)
+                                            <li><a aria-label="Innovate Accounts linkedin account"
+                                                    href="{{ $settings->linkedin_url }}" target="_blank"
+                                                    rel="noreferrer">
+                                                    <img src="{{ asset('front/upload/icons/linkedin.svg') }}"
+                                                        width="15" height="15" loading="lazy"
+                                                        alt="Innovate Accounts linkedin account"></a></li>
+                                        @endif
+                                        @if ($settings->youtube_url)
+                                            <li><a aria-label="Innovate Accounts youtube account"
+                                                    href="{{ $settings->youtube_url }}" target="_blank"
+                                                    rel="noreferrer">
+                                                    <img src="{{ asset('front/upload/icons/youtube.svg') }}"
+                                                        width="15" loading="lazy" height="15"
+                                                        alt="Innovate Accounts youtube account"></a></li>
+                                        @endif
+                                        @if ($settings->instagram_url)
+                                            <li><a aria-label="Innovate Accounts instagram account"
+                                                    href="{{ $settings->instagram_url }}" target="_blank"
+                                                    rel="noreferrer">
+                                                    <img loading="lazy"
+                                                        src="{{ asset('front/upload/icons/instagram.svg') }}"
+                                                        width="15" height="15"
+                                                        alt="Innovate Accounts instagram account"></a></li>
+                                        @endif
+                                    @endif
                                 </ul>
                                 <div id="response_2">Subscribed Thank you!</div>
                             </div>
@@ -1801,11 +1815,11 @@
             </div>
         </footer>
 
-        <a aria-label="contact us on phone"
-            href="tel:+971521297955"
-            class="phone_mobile" id="whatsappContact" target="_blank" rel="noreferrer">
-            <img style="width: 100%" height="50" width="50" src="{{ asset('front/images/Circle-icons-phone.svg.png') }}"
-                loading="lazy" alt="Innovate Accounts Phone">
+        <a aria-label="contact us on phone" href="tel:+971521297955" class="phone_mobile" id="whatsappContact"
+            target="_blank" rel="noreferrer">
+            <img style="width: 100%" height="50" width="50"
+                src="{{ asset('front/images/Circle-icons-phone.svg.png') }}" loading="lazy"
+                alt="Innovate Accounts Phone">
         </a>
 
         <a aria-label="contact us on whatsapp"
@@ -2213,46 +2227,49 @@
 
 
         <script>
-        $("#contact_us_form").on('submit',function(event) {
-            event.preventDefault();
-            var $form = $(this);
-            var formData = new FormData($form[0]);
-            $('.validation_error_message').css('display','none')
-            $.ajax({
-                type: "post",
-                url: "{{ route('save-contact') }}",
-                dataType: "json",
-                "headers": {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(data){
-                    // successMsg(data.message)
-                    // alert("Data Save: " + data.message);
-                    // form.reset();
-                    $('#contact_us_form')[0]. reset();
-                    $('#success_msg').show().html(data.message);
-                   // $("#contact_us_form").reset();
-                   
-                   
-              },
-              error: function(err){
-                if (err.status == 422) { // when status code is 422, it's a validation issue
-            console.log(err.responseJSON);
-            $('#success_message').fadeIn().html(err.responseJSON.message);
-            
-            // you can loop through the errors object and show it to the user
-            console.warn(err.responseJSON.errors);
-            // display errors on each form field
-            $.each(err.responseJSON.errors, function (i, error) {
-                var el = $(document).find('[name="'+i+'"]');
-                el.after($('<span class="validation_error_message" style="color: red;">'+error[0]+'</span>'));
+            $("#contact_us_form").on('submit', function(event) {
+                event.preventDefault();
+                var $form = $(this);
+                var formData = new FormData($form[0]);
+                $('.validation_error_message').css('display', 'none')
+                $.ajax({
+                    type: "post",
+                    url: "{{ route('save-contact') }}",
+                    dataType: "json",
+                    "headers": {
+                        'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+                    },
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(data) {
+                        // successMsg(data.message)
+                        // alert("Data Save: " + data.message);
+                        // form.reset();
+                        $('#contact_us_form')[0].reset();
+                        $('#success_msg').show().html(data.message);
+                        // $("#contact_us_form").reset();
+
+
+                    },
+                    error: function(err) {
+                        if (err.status == 422) { // when status code is 422, it's a validation issue
+                            console.log(err.responseJSON);
+                            $('#success_message').fadeIn().html(err.responseJSON.message);
+
+                            // you can loop through the errors object and show it to the user
+                            console.warn(err.responseJSON.errors);
+                            // display errors on each form field
+                            $.each(err.responseJSON.errors, function(i, error) {
+                                var el = $(document).find('[name="' + i + '"]');
+                                el.after($('<span class="validation_error_message" style="color: red;">' +
+                                    error[0] + '</span>'));
+                            });
+                        }
+                    }
+                });
             });
-        }
-            }
-        });
-        });
-    </script>
+        </script>
 
 
         @stack('scripts')

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Request;
@@ -32,12 +33,17 @@ class ViewServiceProvider extends ServiceProvider
                     return Service::with('pages')->orderBy('sort_by', 'asc')->get(); // Eager load pages
                 });
 
+                $blogs = Cache::remember('blogs_with_pages', 60 * 60, function () {
+                    return Blog::active()->limit(10)->get();
+                });
+
                 // Caching settings
                 $settings = Cache::remember('settings_data', 60 * 60, function () {
                     return Setting::first();
                 });
 
                 $view->with('services', $services);
+                $view->with('blogs', $blogs);
                 $view->with('settings', $settings);
             }
         });
