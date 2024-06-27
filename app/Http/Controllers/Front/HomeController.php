@@ -11,6 +11,7 @@ use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Validator;
+use App\Models\Blog;
 
 class HomeController extends Controller
 {
@@ -50,7 +51,8 @@ class HomeController extends Controller
             }
             $title = $news->title;
             $newsList = News::active()->paginate(10);
-            return view('front.news.detail', compact('title', 'news', 'newsList'));
+            $blogList = Blog::active()->paginate(5);
+            return view('front.news.detail', compact('title', 'news', 'newsList','blogList'));
         }
         // Check if the request is an AJAX request
         if ($request->ajax()) {
@@ -59,6 +61,28 @@ class HomeController extends Controller
         }
         $news = News::active()->paginate(10);
         return view('front.news.index', compact('title', 'news'));
+    }
+
+    function blog(Request $request, $slug = null)
+    {
+        $title = 'Blog Page';
+        if ($slug) {
+            $blog = Blog::whereSlug($slug)->first();
+            if (!$blog) {
+                abort(404);
+            }
+            $title = $blog->title;
+            $blogList = Blog::active()->paginate(5);
+            $newsList = News::active()->paginate(5);
+            return view('front.blog.detail', compact('title', 'blog', 'blogList','newsList'));
+        }
+        // Check if the request is an AJAX request
+        if ($request->ajax()) {
+            $blogs = Blog::active()->paginate(5); // Adjust the number of items per page as needed
+            return view('front.blog.pagination', compact('blogs'))->render();
+        }
+        $blogs = Blog::active()->paginate(5);
+        return view('front.blog.index', compact('title', 'blogs'));
     }
 
     function aboutUs(Request $request)

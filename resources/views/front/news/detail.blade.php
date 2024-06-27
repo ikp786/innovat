@@ -193,6 +193,17 @@
                                 </div>
                             </article> --}}
 
+                            @foreach ($blogList as $blog)
+                                    <article class="post media-post clearfix pb-0 mb-25"
+                                        style="font-family: Poppins,sans-serif;">
+                                        <div class="post-right">
+                                            <h5 class="post-title mt-0 mb-0"><a class="font-15"
+                                                    style="font-family: Poppins,sans-serif;"
+                                                    href="{{ route('blog', $blog->slug) }}">{{ $blog->title }}</a>
+                                            </h5>
+                                        </div>
+                                    </article>
+                                @endforeach
                         </div>
                     </div>
                     <div class="widget bordered mb-20">

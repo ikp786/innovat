@@ -1502,13 +1502,13 @@
                                                 News</a>
                                         </li>
                                         <li>
-                                            <a href="#" style="font-weight: bold !important;">
+                                            <a href="{{ route('blog') }}" style="font-weight: bold !important;">
                                                 Blogs</a>
                                         </li>
-                                        <li>
+                                        {{--  <li>
                                             <a href="{{ route('webinars') }}" style="font-weight: bold !important;">
                                                 Webinars</a>
-                                        </li>
+                                        </li>  --}}
                                         <li>
                                             <a href=" {{ route('client-stories') }}" style="font-weight: bold !important;">
                                                 Client Stories</a>
