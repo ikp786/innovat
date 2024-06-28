@@ -59,4 +59,4 @@ jobs:
             php artisan key:generate --force
             php artisan migrate --force
             php artisan db:seed --force
-            chmod -R 777 storage bootstrap/cache
+            # chmod -R 777 storage bootstrap/cache
