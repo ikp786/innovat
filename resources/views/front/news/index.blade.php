@@ -1,9 +1,9 @@
 @extends('front.layouts.app')
 @push('content')
     <section class="inner-header divider"
-        style="background-image: url('{{ asset('front/upload/files/news.html') }}'); background-size: cover;">
+        style="background-image: url('{{ asset('front/upload/files/News Page.png') }}'); background-size: cover;">
         <div class="container banner_text">
-            <div class="section-content">
+            <div class="section-content" style="visibility: hidden;">
                 <div class="row">
                     <div class="col-md-6">
                         <h1 class="text-theme-colored2 font-26">News</h1>
