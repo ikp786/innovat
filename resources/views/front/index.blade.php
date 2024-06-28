@@ -495,7 +495,7 @@
                                 <div id="response">We will get back to you soon. Thank you!</div>
                                 <h3 class="text-white line-bottom-theme-colored2 font-30">Get a Free Consultation
                                 </h3>
-                                <div id="success_msg" class="p-5 mb-5 pt-5 pb-5" style="background: linear-gradient(to right, #006ebb, #e1e7d5);color: white;border-radius: 2px;display: none;text-align: center;font-weight: 600;"></div>
+                                <div id="success_msg" class="p-5 mb-5 pt-10 pb-10" style="background: linear-gradient(to right, #006ebb, #e1e7d5);color: white;border-radius: 2px;display: none;text-align: center;font-weight: 600;"></div>
                                 <form id="contact_us_form"  action="{{ route('save-contact') }}" name="" class="reservation-form form-transparent">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -681,17 +681,17 @@
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
-                                        <div class="item"><img src="{{ asset('front/images/clients/1.html') }}"
+                                        <div class="item"><img src="{{ asset('front/upload/files/brand1.jpeg') }}"
                                                 height="99" width="190" loading="lazy"
                                                 alt="Innovate Accounts clients"></div>
                                     </li>
                                     <li class="splide__slide">
 
-                                        <div class="item"><img src="{{ asset('front/images/clients/2.html') }}"
+                                        <div class="item"><img src="{{ asset('front/upload/files/brand2.jpeg') }}"
                                                 height="99" width="190" loading="lazy"
                                                 alt="Innovate Accounts clients"></div>
                                     </li>
-                                    <li class="splide__slide">
+                                    <!-- <li class="splide__slide">
                                         <div class="item"><img src="{{ asset('front/images/clients/bentley.html') }}"
                                                 height="99" width="190" loading="lazy" alt="bentley">
                                         </div>
@@ -760,7 +760,7 @@
                                         <div class="item"><img src="{{ asset('front/images/clients/14.html') }}"
                                                 height="99" width="190" loading="lazy"
                                                 alt="Innovate Accounts clients"></div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
