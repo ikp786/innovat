@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactUsMailNotification;
 use App\Models\Banner;
 use App\Models\News;
 use App\Models\Page;
@@ -103,21 +104,6 @@ class HomeController extends Controller
     // store data in table contact_us
     function saveContactUsData(Request $request)
     {
-        // die;
-        // dd($request->all());
-
-
-        // $validator = Validator::make($request->all(), [
-        // 'name' => 'required|string|max:255',
-        // 'email' => 'required|email|max:255',
-        // 'contact_number' => 'required|string|max:15',
-        // 'location' => 'required|string|max:255',
-        // 'service_id' => 'required|integer',
-        // 'message' => 'required|string'
-        // ]);
-
-        // $validator->validate();
-
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -135,6 +121,8 @@ class HomeController extends Controller
         $contactUs->service_id = $request->input('service_id');
         $contactUs->message = $request->input('message');
         $contactUs->save();
+        // Send email to admin
+    \Mail::to(env('ADMIN_EMAIL'))->send(new ContactUsMailNotification($contactUs));
 
         return response()->json(['status' => true,'message' => 'We will get back to you soon !!!']);
         return redirect()->back()->with('success', 'Data stored successfully!');
