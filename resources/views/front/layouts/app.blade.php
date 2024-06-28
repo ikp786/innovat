@@ -1473,24 +1473,47 @@
 
                                         <div class="megamenu-row">
 
-                                            @foreach ($services as $serviceKey => $serviceValue)
-                                                <div class="col3">
-                                                    <h4 class="megamenu-col-title"><a
-                                                            href="{{ route('services', $serviceValue->slug) }}"><img
-                                                                src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}"
-                                                                width="25" alt="{{ $serviceValue->title }}"
-                                                                height="25"
-                                                                style="position:relative;top: 5px;" />{{ $serviceValue->title }}</a>
-                                                    </h4>
-                                                    <ul>
-                                                        @foreach ($serviceValue->pages as $pageKey => $pageValue)
-                                                            <li><a
-                                                                    href="{{ route('services', $pageValue->slug) }}">{{ $pageValue->title }}</a>
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            @endforeach
+                                            @php
+    $count = 0;
+@endphp
+
+@foreach ($services as $serviceKey => $serviceValue)
+    @if ($count % 4 == 0)
+        @if ($count != 0)
+            </div> <!-- Close previous div if not the first iteration -->
+        @endif
+        <div class="row"> <!-- Start a new div every 4 records -->
+    @endif
+
+    <div class="col3">
+        <h4 class="megamenu-col-title">
+            <a href="{{ route('services', $serviceValue->slug) }}">
+                <img src="{{ asset('uploads/service_icons/' . $serviceValue->icon) }}"
+                     width="25" alt="{{ $serviceValue->title }}"
+                     height="25" style="position:relative;top: 5px;" />
+                {{ $serviceValue->title }}
+            </a>
+        </h4>
+        <ul>
+            @foreach ($serviceValue->pages as $pageKey => $pageValue)
+                <li>
+                    <a href="{{ route('services', $pageValue->slug) }}">
+                        {{ $pageValue->title }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+
+    @php
+        $count++;
+    @endphp
+@endforeach
+
+@if ($count % 4 != 0)
+    </div> <!-- Close the last opened div if not a multiple of 4 -->
+@endif
+
                                         </div>
                                     </div>
                                 </li>
