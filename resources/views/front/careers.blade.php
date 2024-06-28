@@ -2,7 +2,7 @@
 @push('styles')
     @push('content')
         <section class="inner-header divider"
-            style="background-image: url('{{asset('front/uploads/files/Careers Page.png')}}'); background-size: cover;">
+            style="background-image: url('{{ asset('front/upload/files/Careers.png') }}'); background-size: cover;">
             <div class="container banner_text">
                 <div class="section-content" style="visibility: hidden;">
                     <div class="row">
