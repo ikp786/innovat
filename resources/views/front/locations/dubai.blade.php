@@ -1,14 +1,14 @@
 @extends('front.layouts.app')
 @push('content')
 <section class="inner-header divider"
-style="background-image: url('{{ asset('front/uploads/contact/bms-auditing-dubai.html') }}'); background-size: cover;">
+style="background-image: url('{{asset('front/upload/files/bms-auditing-dubai.webp')}}'); background-size: cover;">
 <div class="container banner_text">
     <!-- Section Content -->
     <div class="section-content">
         <div class="row">
             <div class="col-md-6">
                 <h1 class="text-theme-colored2 font-26">Contact us:</h1>
-                <h6>Your Trusted partner for Business and According Services</h6>
+                <h6 class="text-white">Your Trusted partner for Business and According Services</h6>
             </div>
         </div>
     </div>
