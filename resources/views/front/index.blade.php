@@ -276,7 +276,7 @@
             </div>
         </section>
 
-        <div style="width: 100vw;background-color: #006EBB; padding: 30px 0;">
+        <!-- <div style="width: 100vw;background-color: #006EBB; padding: 30px 0;">
             <div class="container">
                 <div class="row" style="display: flex;align-items: end;">
                     <div class="col-md-7 col-sm-7">
@@ -289,7 +289,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <section id="blog" style="display: none;">
             <div class="container pb-sm-40 pt-0">
@@ -463,6 +463,7 @@
         <div class="brochure_download" style="background-color: #006EBB; padding: 30px 0;">
             <div class="container">
                 <div class="row">
+
                     <div class="col-md-7">
                         <img src="{{ asset('front/upload/files/home/tag_bms3860.html') }}" loading="lazy" width="100%"
                             height="100%" alt="Innovate Accounts Brochure">
@@ -480,6 +481,7 @@
                             width="100%" style="max-width: 500px;" height="100%"
                             alt="Innovate Accounts brochure preview">
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -586,25 +588,23 @@
 
                             <div class="splide testimonials" id="testimonials" role="group" aria-label="testimonials">
                                 <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
+                                    <ul class="splide__list display-block ">
+                                        <li class="splide__slide ">
                                             <div class="testimonial">
                                                 <div class="comment bg-lighter p-20">
-                                                    <p class="font-15 text-black">Excellent team of professionals,
-                                                        We
-                                                        provide you utmost analysis of financial statements and
-                                                        reviewing
-                                                        fund flows and cash flow statements.</p>
+                                                    <p class="font-15 text-black">We entrusted InnovateAccounts team our book keeping, Accounting and tax consultation work and we were thrilled to see the prompt response, quality of work and the expert knowledge they bring to help with our accounting and business operations. They are very proactive in reaching out to us with guidance and be compliant with UAE Law. They us to focus on our business ensuring our finance and accounting etc are taken care by them.</p>
                                                 </div>
-                                                <div class="content mt-30">
+                                                <div class="content mt-20">
                                                     <div class="mr-20 mt-0">
                                                         <h4 class="author text-theme-colored2 font-weight-600 pt-5 mb-0">
-                                                            Mashal ALZarooni</h4>
+                                                            Name: Ved Virat </h4>
+                                                            <span>Company: JSS Real Estate</span>
+                                                            <p>Position: Co-Founder</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="splide__slide">
+                                        <!-- <li class="splide__slide">
                                             <div class="testimonial">
                                                 <div class="comment bg-lighter p-20">
                                                     <p class="font-15 text-black">Our company has been working
@@ -659,7 +659,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -688,6 +688,12 @@
                                     <li class="splide__slide">
 
                                         <div class="item"><img src="{{ asset('front/upload/files/brand2.jpeg') }}"
+                                                height="99" width="190" loading="lazy"
+                                                alt="Innovate Accounts clients"></div>
+                                    </li>
+                                    <li class="splide__slide">
+
+                                        <div class="item"><img src="{{ asset('front/upload/files/brand.jpeg') }}"
                                                 height="99" width="190" loading="lazy"
                                                 alt="Innovate Accounts clients"></div>
                                     </li>
