@@ -24,7 +24,7 @@
                                     <div class="col-md-3 col-sm-6">
                                         <div class="service-grid"><a href="{{ route('services', $service->slug) }}"
                                                 target="_blank" rel="noopener"><img
-                                                    src="{{ asset('uploads/service_images/' . $data->image) }}"
+                                                    src="{{ asset('uploads/service_images/' . $service->image) }}"
                                                     alt="" width="100%" /></a>
                                             <h2 id="h_1505462755821655287011242"><a
                                                     href="{{ route('services', $service->slug) }}" target="_blank"
