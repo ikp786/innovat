@@ -1,5 +1,5 @@
 @extends('front.layouts.app')
-@push('style')
+@push('styles')
     <style>
         .service-grid {
             text-align: center;
