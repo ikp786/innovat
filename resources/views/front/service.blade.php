@@ -1,4 +1,35 @@
 @extends('front.layouts.app')
+@push('style')
+    <style>
+        .service-grid {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .service-grid h2 {
+            font-size: 20px;
+        }
+
+        .service-grid p {
+            font-size: 15px;
+            color: #222222;
+        }
+
+        .service-grid p a {
+            color: #222222 !important;
+        }
+
+        .service-grid h2 a {
+            color: #e30d12 !important;
+        }
+
+        .service-grid img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+        }
+    </style>
+@endpush
 @push('content')
     <div class="main-content">
         <section class="inner-header divider"
@@ -31,7 +62,7 @@
                                                     rel="noopener">{{ $service->title }}</a></h2>
                                             <p><a href="{{ route('services', $service->slug) }}" target="_blank"
                                                     rel="noopener">
-                                                    {{ substr(strip_tags($service->description), 0, 250) }}                                                    
+                                                    {{ substr(strip_tags($service->description), 0, 250) }}
                                             </p>
                                         </div>
                                     </div>
