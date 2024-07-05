@@ -20,19 +20,23 @@
                     <div class="col-md-12  col-lg-12 page_content">
                         <section>
                             <div class="row">
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="service-grid"><a href="audit-services.html" target="_blank"
-                                            rel="noopener"><img
-                                                src="{{ asset('front/upload/files/Services/audit-assurance.html') }}"
-                                                alt="" width="100%" /></a>
-                                        <h2 id="h_1505462755821655287011242"><a href="audit-services.html" target="_blank"
-                                                rel="noopener">Audit and Assurance</a></h2>
-                                        <p><a href="audit-services.html" target="_blank" rel="noopener">Our finest auditors
-                                                use modern auditing techniques and prepare authentic &amp; transparent audit
-                                                report by following the International Standards of Auditing (ISA).</a></p>
+                                @foreach ($services as $key => $service)
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="service-grid"><a href="{{ route('services', $service->slug) }}"
+                                                target="_blank" rel="noopener"><img
+                                                    src="{{ asset('uploads/service_images/' . $data->image) }}"
+                                                    alt="" width="100%" /></a>
+                                            <h2 id="h_1505462755821655287011242"><a
+                                                    href="{{ route('services', $service->slug) }}" target="_blank"
+                                                    rel="noopener">{{ $service->title }}</a></h2>
+                                            <p><a href="{{ route('services', $service->slug) }}" target="_blank"
+                                                    rel="noopener">
+                                                    {{ substr(strip_tags($service->description), 0, 250) }}                                                    
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
+                                @endforeach
+                                {{--  <div class="col-md-3 col-sm-6">
                                     <div class="service-grid"><a href="financial-audit-services.html" target="_blank"
                                             rel="noopener"><img
                                                 src="{{ asset('front/upload/files/Services/financial-audit.html') }}"
@@ -111,8 +115,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="service-grid"><img
-                                            src="{{ asset('front/upload/files/Services/tax-agent.html') }}" alt=""
-                                            width="100%" />
+                                            src="{{ asset('front/upload/files/Services/tax-agent.html') }}"
+                                            alt="" width="100%" />
                                         <h2><span style="color: #ed1e24;">Tax Agent</span></h2>
                                         <p>We assist you in better planning of your taxes and differentiating between the
                                             Dos and Don&rsquo;ts. Being a Tax Agent in Dubai, UAE, We ensure VAT compliance
@@ -166,7 +170,7 @@
                                         <p>Technology goes beyond implementation. It can be complicated, but we help to
                                             simplify the process and maximise impact along your transformation journey.</p>
                                     </div>
-                                </div>
+                                </div>  --}}
                             </div>
                         </section>
                     </div>

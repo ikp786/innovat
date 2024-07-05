@@ -39,7 +39,8 @@ class HomeController extends Controller
             return view('front.services', compact('title', 'data', 'modelName', 'news'));
         }
         $title = 'Service Page';
-        return view('front.service', compact('title'));
+        $services = Service::active()->get();
+        return view('front.service', compact('title','services'));
     }
 
     function news(Request $request, $slug = null)
