@@ -15,6 +15,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('client-stories', 'clientStories')->name('client-stories');
     Route::get('faq', 'faq')->name('faq');
     Route::get('careers', 'careers')->name('careers');
+    Route::post('save-career','saveCareer')->name('save-career');
     Route::get('our-locations/{locationName}', 'ourLocations')->name('our-locations');
     Route::post('save-contact', 'saveContactUsData')->name('save-contact');
 });

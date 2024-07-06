@@ -43,31 +43,34 @@
                                                 style="text-decoration: underline;">careers@innovateaccounts.com</span></span></a>
                                 </p>
                             </div>
-                            <form id="career_form" name="career_form" class="mt-30" enctype="multipart/form-data">
+                    
+                            <form id="career_form" id="career_form" name="career_form" action="{{ route('save-contact') }}" class="mt-30" method="POST">
+                                @csrf
+                                <div id="success_msg" class="p-5 mb-5 pt-10 pb-10" style="background: linear-gradient(to right, #006ebb, #e1e7d5);color: white;border-radius: 2px;display: none;text-align: center;font-weight: 600;"></div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group mb-10">
-                                            <input id="con_fullname" name="con_fullname" class="form-control captchaValid"
+                                            <input id="name" id="name" name="name" class="form-control captchaValid"
                                                 type="text" placeholder="Full Name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group mb-10">
-                                            <input id="con_email" name="con_email" class="form-control captchaValid"
+                                            <input id="email" name="email" class="form-control captchaValid"
                                                 type="text" placeholder="Email id">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group mb-10">
-                                            <input id="con_phone" name="con_phone" class="form-control captchaValid"
+                                            <input id="mobile" name="mobile" class="form-control captchaValid"
                                                 type="number" placeholder="Mobile Number">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group mb-10 white-select2">
-                                            <select id="country" name="country" class="form-control captchaValid">
+                                            <select id="location" name="location" class="form-control captchaValid">
                                                 <option value="">Select Country</option>
                                                 <option value="dubai">Dubai</option>
                                                 <option value="mumbai">Mumbai</option>
@@ -92,7 +95,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group mb-10">
-                                            <input id="con_resume" name="con_resume" class="form-control captchaValid"
+                                            <input id="attachment" name="attachment" class="form-control captchaValid"
                                                 type="file" placeholder="Resume">
                                         </div>
                                     </div>
@@ -102,11 +105,6 @@
                                     </div>
 
                                 </div>
-
-                                <!-- <div class="form-group mb-10">
-                                          <textarea id="con_message" name="con_message" class="form-control" placeholder="Enter Message" rows="5"></textarea>
-                                        </div> -->
-
                                 <div class="form-group mb-20 mt-20 loading_block">
                                     <button type="submit" class="btn btn-dark btn-theme-colored"
                                         id="career_form_btn">Submit</button>
@@ -120,5 +118,39 @@
         </section>
     @endpush
     @push('scripts')
-        <script></script>
+    <script>
+        $("#career_form").on('submit', function(event) {
+            event.preventDefault();
+            var $form = $(this);
+            var formData = new FormData($form[0]);
+            $('.validation_error_message').css('display', 'none')
+            $.ajax({
+                type: "post",
+                url: "{{ route('save-career') }}",
+                dataType: "json",
+                "headers": {
+                    'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+                },
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    $('#career_form')[0].reset();
+                    $('#success_msg').show().html(data.message);
+                },
+                error: function(err) {
+                    if (err.status == 422) { // when status code is 422, it's a validation issue
+                        $('#success_message').fadeIn().html(err.responseJSON.message);
+                        // display errors on each form field
+                        $.each(err.responseJSON.errors, function(i, error) {
+                            var el = $(document).find('[name="' + i + '"]');
+                            el.after($('<span class="validation_error_message" style="color: red;">' +
+                                error[0] + '</span>'));
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
     @endpush

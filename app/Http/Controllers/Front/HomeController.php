@@ -5,24 +5,26 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactUsMailNotification;
 use App\Models\Banner;
+use App\Models\Career;
 use App\Models\News;
 use App\Models\Page;
 use App\Models\ContactUs;
 use App\Models\Service;
 use App\Models\Setting;
+use App\Traits\FileUploadTrait;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Front\Validator;
 use App\Models\Blog;
 
 class HomeController extends Controller
 {
+    use FileUploadTrait;
     function index(Request $request, $slug = null)
     {
         $title = 'Home Page';
         $services = Service::active()->get();
         $banners = Banner::active()->get();
         $settings = Setting::first();
-        return view('front.index', compact('title', 'services', 'banners','settings'));
+        return view('front.index', compact('title', 'services', 'banners', 'settings'));
     }
 
     function services(Request $request, $slug = null)
@@ -40,7 +42,7 @@ class HomeController extends Controller
         }
         $title = 'Service Page';
         $services = Service::active()->get();
-        return view('front.service', compact('title','services'));
+        return view('front.service', compact('title', 'services'));
     }
 
     function news(Request $request, $slug = null)
@@ -54,7 +56,7 @@ class HomeController extends Controller
             $title = $news->title;
             $newsList = News::active()->paginate(10);
             $blogList = Blog::active()->paginate(5);
-            return view('front.news.detail', compact('title', 'news', 'newsList','blogList'));
+            return view('front.news.detail', compact('title', 'news', 'newsList', 'blogList'));
         }
         // Check if the request is an AJAX request
         if ($request->ajax()) {
@@ -76,7 +78,7 @@ class HomeController extends Controller
             $title = $blog->title;
             $blogList = Blog::active()->paginate(5);
             $newsList = News::active()->paginate(5);
-            return view('front.blog.detail', compact('title', 'blog', 'blogList','newsList'));
+            return view('front.blog.detail', compact('title', 'blog', 'blogList', 'newsList'));
         }
         // Check if the request is an AJAX request
         if ($request->ajax()) {
@@ -96,9 +98,8 @@ class HomeController extends Controller
     function ourLocations(Request $request, $location)
     {
         $title = 'Our Location';
-         $services = Service::active()->get();
-        return view('front.locations.' . $location, compact('title','services'));
-
+        $services = Service::active()->get();
+        return view('front.locations.' . $location, compact('title', 'services'));
     }
 
 
@@ -112,7 +113,7 @@ class HomeController extends Controller
             'location' => 'required|string|max:255',
             'service_id' => 'required|integer',
             'message' => 'required|string'
-            ]);
+        ]);
 
         $contactUs = new ContactUs();
         $contactUs->name = $request->input('name');
@@ -123,12 +124,10 @@ class HomeController extends Controller
         $contactUs->message = $request->input('message');
         $contactUs->save();
         // Send email to admin
-    \Mail::to(env('ADMIN_EMAIL'))->send(new ContactUsMailNotification($contactUs));
+        \Mail::to(env('ADMIN_EMAIL'))->send(new ContactUsMailNotification($contactUs));
 
-        return response()->json(['status' => true,'message' => 'We will get back to you soon !!!']);
+        return response()->json(['status' => true, 'message' => 'We will get back to you soon !!!']);
         return redirect()->back()->with('success', 'Data stored successfully!');
-
-
     }
 
 
@@ -157,4 +156,25 @@ class HomeController extends Controller
         return view('front.careers', compact('title'));
     }
 
+    // store data in table contact_us
+    function saveCareer(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'mobile' => 'required|string|max:15',
+            'location' => 'required|string|max:255',
+            'department' => 'required|string',
+            'attachment' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+        ]);
+
+        $career = new Career();
+        $career->fill($request->all());
+        if ($file = $request->file('attachment')) {
+            $folder = public_path('/uploads/careers');
+            $career->attachment = $this->uploadFile($file, $folder);
+        }
+        $career->save();
+        return response()->json(['status' => true, 'message' => 'Your request submited successfully!.']);
+    }
 }
