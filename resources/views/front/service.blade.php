@@ -33,10 +33,10 @@
 @push('content')
     <div class="main-content">
         <section class="inner-header divider"
-            style="background-image: url('{{ asset('front/upload/files/services.html') }}'); background-size: cover;">
+            style="background-image: url('{{ asset('front/upload/files/Services.png') }}'); background-size: cover;">
             <div class="container banner_text pb-60">
                 <!-- Section Content -->
-                <div class="section-content">
+                <div class="section-content" style="display: none;">
                     <div class="row">
                         <div class="col-md-6">
                             <h1 class="text-theme-colored2 font-26">Services</h1>

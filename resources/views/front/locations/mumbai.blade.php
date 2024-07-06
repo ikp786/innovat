@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 @push('content')
 <section class="inner-header divider"
-style="background-image: url('{{ asset('front/uploads/contact/bms-auditing-dubai.html') }}'); background-size: cover;">
+style="background-image: url('{{ asset('front/uploads/contact/Contact Us.png') }}'); background-size: cover;">
 <div class="container banner_text">
     <!-- Section Content -->
     <div class="section-content">
