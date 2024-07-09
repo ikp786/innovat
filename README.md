@@ -16,7 +16,7 @@ This is a Laravel-based application named Innovat. Below are the steps to set up
 <code>git clone https://github.com/ikp786/innovat.git
 cd innovat
 </code>
-<button onclick="copyToClipboard(this)">Copy</button>
+
 </pre>
 
 ### Step 2: Install Composer dependencies
