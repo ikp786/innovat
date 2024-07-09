@@ -13,7 +13,7 @@ This is a Laravel-based application named Innovat. Below are the steps to set up
 ### Step 1: Clone the repository
 
 <pre>
-<code>git clone https://github.com/ikp786/innovat.git
+<code>git clone https://github.com/ikp786/innovat.git && 
 cd innovat
 </code>
 
@@ -23,14 +23,12 @@ cd innovat
 
 <pre>
 <code>composer install</code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 ### Step 3: Set up the environment configuration
 
 <pre>
 <code>cp .env.example .env</code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 Update the `.env` file with the following:
@@ -59,21 +57,18 @@ MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=
 ADMIN_EMAIL=
 </code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 ### Step 4: Generate application key
 
 <pre>
 <code>php artisan key:generate</code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 ### Step 5: Run migrations
 
 <pre>
 <code>php artisan migrate</code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 ## Running the Application
@@ -82,7 +77,6 @@ Start the Laravel development server:
 
 <pre>
 <code>php artisan serve</code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 The application will be accessible at [http://localhost:8000](http://localhost:8000).
@@ -103,7 +97,6 @@ MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=
 ADMIN_EMAIL=
 </code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 ### Database Configuration
@@ -118,7 +111,6 @@ DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
 </code>
-<button onclick="copyToClipboard(this)">Copy</button>
 </pre>
 
 ## Deployment
