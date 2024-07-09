@@ -126,16 +126,3 @@ For deployment, ensure the following:
 ## License
 
 This project is licensed under the MIT License.
-
-<script>
-function copyToClipboard(button) {
-    var code = button.previousElementSibling;
-    var range = document.createRange();
-    range.selectNode(code);
-    window.getSelection().removeAllRanges(); // clear current selection
-    window.getSelection().addRange(range); // to select text
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges(); // to deselect
-    alert("Copied to clipboard");
-}
-</script>
