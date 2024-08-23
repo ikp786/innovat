@@ -6,4 +6,5 @@ return [
     Spatie\Html\HtmlServiceProvider::class,
     Yajra\DataTables\DataTablesServiceProvider::class,
     Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+    Barryvdh\Debugbar\ServiceProvider::class,
 ];

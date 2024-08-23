@@ -13,11 +13,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Innovate Accounts" />
-    <meta name="p:domain_verify" content="0836777531265b3aa0a15b497322e445" />
+    {{-- <meta name="p:domain_verify" content="0836777531265b3aa0a15b497322e445" /> --}}
     <meta name="csrf_token" content="{{ csrf_token() }}" />
 
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:type" content="business.business">
+    {{-- <meta property="og:type" content="business.business">
     <meta property="og:title" content="Accounting Dubai, Mumbai">
     <meta property="og:url" content="index.html">
     <meta property="og:description"
@@ -34,26 +34,26 @@
     <meta name="twitter:site" content="@Innovate Accounts_auditing">
     <meta name="twitter:title" content="Accounting  Dubai, Mumbai">
     <meta name="twitter:description"
-        content="Innovate Accounts is the best Accounting  Dubai and Mumbai. Our services include Audit, Accounting, Bookkeeping, VAT and more.">
-    <meta name="twitter:image" content="{{ asset('front/upload/files/Innovate-H5.png') }}">
+        content="Innovate Accounts is the best Accounting  Dubai and Mumbai. Our qqqqqqqqqqqqqqqqqqqq   services include Audit, Accounting, Bookkeeping, VAT and more.">
+    <meta name="twitter:image" content="{{ asset('front/upload/files/Innovate-H5.png') }}"> --}}
     <!-- Favicon and Touch Icons -->
-    {!! Html::element('link')->attribute('rel', 'shortcut icon')->attribute('href', asset('/front/upload/files/favicon/favicon.png'))->attribute('type', 'image/x-icon') !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '57x57')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-57x57.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '72x72')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-72x72.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '76x76')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-76x76.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '114x114')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-114x114.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '120x120')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-120x120.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '144x144')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-144x144.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '152x152')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-152x152.png')) !!}
-    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '180x180')->attribute('href', asset('/front/upload/files/favicon/apple-touch-icon-180x180.png')) !!}
+    {{-- {!! Html::element('link')->attribute('rel', 'shortcut icon')->attribute('href', asset('/front/upload/files/favicon/favicon.png'))->attribute('type', 'image/x-icon') !!} --}}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '57x57')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '72x72')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '76x76')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '114x114')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '120x120')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '144x144')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '152x152')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
+    {!! Html::element('link')->attribute('rel', 'apple-touch-icon')->attribute('sizes', '180x180')->attribute('href', asset('/front/upload/files/favicon/favicon.png')) !!}
     <!-- CSS | menuzord megamenu skins -->
     {!! Html::element('link')->attribute('rel', 'stylesheet')->attribute('href', asset('/front/css/style-main.min3f56.css?v=11')) !!}
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     @stack('styles')
-    <meta name="google-site-verification" content="OIKJ3eKwEnRYUezb2doKPXs3ManLHnDESmsYSunmFAg" />
+    {{-- <meta name="google-site-verification" content="OIKJ3eKwEnRYUezb2doKPXs3ManLHnDESmsYSunmFAg" /> --}}
 
     <link rel="canonical" href="index.html" />
     <link rel="alternate" href="index.html" hreflang="en" />
@@ -606,7 +606,7 @@
 			}
 		</script>
         --}}
-    <script type="application/ld+json">
+    {{-- <script type="application/ld+json">
 			{
 				"@context": "http://schema.org",
 				"@type": "Website",
@@ -619,7 +619,7 @@
 					"query-input": "required name=search_term_string"
 				}
 			}
-		</script>
+		</script> --}}
     <style>
         .menuzord-menu>li>.megamenu .megamenu-row .megamenu-col-title,
         .menuzord-menu>li>.megamenu .megamenu-row .megamenu-col-title a {

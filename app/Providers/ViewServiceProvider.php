@@ -27,7 +27,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         // Using a closure-based composer for specific views
         View::composer('front.layouts.app', function ($view) {
-            Cache::flush();
+            // Cache::flush();
             if (!Request::is('admin/*')) { // Assuming your admin routes are prefixed with 'admin'
                 $services = Cache::remember('services_with_pages', 60 * 60, function () {
                     return Service::active()->with('pages')->orderBy('sort_by', 'asc')->get(); // Eager load pages
